@@ -1,0 +1,2297 @@
+# Makefile.in generated automatically by automake 1.4a from Makefile.am
+
+# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
+# This Makefile.in is free software; the Free Software Foundation
+# gives unlimited permission to copy and/or distribute it,
+# with or without modifications, as long as this notice is preserved.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+
+DESTDIR =
+
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+
+top_builddir = ..
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+INSTALL_STRIP_FLAG =
+transform = @program_transform_name@
+
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+host_alias = @host_alias@
+host_triplet = @host@
+AS = @AS@
+CATALOGS = @CATALOGS@
+CATOBJEXT = @CATOBJEXT@
+CC = @CC@
+CPP = @CPP@
+CXX = @CXX@
+CXXCPP = @CXXCPP@
+DATADIRNAME = @DATADIRNAME@
+DLLTOOL = @DLLTOOL@
+GENCAT = @GENCAT@
+GMOFILES = @GMOFILES@
+GMSGFMT = @GMSGFMT@
+GT_NO = @GT_NO@
+GT_YES = @GT_YES@
+INCLUDE_LOCALE_H = @INCLUDE_LOCALE_H@
+INSTOBJEXT = @INSTOBJEXT@
+INTLDEPS = @INTLDEPS@
+INTLLIBS = @INTLLIBS@
+INTLOBJS = @INTLOBJS@
+LD = @LD@
+LIBOBJS = @LIBOBJS@
+LIBTOOL = @LIBTOOL@
+LN_S = @LN_S@
+MAKEINFO = @MAKEINFO@
+MKINSTALLDIRS = @MKINSTALLDIRS@
+MSGFMT = @MSGFMT@
+NM = @NM@
+OBJDUMP = @OBJDUMP@
+PACKAGE = @PACKAGE@
+PERL = @PERL@
+POFILES = @POFILES@
+POSUB = @POSUB@
+RANLIB = @RANLIB@
+SP_MESSAGE_DOMAIN = @SP_MESSAGE_DOMAIN@
+USE_INCLUDED_LIBINTL = @USE_INCLUDED_LIBINTL@
+USE_NLS = @USE_NLS@
+VERSION = @VERSION@
+l = @l@
+
+lib_LTLIBRARIES = libosp.la
+
+libosp_la_LDFLAGS = -version-info 1:0:0
+
+libosp_la_SOURCES = Allocator.cxx ArcEngine.cxx 	ArcEngineMessages.h ArcProcessor.h Attribute.cxx 	Big5CodingSystem.cxx CatalogEntry.h CatalogMessages.h 	CharsetDecl.cxx CharsetInfo.cxx CharsetRegistry.cxx CmdLineApp.cxx 	CmdLineAppMessages.h CodingSystem.cxx CodingSystemKit.cxx 	ConsoleOutput.cxx ContentState.cxx ContentToken.cxx 	DescriptorManager.cxx Dtd.cxx DtdDeclEventHandler.cxx 	DtdDeclEventHandler.h EUCJPCodingSystem.cxx ElementType.cxx 	Entity.cxx EntityApp.cxx EntityCatalog.cxx EntityDecl.cxx 	EntityManager.cxx EntityManagerMessages.h EquivClass.h 	ErrnoMessageArg.cxx ErrorCountEventHandler.cxx Event.cxx 	EventGenerator.cxx EventQueue.h ExtendEntityManager.cxx 	ExternalId.cxx Fixed2CodingSystem.cxx GenericEventHandler.cxx 	Group.cxx Group.h Hash.cxx IListBase.cxx Id.cxx Id.h 	IdentityCodingSystem.cxx InputSource.cxx InternalInputSource.cxx 	Link.cxx LinkProcess.cxx LiteralStorage.cxx Location.cxx Lpd.cxx 	LpdEntityRef.h Markup.cxx MarkupScan.h Message.cxx MessageArg.cxx 	MessageEventHandler.cxx MessageFormatter.cxx MessageFormatterMessages.h 	MessageReporter.cxx MessageReporterMessages.h 	MessageTable.cxx ModeInfo.cxx 	ModeInfo.h Mutex.h NameToken.h Notation.cxx NotationStorage.cxx 	NumericCharRefOrigin.cxx NumericCharRefOrigin.h OffsetOrderedList.cxx 	OffsetOrderedList.h OpenElement.cxx OutputByteStream.cxx 	OutputCharStream.cxx OutputState.cxx OutputState.h Param.cxx Param.h 	Parser.cxx Parser.h ParserApp.cxx ParserAppMessages.h 	EntityAppMessages.h 	ParserEventGeneratorKit.cxx ParserMessages.h ParserMessages.cxx 	ParserOptions.cxx ParserState.cxx ParserState.h Partition.cxx 	Partition.h PosixStorage.cxx PosixStorageMessages.h Priority.h 	Recognizer.cxx Recognizer.h RewindStorageObject.cxx 	SGMLApplication.cxx SJISCodingSystem.cxx SOEntityCatalog.cxx Sd.cxx 	SdFormalError.h SdText.cxx SearchResultMessageArg.cxx SgmlParser.cxx 	ShortReferenceMap.cxx SrInfo.h StdioStorage.cxx StdioStorageMessages.h 	StorageManager.cxx StorageObjectPosition.h Syntax.cxx 	Text.cxx TokenMessageArg.cxx TokenMessageArg.h 	TranslateCodingSystem.cxx Trie.h TrieBuilder.cxx TrieBuilder.h 	TypeId.cxx URLStorage.cxx URLStorageMessages.h 	UTF8CodingSystem.cxx Undo.cxx Undo.h UnicodeCodingSystem.cxx 	UnivCharsetDesc.cxx XMLCodingSystem.cxx 	assert.cxx big5.h events.h gb2312.h iso646-jis.h iso8859-2.h 	iso8859-3.h iso8859-4.h iso8859-5.h iso8859-6.h iso8859-7.h 	iso8859-8.h iso8859-9.h jis0201.h jis0208.h jis0212.h ksc5601.h 	koi8-r.h 	parseAttribute.cxx parseCommon.cxx parseDecl.cxx parseInstance.cxx 	parseMode.cxx parseParam.cxx parseSd.cxx splib.cxx splib.h 	splibpch.h token.h app_inst.cxx arc_inst.cxx entmgr_inst.cxx 	parser_inst.cxx xentmgr_inst.cxx
+
+
+INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/generic
+
+EXTRA_DIST = ArcEngineMessages.msg ArcEngineMessages.rc 	CatalogMessages.msg CatalogMessages.rc 	CmdLineAppMessages.msg CmdLineAppMessages.rc 	EntityAppMessages.msg EntityAppMessages.rc 	EntityManagerMessages.msg EntityManagerMessages.rc 	MessageFormatterMessages.msg MessageFormatterMessages.rc 	MessageReporterMessages.msg MessageReporterMessages.rc 	ParserAppMessages.msg ParserAppMessages.rc 	ParserMessages.msg ParserMessages.rc 	PosixStorageMessages.msg PosixStorageMessages.rc 	StdioStorageMessages.msg StdioStorageMessages.rc 	URLStorageMessages.msg URLStorageMessages.rc 	app_inst.m4 arc_inst.m4 entmgr_inst.m4 	parser_inst.m4 xentmgr_inst.m4 WinInetStorage.cxx 	WinInetStorageMessages.h WinInetStorageMessages.msg 	WinInetStorageMessages.rc WinApp.cxx Win32CodingSystem.cxx 	lib.rc lib.dsp
+
+
+MSGGENFLAGS = -l libModule
+
+BUILT_SOURCES = ArcEngineMessages.h ArcEngineMessages.rc 	CatalogMessages.h CatalogMessages.rc 	CmdLineAppMessages.h CmdLineAppMessages.rc 	EntityAppMessages.h EntityAppMessages.rc 	EntityManagerMessages.h EntityManagerMessages.rc 	MessageFormatterMessages.h MessageFormatterMessages.rc 	MessageReporterMessages.h MessageReporterMessages.rc 	ParserAppMessages.h ParserAppMessages.rc 	ParserMessages.cxx ParserMessages.h ParserMessages.rc 	PosixStorageMessages.h PosixStorageMessages.rc 	StdioStorageMessages.h StdioStorageMessages.rc 	URLStorageMessages.h URLStorageMessages.rc 	WinInetStorageMessages.h WinInetStorageMessages.rc 	app_inst.cxx arc_inst.cxx entmgr_inst.cxx parser_inst.cxx 	xentmgr_inst.cxx
+
+
+SUFFIXES = .msg .m4 .rc
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+CONFIG_HEADER = ../config.h
+CONFIG_CLEAN_FILES = 
+LTLIBRARIES =  $(lib_LTLIBRARIES)
+
+
+DEFS = @DEFS@ -I. -I$(srcdir) -I..
+CPPFLAGS = @CPPFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+libosp_la_LIBADD = 
+libosp_la_OBJECTS =  Allocator.lo ArcEngine.lo Attribute.lo \
+Big5CodingSystem.lo CharsetDecl.lo CharsetInfo.lo CharsetRegistry.lo \
+CmdLineApp.lo CodingSystem.lo CodingSystemKit.lo ConsoleOutput.lo \
+ContentState.lo ContentToken.lo DescriptorManager.lo Dtd.lo \
+DtdDeclEventHandler.lo EUCJPCodingSystem.lo ElementType.lo Entity.lo \
+EntityApp.lo EntityCatalog.lo EntityDecl.lo EntityManager.lo \
+ErrnoMessageArg.lo ErrorCountEventHandler.lo Event.lo EventGenerator.lo \
+ExtendEntityManager.lo ExternalId.lo Fixed2CodingSystem.lo \
+GenericEventHandler.lo Group.lo Hash.lo IListBase.lo Id.lo \
+IdentityCodingSystem.lo InputSource.lo InternalInputSource.lo Link.lo \
+LinkProcess.lo LiteralStorage.lo Location.lo Lpd.lo Markup.lo \
+Message.lo MessageArg.lo MessageEventHandler.lo MessageFormatter.lo \
+MessageReporter.lo MessageTable.lo ModeInfo.lo Notation.lo \
+NotationStorage.lo NumericCharRefOrigin.lo OffsetOrderedList.lo \
+OpenElement.lo OutputByteStream.lo OutputCharStream.lo OutputState.lo \
+Param.lo Parser.lo ParserApp.lo ParserEventGeneratorKit.lo \
+ParserMessages.lo ParserOptions.lo ParserState.lo Partition.lo \
+PosixStorage.lo Recognizer.lo RewindStorageObject.lo SGMLApplication.lo \
+SJISCodingSystem.lo SOEntityCatalog.lo Sd.lo SdText.lo \
+SearchResultMessageArg.lo SgmlParser.lo ShortReferenceMap.lo \
+StdioStorage.lo StorageManager.lo Syntax.lo Text.lo TokenMessageArg.lo \
+TranslateCodingSystem.lo TrieBuilder.lo TypeId.lo URLStorage.lo \
+UTF8CodingSystem.lo Undo.lo UnicodeCodingSystem.lo UnivCharsetDesc.lo \
+XMLCodingSystem.lo assert.lo parseAttribute.lo parseCommon.lo \
+parseDecl.lo parseInstance.lo parseMode.lo parseParam.lo parseSd.lo \
+splib.lo app_inst.lo arc_inst.lo entmgr_inst.lo parser_inst.lo \
+xentmgr_inst.lo
+CXXFLAGS = @CXXFLAGS@
+CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+CXXLD = $(CXX)
+CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+CFLAGS = @CFLAGS@
+COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+CCLD = $(CC)
+LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+DIST_COMMON =  Makefile.am Makefile.in
+
+
+DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+
+TAR = gtar
+GZIP_ENV = --best
+SOURCES = $(libosp_la_SOURCES)
+OBJECTS = $(libosp_la_OBJECTS)
+
+all: all-redirect
+.SUFFIXES:
+.SUFFIXES: .S .c .cxx .lo .m4 .msg .o .rc .s
+$(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps lib/Makefile
+
+Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) \
+	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
+
+mostlyclean-libLTLIBRARIES:
+
+clean-libLTLIBRARIES:
+	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+
+distclean-libLTLIBRARIES:
+
+maintainer-clean-libLTLIBRARIES:
+
+install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(libdir)
+	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p; \
+	  else :; fi; \
+	done
+
+uninstall-libLTLIBRARIES:
+	@$(NORMAL_UNINSTALL)
+	list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+	  $(LIBTOOL)  --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p; \
+	done
+
+.c.o:
+	$(COMPILE) -c $<
+
+.s.o:
+	$(COMPILE) -c $<
+
+.S.o:
+	$(COMPILE) -c $<
+
+mostlyclean-compile:
+	-rm -f *.o core *.core
+
+clean-compile:
+
+distclean-compile:
+	-rm -f *.tab.c
+
+maintainer-clean-compile:
+
+.c.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+.s.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+.S.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+mostlyclean-libtool:
+	-rm -f *.lo
+
+clean-libtool:
+	-rm -rf .libs _libs
+
+distclean-libtool:
+
+maintainer-clean-libtool:
+
+libosp.la: $(libosp_la_OBJECTS) $(libosp_la_DEPENDENCIES)
+	$(CXXLINK) -rpath $(libdir) $(libosp_la_LDFLAGS) $(libosp_la_OBJECTS) $(libosp_la_LIBADD) $(LIBS)
+.cxx.o:
+	$(CXXCOMPILE) -c $<
+.cxx.lo:
+	$(LTCXXCOMPILE) -c $<
+
+tags: TAGS
+
+ID: $(HEADERS) $(SOURCES) $(LISP)
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	here=`pwd` && cd $(srcdir) \
+	  && mkid -f$$here/ID $$unique $(LISP)
+
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+
+mostlyclean-tags:
+
+clean-tags:
+
+distclean-tags:
+	-rm -f TAGS ID
+
+maintainer-clean-tags:
+
+distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+
+subdir = lib
+
+distdir: $(DISTFILES)
+	@for file in $(DISTFILES); do \
+	  d=$(srcdir); \
+	  if test -d $$d/$$file; then \
+	    cp -pr $$d/$$file $(distdir)/$$file; \
+	  else \
+	    test -f $(distdir)/$$file \
+	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+	  fi; \
+	done
+Allocator.lo Allocator.o : Allocator.cxx splib.h ../config.h \
+	../include/Allocator.h ../include/macros.h
+app_inst.lo app_inst.o : app_inst.cxx splib.h ../config.h
+ArcEngine.lo ArcEngine.o : ArcEngine.cxx splib.h ../config.h \
+	../include/ArcEngine.h ../include/Event.h ../include/Link.h \
+	../include/Allocator.h ../include/Location.h ../include/types.h \
+	../include/Boolean.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/SgmlParser.h ArcProcessor.h \
+	../include/ContentState.h ../include/OpenElement.h \
+	../include/IList.h ../include/IListBase.h Id.h \
+	../include/IQueue.h ../include/IQueue.cxx ArcEngineMessages.h \
+	../include/ParserOptions.h ../include/EventsWanted.h \
+	../include/LinkProcess.h ../include/macros.h events.h
+arc_inst.lo arc_inst.o : arc_inst.cxx splib.h ../config.h
+assert.lo assert.o : assert.cxx splib.h ../config.h
+Attribute.lo Attribute.o : Attribute.cxx splib.h ../config.h \
+	../include/Attribute.h ../include/Resource.h ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/macros.h ParserMessages.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/EntityCatalog.h ../include/Entity.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Notation.h ../include/Attributed.h
+Big5CodingSystem.lo Big5CodingSystem.o : Big5CodingSystem.cxx splib.h \
+	../config.h ../include/Big5CodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h
+CharsetDecl.lo CharsetDecl.o : CharsetDecl.cxx splib.h ../config.h \
+	../include/CharsetDecl.h ../include/types.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/ExternalId.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/Text.h ../include/Location.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/ISet.h ../include/ISet.cxx ../include/macros.h \
+	../include/constant.h
+CharsetInfo.lo CharsetInfo.o : CharsetInfo.cxx splib.h ../config.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/types.h ../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Boolean.h ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx
+CharsetRegistry.lo CharsetRegistry.o : CharsetRegistry.cxx splib.h \
+	../config.h ../include/CharsetRegistry.h ../include/Boolean.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/Resource.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/macros.h iso8859-2.h iso8859-3.h iso8859-4.h \
+	iso8859-5.h iso8859-6.h iso8859-7.h iso8859-8.h iso8859-9.h \
+	iso646-jis.h jis0201.h jis0208.h jis0212.h gb2312.h ksc5601.h \
+	big5.h
+CmdLineApp.lo CmdLineApp.o : CmdLineApp.cxx splib.h ../config.h \
+	../include/CmdLineApp.h ../include/MessageReporter.h \
+	../include/types.h ../include/MessageFormatter.h \
+	../include/MessageBuilder.h ../include/Boolean.h \
+	../include/Message.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/OutputCharStream.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/CodingSystemKit.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Options.h \
+	../include/Options.cxx CmdLineAppMessages.h \
+	../include/ErrnoMessageArg.h ../include/macros.h \
+	../include/sptchar.h ../include/MessageTable.h \
+	../include/ConsoleOutput.h
+CodingSystemKit.lo CodingSystemKit.o : CodingSystemKit.cxx splib.h \
+	../config.h ../include/CodingSystemKit.h ../include/Boolean.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/CodingSystem.h \
+	../include/OutputByteStream.h ../include/Resource.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/TranslateCodingSystem.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/CharsetRegistry.h \
+	../include/UTF8CodingSystem.h ../include/Fixed2CodingSystem.h \
+	../include/UnicodeCodingSystem.h ../include/XMLCodingSystem.h \
+	../include/EUCJPCodingSystem.h ../include/SJISCodingSystem.h \
+	../include/Big5CodingSystem.h ../include/IdentityCodingSystem.h \
+	../include/Owner.h ../include/Owner.cxx
+CodingSystem.lo CodingSystem.o : CodingSystem.cxx splib.h ../config.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h
+ConsoleOutput.lo ConsoleOutput.o : ConsoleOutput.cxx splib.h ../config.h \
+	../include/ConsoleOutput.h ../include/OutputCharStream.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/CodingSystem.h \
+	../include/OutputByteStream.h
+ContentState.lo ContentState.o : ContentState.cxx splib.h ../config.h \
+	../include/ContentState.h ../include/OpenElement.h \
+	../include/Boolean.h ../include/ContentToken.h \
+	../include/Owner.h ../include/Owner.cxx ../include/Text.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/NCVector.h ../include/ElementType.h \
+	../include/Named.h ../include/Attributed.h \
+	../include/Attribute.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Mode.h ../include/Link.h \
+	../include/Allocator.h ../include/IList.h \
+	../include/IListBase.h ../include/Dtd.h ../include/NamedTable.h \
+	../include/Hash.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/NamedResourceTable.h \
+	../include/NamedResource.h ../include/Notation.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/EntityDecl.h ../include/Entity.h ../include/Markup.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/IListIter.h \
+	../include/IListIterBase.h ../include/macros.h
+ContentToken.lo ContentToken.o : ContentToken.cxx splib.h ../config.h \
+	../include/ContentToken.h ../include/Owner.h \
+	../include/Owner.cxx ../include/Text.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/NCVector.h ../include/macros.h \
+	../include/ElementType.h ../include/Named.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/Message.h ../include/MessageArg.h ../include/Mode.h \
+	../include/Dtd.h ../include/NamedTable.h ../include/Hash.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/NamedResourceTable.h ../include/NamedResource.h \
+	../include/Notation.h ../include/ExternalId.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Entity.h ../include/Allocator.h ../include/Markup.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h
+DescriptorManager.lo DescriptorManager.o : DescriptorManager.cxx splib.h \
+	../config.h ../include/DescriptorManager.h ../include/Boolean.h \
+	../include/List.h ../include/IList.h ../include/IListBase.h \
+	../include/Link.h ../include/List.cxx ../include/IListIter.h \
+	../include/IListIterBase.h ../include/ListIter.h
+DtdDeclEventHandler.lo DtdDeclEventHandler.o : DtdDeclEventHandler.cxx \
+	splib.h ../config.h DtdDeclEventHandler.h ../include/Boolean.h \
+	../include/Event.h ../include/Link.h ../include/Allocator.h \
+	../include/Location.h ../include/types.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/ErrorCountEventHandler.h \
+	../include/macros.h
+Dtd.lo Dtd.o : Dtd.cxx splib.h ../config.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/Hash.h ../include/StringC.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Named.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/NamedResourceTable.h ../include/NamedResource.h \
+	../include/Resource.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/ElementType.h ../include/Owner.h \
+	../include/Owner.cxx ../include/Location.h ../include/rtti.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/Text.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Notation.h ../include/ExternalId.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Entity.h ../include/Allocator.h ../include/Markup.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h
+ElementType.lo ElementType.o : ElementType.cxx splib.h ../config.h \
+	../include/ElementType.h ../include/Boolean.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/Location.h \
+	../include/types.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/Named.h ../include/Attributed.h \
+	../include/Attribute.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/MessageArg.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/macros.h
+EntityApp.lo EntityApp.o : EntityApp.cxx splib.h ../config.h \
+	../include/EntityApp.h ../include/CmdLineApp.h \
+	../include/MessageReporter.h ../include/types.h \
+	../include/MessageFormatter.h ../include/MessageBuilder.h \
+	../include/Boolean.h ../include/Message.h ../include/Location.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/OutputCharStream.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/CodingSystemKit.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Options.h \
+	../include/Options.cxx ../include/ExtendEntityManager.h \
+	../include/EntityManager.h ../include/EntityCatalog.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/sptchar.h ../include/PosixStorage.h \
+	../include/StorageManager.h ../include/DescriptorManager.h \
+	../include/List.h ../include/IList.h ../include/IListBase.h \
+	../include/Link.h ../include/List.cxx ../include/IListIter.h \
+	../include/IListIterBase.h ../include/URLStorage.h \
+	../include/LiteralStorage.h ../include/NotationStorage.h \
+	../include/SOEntityCatalog.h ../include/macros.h \
+	EntityAppMessages.h
+EntityCatalog.lo EntityCatalog.o : EntityCatalog.cxx splib.h ../config.h \
+	../include/EntityCatalog.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Resource.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/EntityDecl.h ../include/NamedResource.h \
+	../include/Named.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/StringResource.h ../include/Location.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h
+EntityDecl.lo EntityDecl.o : EntityDecl.cxx splib.h ../config.h \
+	../include/EntityDecl.h ../include/NamedResource.h \
+	../include/Named.h ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Resource.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/StringResource.h \
+	../include/Location.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/rtti.h
+EntityManager.lo EntityManager.o : EntityManager.cxx splib.h ../config.h \
+	../include/EntityManager.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Resource.h \
+	../include/EntityCatalog.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Ptr.h ../include/Ptr.cxx
+Entity.lo Entity.o : Entity.cxx splib.h ../config.h ../include/Entity.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/NamedResource.h ../include/Named.h \
+	../include/Resource.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/rtti.h ../include/Attribute.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/MessageArg.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h ParserState.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Attributed.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Notation.h ../include/ShortReferenceMap.h \
+	../include/Event.h ../include/Link.h ../include/Lpd.h \
+	EventQueue.h ../include/IQueue.h ../include/IQueue.cxx events.h \
+	Id.h ../include/InputSource.h ../include/IList.h \
+	../include/IListBase.h ../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/macros.h \
+	../include/InternalInputSource.h ParserMessages.h
+entmgr_inst.lo entmgr_inst.o : entmgr_inst.cxx splib.h ../config.h
+ErrnoMessageArg.lo ErrnoMessageArg.o : ErrnoMessageArg.cxx splib.h \
+	../config.h ../include/ErrnoMessageArg.h \
+	../include/MessageArg.h ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/rtti.h \
+	../include/MessageBuilder.h
+ErrorCountEventHandler.lo ErrorCountEventHandler.o : \
+	ErrorCountEventHandler.cxx splib.h ../config.h \
+	../include/ErrorCountEventHandler.h ../include/Event.h \
+	../include/Link.h ../include/Allocator.h ../include/Location.h \
+	../include/types.h ../include/Boolean.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h
+EUCJPCodingSystem.lo EUCJPCodingSystem.o : EUCJPCodingSystem.cxx splib.h \
+	../config.h ../include/EUCJPCodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h
+EventGenerator.lo EventGenerator.o : EventGenerator.cxx splib.h \
+	../config.h ../include/Boolean.h ../generic/EventGenerator.h \
+	../generic/SGMLApplication.h
+Event.lo Event.o : Event.cxx splib.h ../config.h ../include/Event.h \
+	../include/Link.h ../include/Allocator.h ../include/Location.h \
+	../include/types.h ../include/Boolean.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h
+ExtendEntityManager.lo ExtendEntityManager.o : ExtendEntityManager.cxx \
+	splib.h ../config.h ../include/ExtendEntityManager.h \
+	../include/EntityManager.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Resource.h \
+	../include/EntityCatalog.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Ptr.h ../include/Ptr.cxx \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/Location.h ../include/Owner.h ../include/Owner.cxx \
+	../include/rtti.h ../include/CodingSystemKit.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	OffsetOrderedList.h ../include/NCVector.h Mutex.h \
+	../include/StorageManager.h EntityManagerMessages.h \
+	StorageObjectPosition.h ../include/InputSource.h \
+	../include/Link.h ../include/XcharMap.h ../include/XcharMap.cxx \
+	../include/macros.h
+ExternalId.lo ExternalId.o : ExternalId.cxx splib.h ../config.h \
+	../include/ExternalId.h ../include/Boolean.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/Text.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Location.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/macros.h ParserMessages.h
+Fixed2CodingSystem.lo Fixed2CodingSystem.o : Fixed2CodingSystem.cxx \
+	splib.h ../config.h ../include/Fixed2CodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h \
+	../include/macros.h
+GenericEventHandler.lo GenericEventHandler.o : GenericEventHandler.cxx \
+	splib.h ../config.h ../include/GenericEventHandler.h \
+	../include/Boolean.h ../generic/SGMLApplication.h \
+	../include/Event.h ../include/Link.h ../include/Allocator.h \
+	../include/Location.h ../include/types.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/MessageReporter.h \
+	../include/MessageFormatter.h ../include/MessageBuilder.h \
+	../include/OutputCharStream.h ../include/CodingSystem.h \
+	../include/OutputByteStream.h \
+	../include/ErrorCountEventHandler.h ../include/macros.h \
+	../include/ExtendEntityManager.h ../include/CodingSystemKit.h
+Group.lo Group.o : Group.cxx splib.h ../config.h Group.h \
+	../include/Boolean.h ../include/ContentToken.h \
+	../include/Owner.h ../include/Owner.cxx ../include/Text.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/NCVector.h ../include/MessageArg.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/EntityCatalog.h ../include/MessageBuilder.h \
+	ParserMessages.h ../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/macros.h
+Hash.lo Hash.o : Hash.cxx splib.h ../config.h ../include/Hash.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx
+IdentityCodingSystem.lo IdentityCodingSystem.o : \
+	IdentityCodingSystem.cxx splib.h ../config.h \
+	../include/IdentityCodingSystem.h ../include/CodingSystem.h \
+	../include/types.h ../include/Boolean.h ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx \
+	../include/OutputByteStream.h
+Id.lo Id.o : Id.cxx splib.h ../config.h Id.h ../include/Named.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/rtti.h
+IListBase.lo IListBase.o : IListBase.cxx splib.h ../config.h \
+	../include/IListBase.h ../include/Link.h ../include/Boolean.h
+InputSource.lo InputSource.o : InputSource.cxx splib.h ../config.h \
+	../include/InputSource.h ../include/types.h ../include/Link.h \
+	../include/Ptr.h ../include/Boolean.h ../include/Ptr.cxx \
+	../include/Location.h ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/XcharMap.h \
+	../include/constant.h ../include/XcharMap.cxx MarkupScan.h
+InternalInputSource.lo InternalInputSource.o : InternalInputSource.cxx \
+	splib.h ../config.h ../include/InternalInputSource.h \
+	../include/InputSource.h ../include/types.h ../include/Link.h \
+	../include/Ptr.h ../include/Boolean.h ../include/Ptr.cxx \
+	../include/Location.h ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/XcharMap.h \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/Allocator.h ../include/macros.h
+Link.lo Link.o : Link.cxx splib.h ../config.h ../include/Link.h
+LinkProcess.lo LinkProcess.o : LinkProcess.cxx splib.h ../config.h \
+	../include/LinkProcess.h ../include/Lpd.h \
+	../include/Attribute.h ../include/Resource.h ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Named.h \
+	../include/NamedTable.h ../include/Hash.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Dtd.h ../include/NamedResourceTable.h \
+	../include/NamedResource.h ../include/ElementType.h \
+	../include/Attributed.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Notation.h ../include/ExternalId.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Entity.h ../include/Allocator.h ../include/Markup.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/IList.h \
+	../include/IListBase.h ../include/Link.h ParserState.h \
+	../include/Event.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ParserMessages.h
+LiteralStorage.lo LiteralStorage.o : LiteralStorage.cxx splib.h \
+	../config.h ../include/LiteralStorage.h \
+	../include/StorageManager.h ../include/StringC.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/Resource.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h
+Location.lo Location.o : Location.cxx splib.h ../config.h \
+	../include/Location.h ../include/types.h ../include/Boolean.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/Named.h ../include/Attribute.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/Text.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/ExternalId.h \
+	../include/StringResource.h ../include/Allocator.h \
+	../include/EntityDecl.h ../include/Markup.h ../include/Syntax.h \
+	../include/ISet.h ../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h Mutex.h
+Lpd.lo Lpd.o : Lpd.cxx splib.h ../config.h ../include/Lpd.h \
+	../include/Attribute.h ../include/Resource.h ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Named.h \
+	../include/NamedTable.h ../include/Hash.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Dtd.h ../include/NamedResourceTable.h \
+	../include/NamedResource.h ../include/ElementType.h \
+	../include/Attributed.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Notation.h ../include/ExternalId.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Entity.h ../include/Allocator.h ../include/Markup.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h
+Markup.lo Markup.o : Markup.cxx splib.h ../config.h ../include/Markup.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/Syntax.h ../include/ISet.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/ISet.cxx \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/Resource.h \
+	../include/XcharMap.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/EntityCatalog.h ../include/Sd.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/RangeMap.cxx \
+	../include/ExternalId.h ../include/Text.h ../include/Location.h \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/SdText.h ../include/InputSource.h ../include/Link.h \
+	../include/macros.h ../include/Entity.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/Attribute.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h
+MessageArg.lo MessageArg.o : MessageArg.cxx splib.h ../config.h \
+	../include/MessageArg.h ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/rtti.h \
+	../include/MessageBuilder.h ParserMessages.h \
+	../include/Message.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Owner.h \
+	../include/Owner.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx
+MessageEventHandler.lo MessageEventHandler.o : MessageEventHandler.cxx \
+	splib.h ../config.h ../include/MessageEventHandler.h \
+	../include/Event.h ../include/Link.h ../include/Allocator.h \
+	../include/Location.h ../include/types.h ../include/Boolean.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/Notation.h ../include/NamedResource.h \
+	../include/Named.h ../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/ErrorCountEventHandler.h \
+	../include/SgmlParser.h ../include/ParserOptions.h \
+	../include/EventsWanted.h
+MessageFormatter.lo MessageFormatter.o : MessageFormatter.cxx splib.h \
+	../config.h ../include/MessageFormatter.h ../include/types.h \
+	../include/MessageBuilder.h ../include/Boolean.h \
+	../include/Message.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/OutputCharStream.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/ErrnoMessageArg.h \
+	../include/SearchResultMessageArg.h MessageFormatterMessages.h
+Message.lo Message.o : Message.cxx splib.h ../config.h \
+	../include/Message.h ../include/Location.h ../include/types.h \
+	../include/Boolean.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h
+MessageReporter.lo MessageReporter.o : MessageReporter.cxx splib.h \
+	../config.h ../include/MessageReporter.h ../include/types.h \
+	../include/MessageFormatter.h ../include/MessageBuilder.h \
+	../include/Boolean.h ../include/Message.h ../include/Location.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/OutputCharStream.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	MessageReporterMessages.h ../include/ExtendEntityManager.h \
+	../include/EntityManager.h ../include/EntityCatalog.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/CodingSystemKit.h ../include/StorageManager.h \
+	../include/macros.h
+MessageTable.lo MessageTable.o : MessageTable.cxx splib.h ../config.h \
+	../include/MessageTable.h ../include/Message.h \
+	../include/Location.h ../include/types.h ../include/Boolean.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/sptchar.h
+ModeInfo.lo ModeInfo.o : ModeInfo.cxx splib.h ../config.h \
+	../include/macros.h ../include/types.h ../include/Syntax.h \
+	../include/Boolean.h ../include/ISet.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/ISet.cxx \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/Resource.h ../include/XcharMap.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h token.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/ExternalId.h \
+	../include/Text.h ../include/Location.h ../include/Owner.h \
+	../include/Owner.cxx ../include/rtti.h ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/Mode.h ModeInfo.h \
+	Priority.h
+Notation.lo Notation.o : Notation.cxx splib.h ../config.h \
+	../include/Notation.h ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/NamedResource.h ../include/Named.h \
+	../include/Resource.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/ExternalId.h ../include/Text.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Location.h \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/Attribute.h ../include/StringResource.h \
+	../include/EntityDecl.h ParserState.h ../include/Allocator.h \
+	../include/Dtd.h ../include/NamedTable.h ../include/Hash.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/Event.h \
+	../include/Link.h ../include/Lpd.h EventQueue.h \
+	../include/IQueue.h ../include/IQueue.cxx events.h Id.h \
+	../include/InputSource.h ../include/IList.h \
+	../include/IListBase.h ../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ParserMessages.h
+NotationStorage.lo NotationStorage.o : NotationStorage.cxx splib.h \
+	../config.h ../include/NotationStorage.h \
+	../include/StorageManager.h ../include/StringC.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/Resource.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h
+NumericCharRefOrigin.lo NumericCharRefOrigin.o : \
+	NumericCharRefOrigin.cxx splib.h ../config.h \
+	NumericCharRefOrigin.h ../include/Location.h ../include/types.h \
+	../include/Boolean.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/Markup.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/EntityCatalog.h ../include/Sd.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/RangeMap.cxx \
+	../include/ExternalId.h ../include/Text.h ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h
+OffsetOrderedList.lo OffsetOrderedList.o : OffsetOrderedList.cxx splib.h \
+	../config.h OffsetOrderedList.h ../include/types.h \
+	../include/Owner.h ../include/Owner.cxx ../include/NCVector.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Boolean.h Mutex.h ../include/macros.h
+OpenElement.lo OpenElement.o : OpenElement.cxx splib.h ../config.h \
+	../include/OpenElement.h ../include/Boolean.h \
+	../include/ContentToken.h ../include/Owner.h \
+	../include/Owner.cxx ../include/Text.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/NCVector.h ../include/ElementType.h \
+	../include/Named.h ../include/Attributed.h \
+	../include/Attribute.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Mode.h ../include/Link.h \
+	../include/Allocator.h
+OutputByteStream.lo OutputByteStream.o : OutputByteStream.cxx splib.h \
+	../config.h ../include/OutputByteStream.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx
+OutputCharStream.lo OutputCharStream.o : OutputCharStream.cxx splib.h \
+	../config.h ../include/OutputCharStream.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/macros.h
+OutputState.lo OutputState.o : OutputState.cxx splib.h ../config.h \
+	OutputState.h ../include/Location.h ../include/types.h \
+	../include/Boolean.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/rtti.h ../include/IList.h \
+	../include/IListBase.h ../include/Link.h \
+	../include/EventsWanted.h ../include/Event.h \
+	../include/Allocator.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/MessageArg.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ElementType.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h
+Param.lo Param.o : Param.cxx splib.h ../config.h Param.h \
+	../include/Boolean.h ../include/ContentToken.h \
+	../include/Owner.h ../include/Owner.cxx ../include/Text.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/NCVector.h ../include/MessageArg.h ../include/Mode.h \
+	NameToken.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/MessageBuilder.h ../include/macros.h \
+	ParserMessages.h ../include/Message.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx
+parseAttribute.lo parseAttribute.o : parseAttribute.cxx splib.h \
+	../config.h Parser.h ../include/types.h ../include/Attribute.h \
+	../include/Resource.h ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	token.h ../include/macros.h ParserMessages.h
+parseCommon.lo parseCommon.o : parseCommon.cxx splib.h ../config.h \
+	Parser.h ../include/types.h ../include/Attribute.h \
+	../include/Resource.h ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	token.h ParserMessages.h NumericCharRefOrigin.h \
+	../include/macros.h
+parseDecl.lo parseDecl.o : parseDecl.cxx splib.h ../config.h Parser.h \
+	../include/types.h ../include/Attribute.h ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	Param.h NameToken.h ParserMessages.h TokenMessageArg.h token.h \
+	../include/macros.h
+parseInstance.lo parseInstance.o : parseInstance.cxx splib.h ../config.h \
+	Parser.h ../include/types.h ../include/Attribute.h \
+	../include/Resource.h ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	ParserMessages.h TokenMessageArg.h token.h ../include/macros.h
+parseMode.lo parseMode.o : parseMode.cxx splib.h ../config.h Parser.h \
+	../include/types.h ../include/Attribute.h ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	ParserMessages.h TokenMessageArg.h ModeInfo.h Partition.h \
+	SrInfo.h ../include/ISetIter.h token.h TrieBuilder.h \
+	../include/macros.h
+parseParam.lo parseParam.o : parseParam.cxx splib.h ../config.h Parser.h \
+	../include/types.h ../include/Attribute.h ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	Param.h NameToken.h Group.h ParserMessages.h TokenMessageArg.h \
+	token.h ../include/macros.h
+ParserApp.lo ParserApp.o : ParserApp.cxx splib.h ../config.h \
+	../include/ParserApp.h ../include/SgmlParser.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Location.h ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/EntityManager.h ../include/EntityCatalog.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/ParserOptions.h ../include/EventsWanted.h \
+	../include/EntityApp.h ../include/CmdLineApp.h \
+	../include/MessageReporter.h ../include/MessageFormatter.h \
+	../include/MessageBuilder.h ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/OutputCharStream.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/CodingSystemKit.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Options.h \
+	../include/Options.cxx ../include/ExtendEntityManager.h \
+	../include/ErrorCountEventHandler.h ../include/Event.h \
+	../include/Link.h ../include/Allocator.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/Syntax.h ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/XcharMap.cxx \
+	../include/CharsetDecl.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/NamedResourceTable.h \
+	../include/ElementType.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/Markup.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/Lpd.h \
+	ParserAppMessages.h ../include/macros.h ../include/sptchar.h \
+	../include/ArcEngine.h
+ParserEventGeneratorKit.lo ParserEventGeneratorKit.o : \
+	ParserEventGeneratorKit.cxx splib.h ../config.h \
+	../include/Boolean.h ../include/ParserApp.h \
+	../include/SgmlParser.h ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Location.h ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/EntityManager.h ../include/EntityCatalog.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/ParserOptions.h ../include/EventsWanted.h \
+	../include/EntityApp.h ../include/CmdLineApp.h \
+	../include/MessageReporter.h ../include/MessageFormatter.h \
+	../include/MessageBuilder.h ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/OutputCharStream.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/CodingSystemKit.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
+	../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Options.h \
+	../include/Options.cxx ../include/ExtendEntityManager.h \
+	../include/ErrorCountEventHandler.h ../include/Event.h \
+	../include/Link.h ../include/Allocator.h ../include/Notation.h \
+	../include/NamedResource.h ../include/Named.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Sd.h ../include/Syntax.h ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/XcharMap.cxx \
+	../include/CharsetDecl.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/NamedResourceTable.h \
+	../include/ElementType.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/Markup.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/Lpd.h \
+	../include/macros.h ../generic/SGMLApplication.h \
+	../generic/ParserEventGeneratorKit.h \
+	../generic/EventGenerator.h ../include/GenericEventHandler.h
+parser_inst.lo parser_inst.o : parser_inst.cxx splib.h ../config.h
+ParserMessages.lo ParserMessages.o : ParserMessages.cxx splib.h \
+	../config.h ParserMessages.h ../include/Message.h \
+	../include/Location.h ../include/types.h ../include/Boolean.h \
+	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h
+ParserOptions.lo ParserOptions.o : ParserOptions.cxx splib.h ../config.h \
+	../include/ParserOptions.h ../include/types.h \
+	../include/EventsWanted.h ../include/Boolean.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx
+Parser.lo Parser.o : Parser.cxx splib.h ../config.h Parser.h \
+	../include/types.h ../include/Attribute.h ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	ParserMessages.h
+ParserState.lo ParserState.o : ParserState.cxx splib.h ../config.h \
+	ParserState.h ../include/Allocator.h ../include/Attribute.h \
+	../include/Resource.h ../include/Owner.h ../include/Owner.cxx \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/Text.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/Hash.h ../include/Named.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/NamedResourceTable.h ../include/NamedResource.h \
+	../include/ElementType.h ../include/Attributed.h \
+	../include/Mode.h ../include/ContentToken.h \
+	../include/NCVector.h ../include/Notation.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/EntityDecl.h ../include/Entity.h ../include/Markup.h \
+	../include/Syntax.h ../include/ISet.h ../include/ISet.cxx \
+	../include/HashTable.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/Event.h \
+	../include/Link.h ../include/Lpd.h EventQueue.h \
+	../include/IQueue.h ../include/IQueue.cxx events.h Id.h \
+	../include/InputSource.h ../include/IList.h \
+	../include/IListBase.h ../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/InternalInputSource.h \
+	../include/macros.h ../include/SgmlParser.h \
+	../include/IListIter.h ../include/IListIterBase.h \
+	ParserMessages.h Undo.h
+parseSd.lo parseSd.o : parseSd.cxx splib.h ../config.h Parser.h \
+	../include/types.h ../include/Attribute.h ../include/Resource.h \
+	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h \
+	../include/Event.h ../include/Link.h ../include/Notation.h \
+	../include/Dtd.h ../include/NamedTable.h \
+	../include/NamedResourceTable.h ../include/ShortReferenceMap.h \
+	../include/Lpd.h ../include/IList.h ../include/IListBase.h \
+	ParserState.h EventQueue.h ../include/IQueue.h \
+	../include/IQueue.cxx events.h Id.h ../include/InputSource.h \
+	../include/OpenElement.h OutputState.h \
+	../include/EventsWanted.h ../include/ParserOptions.h \
+	Recognizer.h Trie.h Priority.h LpdEntityRef.h \
+	../include/ContentState.h ../include/SgmlParser.h Undo.h \
+	../include/macros.h SdFormalError.h ../include/MessageBuilder.h \
+	ParserMessages.h ../include/CharsetRegistry.h \
+	../include/ISetIter.h token.h TokenMessageArg.h \
+	NumericCharRefOrigin.h
+Partition.lo Partition.o : Partition.cxx splib.h ../config.h Partition.h \
+	../include/types.h ../include/SubstTable.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/SubstTable.cxx \
+	../include/ISet.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.cxx ../include/XcharMap.h \
+	../include/Resource.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/ISetIter.h ../include/Link.h ../include/IList.h \
+	../include/IListBase.h ../include/IListIter.h \
+	../include/IListIterBase.h ../include/Owner.h \
+	../include/Owner.cxx ../include/macros.h EquivClass.h \
+	../include/StringC.h
+PosixStorage.lo PosixStorage.o : PosixStorage.cxx splib.h ../config.h \
+	../include/PosixStorage.h ../include/StorageManager.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/ISet.h ../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/DescriptorManager.h \
+	../include/List.h ../include/IList.h ../include/IListBase.h \
+	../include/Link.h ../include/List.cxx ../include/IListIter.h \
+	../include/IListIterBase.h ../include/RewindStorageObject.h \
+	../include/MessageArg.h ../include/rtti.h \
+	../include/ErrnoMessageArg.h \
+	../include/SearchResultMessageArg.h ../include/Message.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/CodingSystem.h \
+	../include/OutputByteStream.h ../include/macros.h \
+	PosixStorageMessages.h
+Recognizer.lo Recognizer.o : Recognizer.cxx splib.h ../config.h \
+	../include/Resource.h Trie.h ../include/types.h \
+	../include/Boolean.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/CopyOwner.h ../include/Owner.h \
+	../include/Owner.cxx ../include/CopyOwner.cxx Priority.h \
+	../include/XcharMap.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/constant.h ../include/XcharMap.cxx Recognizer.h \
+	../include/InputSource.h ../include/Link.h \
+	../include/Location.h ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h
+RewindStorageObject.lo RewindStorageObject.o : RewindStorageObject.cxx \
+	splib.h ../config.h ../include/RewindStorageObject.h \
+	../include/StorageManager.h ../include/StringC.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/Resource.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/macros.h
+Sd.lo Sd.o : Sd.cxx splib.h ../config.h ../include/Sd.h \
+	../include/types.h ../include/Boolean.h ../include/Resource.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/ExternalId.h \
+	../include/Text.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Owner.h ../include/Owner.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/Syntax.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/macros.h
+SdText.lo SdText.o : SdText.cxx splib.h ../config.h ../include/SdText.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Owner.h \
+	../include/Owner.cxx ../include/StringC.h ../include/rtti.h
+SearchResultMessageArg.lo SearchResultMessageArg.o : \
+	SearchResultMessageArg.cxx splib.h ../config.h \
+	../include/SearchResultMessageArg.h ../include/MessageArg.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/rtti.h
+SGMLApplication.lo SGMLApplication.o : SGMLApplication.cxx splib.h \
+	../config.h ../include/Boolean.h ../generic/SGMLApplication.h
+SgmlParser.lo SgmlParser.o : SgmlParser.cxx splib.h ../config.h \
+	../include/SgmlParser.h ../include/StringC.h ../include/types.h \
+	../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Location.h ../include/Resource.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/Owner.h \
+	../include/Owner.cxx ../include/rtti.h \
+	../include/EntityManager.h ../include/EntityCatalog.h \
+	../include/SubstTable.h ../include/SubstTable.cxx Parser.h \
+	../include/Attribute.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h ../include/Message.h \
+	../include/MessageArg.h ../include/Attributed.h \
+	../include/ElementType.h ../include/Named.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/NamedResource.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/Sd.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/RangeMap.cxx \
+	../include/CharsetDecl.h ../include/SdText.h ../include/Event.h \
+	../include/Link.h ../include/Notation.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/NamedResourceTable.h \
+	../include/ShortReferenceMap.h ../include/Lpd.h \
+	../include/IList.h ../include/IListBase.h ParserState.h \
+	EventQueue.h ../include/IQueue.h ../include/IQueue.cxx events.h \
+	Id.h ../include/InputSource.h ../include/OpenElement.h \
+	OutputState.h ../include/EventsWanted.h \
+	../include/ParserOptions.h Recognizer.h Trie.h Priority.h \
+	LpdEntityRef.h ../include/ContentState.h Undo.h
+ShortReferenceMap.lo ShortReferenceMap.o : ShortReferenceMap.cxx splib.h \
+	../config.h ../include/ShortReferenceMap.h ../include/Vector.h \
+	../include/xnew.h ../include/Vector.cxx ../include/StringC.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Named.h ../include/Entity.h \
+	../include/NamedResource.h ../include/Resource.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/Attribute.h ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/Text.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/Message.h ../include/MessageArg.h \
+	../include/ExternalId.h ../include/StringResource.h \
+	../include/Allocator.h ../include/EntityDecl.h \
+	../include/Markup.h ../include/Syntax.h ../include/ISet.h \
+	../include/ISet.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/XcharMap.h ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/SdText.h
+SJISCodingSystem.lo SJISCodingSystem.o : SJISCodingSystem.cxx splib.h \
+	../config.h ../include/SJISCodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h
+SOEntityCatalog.lo SOEntityCatalog.o : SOEntityCatalog.cxx splib.h \
+	../config.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/types.h \
+	../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Boolean.h ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/MessageArg.h \
+	../include/rtti.h CatalogMessages.h ../include/Message.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx ../include/SOEntityCatalog.h \
+	../include/ExtendEntityManager.h ../include/EntityManager.h \
+	../include/EntityCatalog.h ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/CodingSystemKit.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	../include/EntityDecl.h ../include/NamedResource.h \
+	../include/Named.h ../include/StringResource.h \
+	../include/HashTable.h ../include/OwnerTable.h \
+	../include/PointerTable.h ../include/PointerTable.cxx \
+	../include/OwnerTable.cxx ../include/Hash.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/InputSource.h \
+	../include/Link.h ../include/XcharMap.h ../include/XcharMap.cxx \
+	CatalogEntry.h ../include/StorageManager.h ../include/macros.h \
+	../include/ParserOptions.h ../include/EventsWanted.h \
+	../include/SgmlParser.h DtdDeclEventHandler.h \
+	../include/Event.h ../include/Allocator.h ../include/Notation.h \
+	../include/ExternalId.h ../include/Text.h \
+	../include/Attributed.h ../include/Attribute.h ../include/Sd.h \
+	../include/Syntax.h ../include/CharsetDecl.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/NamedResourceTable.h \
+	../include/ElementType.h ../include/Mode.h \
+	../include/ContentToken.h ../include/NCVector.h \
+	../include/Entity.h ../include/Markup.h ../include/SdText.h \
+	../include/ShortReferenceMap.h ../include/Lpd.h \
+	../include/ErrorCountEventHandler.h
+splib.lo splib.o : splib.cxx splib.h ../config.h
+StdioStorage.lo StdioStorage.o : StdioStorage.cxx splib.h ../config.h \
+	../include/StdioStorage.h ../include/StorageManager.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/ISet.h ../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/DescriptorManager.h \
+	../include/List.h ../include/IList.h ../include/IListBase.h \
+	../include/Link.h ../include/List.cxx ../include/IListIter.h \
+	../include/IListIterBase.h ../include/Message.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/ErrnoMessageArg.h \
+	../include/CodingSystem.h ../include/OutputByteStream.h \
+	StdioStorageMessages.h
+StorageManager.lo StorageManager.o : StorageManager.cxx splib.h \
+	../config.h ../include/StorageManager.h ../include/StringC.h \
+	../include/types.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/Resource.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h
+StringVectorMessageArg.lo StringVectorMessageArg.o : \
+	StringVectorMessageArg.cxx splib.h ../config.h \
+	StringVectorMessageArg.h ../include/MessageArg.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx ../include/rtti.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/MessageBuilder.h ParserMessages.h \
+	../include/Message.h ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/Owner.h \
+	../include/Owner.cxx ../include/CopyOwner.h \
+	../include/CopyOwner.cxx
+Syntax.lo Syntax.o : Syntax.cxx splib.h ../config.h ../include/Syntax.h \
+	../include/types.h ../include/Boolean.h ../include/ISet.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/ISet.cxx ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/Resource.h ../include/XcharMap.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/ExternalId.h \
+	../include/Text.h ../include/Location.h ../include/Owner.h \
+	../include/Owner.cxx ../include/rtti.h ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/CharsetDecl.h \
+	../include/EntityManager.h ../include/ISetIter.h \
+	../include/macros.h MarkupScan.h
+Text.lo Text.o : Text.cxx splib.h ../config.h ../include/Text.h \
+	../include/types.h ../include/StringC.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Resource.h ../include/Owner.h ../include/Owner.cxx \
+	../include/rtti.h ../include/SubstTable.h \
+	../include/SubstTable.cxx
+TokenMessageArg.lo TokenMessageArg.o : TokenMessageArg.cxx splib.h \
+	../config.h TokenMessageArg.h ../include/MessageArg.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/rtti.h ../include/Mode.h ../include/Syntax.h \
+	../include/ISet.h ../include/ISet.cxx ../include/SubstTable.h \
+	../include/SubstTable.cxx ../include/HashTable.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/Hash.h ../include/HashTableItemBase.h \
+	../include/HashTableItemBase.cxx ../include/HashTable.cxx \
+	../include/Resource.h ../include/XcharMap.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/constant.h \
+	../include/XcharMap.cxx ../include/EntityCatalog.h \
+	../include/Sd.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/RangeMap.cxx ../include/ExternalId.h \
+	../include/Text.h ../include/Location.h ../include/Owner.h \
+	../include/Owner.cxx ../include/Message.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/MessageBuilder.h token.h ParserMessages.h ModeInfo.h \
+	Priority.h ../include/macros.h
+TranslateCodingSystem.lo TranslateCodingSystem.o : \
+	TranslateCodingSystem.cxx splib.h ../config.h \
+	../include/TranslateCodingSystem.h ../include/CodingSystem.h \
+	../include/types.h ../include/Boolean.h ../include/StringC.h \
+	../include/StringOf.h ../include/StringOf.cxx \
+	../include/OutputByteStream.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/CharsetRegistry.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/RangeMap.h ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/Owner.h ../include/Owner.cxx
+TrieBuilder.lo TrieBuilder.o : TrieBuilder.cxx splib.h ../config.h \
+	../include/types.h ../include/macros.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx Trie.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/CopyOwner.h ../include/Owner.h ../include/Owner.cxx \
+	../include/CopyOwner.cxx Priority.h TrieBuilder.h
+TypeId.lo TypeId.o : TypeId.cxx splib.h ../config.h ../include/TypeId.h
+Undo.lo Undo.o : Undo.cxx splib.h ../config.h Undo.h ../include/Link.h \
+	../include/ContentToken.h ../include/Owner.h \
+	../include/Owner.cxx ../include/Text.h ../include/types.h \
+	../include/StringC.h ../include/StringOf.h ../include/Boolean.h \
+	../include/StringOf.cxx ../include/Vector.h ../include/xnew.h \
+	../include/Vector.cxx ../include/Location.h ../include/Ptr.h \
+	../include/Ptr.cxx ../include/Resource.h ../include/rtti.h \
+	../include/SubstTable.h ../include/SubstTable.cxx \
+	../include/NCVector.h ../include/OpenElement.h \
+	../include/ElementType.h ../include/Named.h \
+	../include/Attributed.h ../include/Attribute.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/Message.h ../include/MessageArg.h ../include/Mode.h \
+	../include/Allocator.h ParserState.h ../include/Dtd.h \
+	../include/NamedTable.h ../include/Hash.h \
+	../include/OwnerTable.h ../include/PointerTable.h \
+	../include/PointerTable.cxx ../include/OwnerTable.cxx \
+	../include/NamedResourceTable.h ../include/NamedResource.h \
+	../include/Notation.h ../include/ExternalId.h \
+	../include/StringResource.h ../include/EntityDecl.h \
+	../include/Entity.h ../include/Markup.h ../include/Syntax.h \
+	../include/ISet.h ../include/ISet.cxx ../include/HashTable.h \
+	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
+	../include/HashTable.cxx ../include/XcharMap.h \
+	../include/constant.h ../include/XcharMap.cxx \
+	../include/EntityCatalog.h ../include/Sd.h \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/CharMap.cxx \
+	../include/RangeMap.h ../include/RangeMap.cxx \
+	../include/CharsetDecl.h ../include/EntityManager.h \
+	../include/SdText.h ../include/ShortReferenceMap.h \
+	../include/Event.h ../include/Lpd.h EventQueue.h \
+	../include/IQueue.h ../include/IQueue.cxx events.h Id.h \
+	../include/InputSource.h ../include/IList.h \
+	../include/IListBase.h OutputState.h ../include/EventsWanted.h \
+	../include/ParserOptions.h Recognizer.h Trie.h Priority.h \
+	LpdEntityRef.h ../include/ContentState.h
+UnicodeCodingSystem.lo UnicodeCodingSystem.o : UnicodeCodingSystem.cxx \
+	splib.h ../config.h ../include/UnicodeCodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h \
+	../include/macros.h ../include/Owner.h ../include/Owner.cxx
+UnivCharsetDesc.lo UnivCharsetDesc.o : UnivCharsetDesc.cxx splib.h \
+	../config.h ../include/UnivCharsetDesc.h ../include/types.h \
+	../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/Boolean.h ../include/ISet.h ../include/ISet.cxx \
+	../include/RangeMap.cxx ../include/constant.h \
+	../include/macros.h
+URLStorage.lo URLStorage.o : URLStorage.cxx splib.h ../config.h \
+	../include/URLStorage.h ../include/StorageManager.h \
+	../include/StringC.h ../include/types.h ../include/StringOf.h \
+	../include/Boolean.h ../include/StringOf.cxx \
+	../include/CharsetInfo.h ../include/UnivCharsetDesc.h \
+	../include/CharMap.h ../include/Resource.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/ISet.h ../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h URLStorageMessages.h ../include/Message.h \
+	../include/Location.h ../include/Ptr.h ../include/Ptr.cxx \
+	../include/Owner.h ../include/Owner.cxx ../include/rtti.h \
+	../include/CopyOwner.h ../include/CopyOwner.cxx \
+	../include/MessageArg.h ../include/RewindStorageObject.h \
+	../include/MessageBuilder.h ../include/macros.h
+UTF8CodingSystem.lo UTF8CodingSystem.o : UTF8CodingSystem.cxx splib.h \
+	../config.h ../include/UTF8CodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h \
+	../include/constant.h
+xentmgr_inst.lo xentmgr_inst.o : xentmgr_inst.cxx splib.h ../config.h
+XMLCodingSystem.lo XMLCodingSystem.o : XMLCodingSystem.cxx splib.h \
+	../config.h ../include/XMLCodingSystem.h \
+	../include/CodingSystem.h ../include/types.h \
+	../include/Boolean.h ../include/StringC.h ../include/StringOf.h \
+	../include/StringOf.cxx ../include/OutputByteStream.h \
+	../include/UTF8CodingSystem.h ../include/CodingSystemKit.h \
+	../include/Resource.h ../include/CharsetInfo.h \
+	../include/UnivCharsetDesc.h ../include/CharMap.h \
+	../include/CharMap.cxx ../include/RangeMap.h \
+	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
+	../include/ISet.h ../include/ISet.cxx ../include/RangeMap.cxx \
+	../include/constant.h ../include/Owner.h ../include/Owner.cxx \
+	../include/macros.h
+
+info-am:
+info: info-am
+dvi-am:
+dvi: dvi-am
+check-am: all-am
+check: check-am
+installcheck-am:
+installcheck: installcheck-am
+install-exec-am: install-libLTLIBRARIES
+install-exec: install-exec-am
+
+install-data-am:
+install-data: install-data-am
+
+install-am: all-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+install: install-am
+uninstall-am: uninstall-libLTLIBRARIES
+uninstall: uninstall-am
+all-am: Makefile $(LTLIBRARIES)
+all-redirect: all-am
+install-strip:
+	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
+installdirs:
+	$(mkinstalldirs)  $(DESTDIR)$(libdir)
+
+
+mostlyclean-generic:
+
+clean-generic:
+
+distclean-generic:
+	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+
+maintainer-clean-generic:
+	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+mostlyclean-am:  mostlyclean-libLTLIBRARIES mostlyclean-compile \
+		mostlyclean-libtool mostlyclean-tags \
+		mostlyclean-generic
+
+mostlyclean: mostlyclean-am
+
+clean-am:  clean-libLTLIBRARIES clean-compile clean-libtool clean-tags \
+		clean-generic mostlyclean-am
+
+clean: clean-am
+
+distclean-am:  distclean-libLTLIBRARIES distclean-compile \
+		distclean-libtool distclean-tags distclean-generic \
+		clean-am
+	-rm -f libtool
+
+distclean: distclean-am
+
+maintainer-clean-am:  maintainer-clean-libLTLIBRARIES \
+		maintainer-clean-compile maintainer-clean-libtool \
+		maintainer-clean-tags maintainer-clean-generic \
+		distclean-am
+	@echo "This command is intended for maintainers to use;"
+	@echo "it deletes files that may require special tools to rebuild."
+
+maintainer-clean: maintainer-clean-am
+
+.PHONY: mostlyclean-libLTLIBRARIES distclean-libLTLIBRARIES \
+clean-libLTLIBRARIES maintainer-clean-libLTLIBRARIES \
+uninstall-libLTLIBRARIES install-libLTLIBRARIES mostlyclean-compile \
+distclean-compile clean-compile maintainer-clean-compile \
+mostlyclean-libtool distclean-libtool clean-libtool \
+maintainer-clean-libtool tags mostlyclean-tags distclean-tags \
+clean-tags maintainer-clean-tags distdir info-am info dvi-am dvi check \
+check-am installcheck-am installcheck install-exec-am install-exec \
+install-data-am install-data install-am install uninstall-am uninstall \
+all-redirect all-am all installdirs mostlyclean-generic \
+distclean-generic clean-generic maintainer-clean-generic clean \
+mostlyclean distclean maintainer-clean
+
+
+.m4.cxx: 
+	$(PERL) $(top_srcdir)/instmac.pl $< >$@
+
+%.h %.cxx %.rc: %.msg
+	[ ! -f $(top_srcdir)/msggen.pl ] || $(PERL) -w $(top_srcdir)/msggen.pl $(MSGGENFLAGS) $<
+
+# Tell versions [3.59,3.63) of GNU make to not export all variables.
+# Otherwise a system limit (for SysV at least) may be exceeded.
+.NOEXPORT:

@@ -1,0 +1,1074 @@
+
+   OpenJade ChangeLog
+
+   Generated automatically by cvs2cl.pl; see
+     <URL:http://www.red-bean.com/~kfogel/cvs2cl.shtml> 
+   for more detail.
+
+2000-01-29 22:23  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/lib.dsp (opensp_1_4_branch): Add koi8-r.h to lib.dsp.
+
+2000-01-23 21:31  Peter Nillson <pnidv96@student.vxu.se>
+
+	* NEWS, doc/autoconf.htm (opensp_1_4_branch): Minor fixes.
+
+2000-01-21 22:02  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* doc/autoconf.htm: file autoconf.htm was initially added on branch
+	opensp_1_4_branch.
+
+	* doc/autoconf.htm, doc/build.htm, doc/index.htm
+	(opensp_1_4_branch): Update documenation for 1.4.
+
+2000-01-21 11:16  Peter Nillson <pnidv96@student.vxu.se>
+
+	* intl/.cvsignore (opensp_1_4_branch): Added po2tbl.sed.
+
+2000-01-20 23:39  Peter Nillson <pnidv96@student.vxu.se>
+
+	* .cvsignore, doc/.cvsignore, generic/.cvsignore,
+	include/.cvsignore, intl/.cvsignore, lib/.cvsignore,
+	nsgmls/.cvsignore, po/.cvsignore, pubtext/.cvsignore,
+	sgmlnorm/.cvsignore, spam/.cvsignore, spcat/.cvsignore,
+	spent/.cvsignore, sx/.cvsignore: file .cvsignore was initially
+	added on branch opensp_1_4_branch.
+
+	* .cvsignore, doc/.cvsignore, generic/.cvsignore,
+	include/.cvsignore, intl/.cvsignore, lib/.cvsignore,
+	nsgmls/.cvsignore, po/.cvsignore, pubtext/.cvsignore,
+	sgmlnorm/.cvsignore, spam/.cvsignore, spcat/.cvsignore,
+	spent/.cvsignore, sx/.cvsignore (opensp_1_4_branch): New file.
+
+2000-01-20 21:15  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/CharsetRegistry.h, lib/CharsetRegistry.cxx,
+	lib/CodingSystemKit.cxx, lib/Makefile.am, lib/koi8-r.h
+	(opensp_1_4_branch): Apply patch for koi8 support from
+	Growler@tula.net (Alexey V. Naidyonov).
+
+	* doc/charset.htm (opensp_1_4_branch): Mention koi8-r encoding.
+
+	* lib/koi8-r.h: file koi8-r.h was initially added on branch
+	opensp_1_4_branch.
+
+	* NEWS (opensp_1_4_branch): Document koi8-r support.
+
+2000-01-20 18:18  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am (opensp_1_4_branch): Don't rely on the
+	automake-generated dist-zip rule, provide our own which adds the -l
+	option to store text files with crlf line ends.
+
+2000-01-15 10:10  Peter Nillson <pnidv96@student.vxu.se>
+
+	* configure.in: Define all conditional preprocessor symbols to 1.
+
+2000-01-14 21:36  Peter Nillson <pnidv96@student.vxu.se>
+
+	* include/config.h.old.in (opensp_1_4_branch): SCHEME_BUILTINS:
+	Remove since unused in OpenSP.
+
+2000-01-14 18:38  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/config.h.old.in (opensp_1_4_branch): Fix PATH_SEPARATORS
+
+2000-01-13 19:56  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: More LANG_CPLUSPLUS fixes.
+
+2000-01-13 19:10  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Use AC_LANG_CPLUSPLUS throughout, don't switch back
+	and forth; don't check for const and inline; add comments to all
+	AC_DEFINEs
+
+2000-01-08 14:01  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/Makefile.am, nsgmls/Makefile.am, sgmlnorm/Makefile.am,
+	spam/Makefile.am, spcat/Makefile.am, spent/Makefile.am,
+	sx/Makefile.am: Fix building with builddir!=srcdir.
+
+2000-01-07 13:13  Peter Nillson <pnidv96@student.vxu.se>
+
+	* configure.in: AM_GNU_GETTEXT: Reenable.
+
+2000-01-07 00:58  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/ExternalId.h (opensp_1_4_branch): Add PublicId::Type
+	PublicId::type(), needed for the fpiabs module of the SGML property
+	set.
+
+2000-01-06 23:37  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/Dtd.h (opensp_1_4_branch): Added a way to iterate over
+	the rankstems, needed for implementing the rankabs module of the
+	SGML property set.
+
+2000-01-05 09:57  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am (opensp_1_4_branch): make dist updates the ChangeLog
+	now.
+
+2000-01-04 02:55  Adam Di Carlo <adam@onshore.com>
+
+	* debian/rules (opensp_1_4_branch): fix problems with cvs-build
+	target
+
+2000-01-04 00:06  Adam Di Carlo <adam@onshore.com>
+
+	* lib/Makefile.am, nsgmls/Makefile.am, sgmlnorm/Makefile.am,
+	spam/Makefile.am, spcat/Makefile.am, spent/Makefile.am,
+	sx/Makefile.am (opensp_1_4_branch): fix to check whether msggen.pl
+	exists, fixes the maintainer-clean rule
+
+	* doc/ideas.htm (opensp_1_4_branch): DTDDECL not a todo item
+	anymore
+
+2000-01-02 22:04  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in (opensp_1_4_branch): Fix tests of C++ features to
+	use AC_LANG_CPLUSPLUS.
+
+1999-12-30 21:54  Adam Di Carlo <adam@onshore.com>
+
+	* debian/opensp.postinst, debian/opensp.prerm, debian/rules
+	(opensp_1_4_branch): remove opensp postinst and prerm, not needed
+
+1999-12-30 19:22  Adam Di Carlo <adam@onshore.com>
+
+	* debian/rules (opensp_1_4_branch): correct dh_undocumented
+	invokation
+
+1999-12-30 17:26  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am, doc/index.htm, doc/new.htm (opensp_1_4_branch):
+	Install some top-level doc files and link NEWS from index.htm.
+
+1999-12-30 13:49  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/Makefile.am (opensp_1_4_branch): Use -version-info instead of
+	--version-info.
+
+1999-12-30 04:43  Adam Di Carlo <adam@onshore.com>
+
+	* debian/opensp.doc-base (opensp_1_4_branch): fix doc-base file
+
+1999-12-30 02:18  Adam Di Carlo <adam@onshore.com>
+
+	* debian/changelog, debian/rules (opensp_1_4_branch): man pages
+	link to undocumented
+
+	* debian/README.Debian (opensp_1_4_branch): replaced with
+	README.Debian.in
+
+1999-12-30 00:37  Adam Di Carlo <adam@onshore.com>
+
+	* debian/README.Debian.in: file README.Debian.in was initially
+	added on branch opensp_1_4_branch.
+
+	* debian/libosp1.README.Debian.in: file libosp1.README.Debian.in
+	was initially added on branch opensp_1_4_branch.
+
+	* debian/libosp1.postinst: file libosp1.postinst was initially
+	added on branch opensp_1_4_branch.
+
+	* debian/README.Debian.in, debian/changelog, debian/control,
+	debian/libosp1.README.Debian.in, debian/libosp1.postinst,
+	debian/opensp.postinst, debian/opensp.prerm, debian/rules
+	(opensp_1_4_branch): get everything ship-shape for Debian builds;
+	tested
+
+1999-12-27 15:33  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/lib.dsp (opensp_1_4_branch): Remove
+	StringVectorMessageArg.{h,cxx}.
+
+1999-12-27 15:22  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/MessageArg.h, lib/Attribute.cxx, lib/Makefile.am,
+	lib/MessageArg.cxx, lib/StringVectorMessageArg.cxx,
+	lib/StringVectorMessageArg.h, lib/parseInstance.cxx, lib/splibpch.h
+	(opensp_1_4_branch): Integrate StringVectorMessageArg in
+	Message.h/Message.cxx.
+
+1999-12-27 14:19  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* pubtext/Makefile.am (opensp_1_4_branch): Add opensp-implied.dcl
+	to the distribution.
+
+1999-12-27 14:12  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in (opensp_1_4_branch): Check for ranlib.
+
+1999-12-24 20:48  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* spcat/spcat_inst.m4 (opensp_1_4_branch): Fix an include.
+
+1999-12-23 20:41  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* NEWS, configure.in (opensp_1_4_branch): Bump version number to
+	1.4-pre3.
+
+1999-12-23 06:30  Adam Di Carlo <adam@onshore.com>
+
+	* debian/copyright.Debian (opensp_1_4_branch): new file
+
+	* debian/copyright.Debian: file copyright.Debian was initially
+	added on branch opensp_1_4_branch.
+
+1999-12-22 20:09  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* msggen.pl.in (opensp_1_4_branch): replace "config.h" by "splib.h"
+	in generated .cxx file.
+
+1999-12-22 20:01  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* SP.dsw, include/config.h.old.in, lib/CmdLineApp.cxx, po/de.po,
+	spcat/spcat.dsp (opensp_1_4_branch): More Win32 build fixes.
+
+1999-12-22 19:47  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acinclude.m4, configure.in (opensp_1_4_branch): Add test for
+	typename.
+
+1999-12-22 19:42  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h (opensp_1_4_branch): Move definition of
+	SP_HAVE_TYPENAME before first use.
+
+1999-12-22 18:44  Adam Di Carlo <adam@onshore.com>
+
+	* pubtext/opensp-implied.dcl: file opensp-implied.dcl was initially
+	added on branch opensp_1_4_branch.
+
+	* pubtext/opensp-implied.dcl (opensp_1_4_branch): new file
+
+1999-12-22 08:26  Adam Di Carlo <adam@onshore.com>
+
+	* debian/README.Debian: file README.Debian was initially added on
+	branch opensp_1_4_branch.
+
+	* debian/control: file control was initially added on branch
+	opensp_1_4_branch.
+
+	* debian/opensp.doc-base: file opensp.doc-base was initially added
+	on branch opensp_1_4_branch.
+
+	* debian/README.Debian, debian/changelog, debian/control,
+	debian/opensp.doc-base, debian/opensp.postinst,
+	debian/opensp.prerm, debian/rules (opensp_1_4_branch): add debian
+	files
+
+	* debian/opensp.postinst: file opensp.postinst was initially added
+	on branch opensp_1_4_branch.
+
+	* debian/changelog: file changelog was initially added on branch
+	opensp_1_4_branch.
+
+	* debian/opensp.prerm: file opensp.prerm was initially added on
+	branch opensp_1_4_branch.
+
+	* debian/rules: file rules was initially added on branch
+	opensp_1_4_branch.
+
+1999-12-22 07:56  Adam Di Carlo <adam@onshore.com>
+
+	* configure.in (opensp_1_4_branch): check for locale.h header,
+	needed in intl/
+
+1999-12-21 22:30  Peter Nillson <pnidv96@student.vxu.se>
+
+	* configure.in, include/config.h.old (opensp_1_4_branch): Generate
+	include/config.h.old by autoconf.
+
+	* include/config.h.old.in: file config.h.old.in was initially added
+	on branch opensp_1_4_branch.
+
+	* include/config.h.old, include/config.h.old.in
+	(opensp_1_4_branch): Renamed config.h.old -> config.h.old.in.
+
+1999-12-21 20:53  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in, lib/CmdLineApp.cxx, po/Makefile.in.in
+	(opensp_1_4_branch): Introduce new config variable
+	SP_MESSAGE_DOMAIN and use it instead of SP_VERSION for the message
+	domain in CmdLineApp and po/.
+
+1999-12-21 19:33  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, acinclude.m4, configure.in, include/SubstTable.cxx,
+	include/SubstTable.h, include/config.h.old, lib/CmdLineApp.cxx,
+	lib/MessageTable.cxx, lib/ParserState.cxx, lib/ParserState.h
+	(opensp_1_4_branch): Change the message domain back to a hardcoded
+	"sp", add autoconf checks for mutable and use it in cases where
+	James left a FIXME recommending it.
+
+1999-12-21 18:29  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* NEWS (opensp_1_4_branch):	Update version number in NEWS (to
+	make make distcheck happy).
+
+1999-12-21 17:32  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/config.h.old (opensp_1_4_branch): Change version number
+	to be in sync with configure.in.
+
+1999-12-21 17:26  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/lib.dsp (opensp_1_4_branch): Add forgotten entry for
+	EntityAppMessages.rc.
+
+1999-12-21 17:21  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* SP.dsw, msggen.pl.in, sp-generate.mak, lib/lib.dsp,
+	sgmlnorm/sgmlnorm.dsp, spcat/spcat.dsp, spent/spent.dsp
+	(opensp_1_4_branch): Incorporate more win32 build fixes proposed by
+	Kendall Clark.
+
+1999-12-16 23:07  Peter Nillson <pnidv96@student.vxu.se>
+
+	* Makefile.am, msggen.pl.in: Merge with 1.4 branch.
+
+	* Makefile.am (opensp_1_4_branch): EXTRA_DIST: Added msggen.pl.
+
+	* msggen.pl.in (opensp_1_4_branch): Correct generated .po file
+	header.
+
+1999-12-16 22:11  Peter Nillson <pnidv96@student.vxu.se>
+
+	* lib/lib.dsp, lib/lib.rc, spcat/spcat.dsp, SP.dsw,
+	include/Attribute.h, include/Message.h, include/Options.cxx,
+	lib/app_inst.m4, lib/assert.cxx: MSVC (and other) small fixes.
+
+1999-12-16 22:05  Peter Nillson <pnidv96@student.vxu.se>
+
+	* SP.dsw, include/Attribute.h, include/Message.h,
+	include/Options.cxx, lib/app_inst.m4, lib/assert.cxx, lib/lib.dsp,
+	lib/lib.rc, spcat/spcat.dsp (opensp_1_4_branch): MSVC (and some
+	other) small fixes.
+
+1999-12-15 07:23  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/lib.dsp (opensp_1_4_branch): Remove references to VERSION and
+	version.h.
+
+1999-12-15 06:45  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* sp-generate.mak (opensp_1_4_branch): Create msggen.pl from
+	msggen.pl.in.
+
+	* lib/lib.dsp, nsgmls/nsgmls.dsp, sgmlnorm/sgmlnorm.dsp,
+	spam/spam.dsp, spcat/spcat.dsp, spent/spent.dsp, sx/sx.dsp
+	(opensp_1_4_branch): Correct msggen calls, try to include all new
+	.msg files.
+
+1999-12-15 06:32  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* nsgmls/nsgmls.dsp, spam/spam.dsp, sx/sx.dsp (opensp_1_4_branch):
+	Correct more references to instmac.pl.
+
+1999-12-14 21:21  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/app_inst.m4, lib/lib.dsp (opensp_1_4_branch): Win fixes.
+
+1999-12-14 20:15  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/config.h.old, lib/CmdLineApp.cxx (opensp_1_4_branch):
+	Improve fix for SP_T problem.
+
+1999-12-14 19:09  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/app_inst.m4 (opensp_1_4_branch): Add some instantiations.
+
+1999-12-14 18:57  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/config.h.old, lib/CmdLineApp.cxx (opensp_1_4_branch):
+	Remove SP_T on SP_VERSION and SP_PACKAGE, since it works only on
+	literal strings. This means that the autoconf build won't work on
+	wide systems, but that is no problem, since wide systems are win
+	only.
+
+1999-12-14 16:19  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* NEWS, sp-generate.mak, include/config.h.old, lib/CmdLineApp.cxx
+	(opensp_1_4_branch): Fixes for win build.
+
+1999-12-13 22:41  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* build-win32.bat (opensp_1_4_branch): Remove references to jade.
+	Untested.
+
+1999-12-13 07:51  Peter Nillson <pnidv96@student.vxu.se>
+
+	* po/sv.po: Merge from 1.4 branch.
+
+	* po/sv.po (opensp_1_4_branch): More translations.
+
+1999-12-12 09:18  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in (opensp_1_4_branch): Update version number to
+	1.4-pre2
+
+1999-12-12 09:14  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/Makefile.am (opensp_1_4_branch): Change library version to
+	1.0.0.
+
+1999-12-12 08:43  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Change version to 1.5-devel
+
+1999-12-11 21:34  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in, lib/Group.cxx, lib/Param.cxx,
+	lib/ParserMessages.msg, lib/TokenMessageArg.cxx, lib/parseSd.cxx,
+	po/de.po: Remove delimEnd message, change version number to
+	1.4-pre1.
+
+1999-12-11 00:41  Peter Nillson <pnidv96@student.vxu.se>
+
+	* po/sv.po: Many new translations.
+
+1999-12-10 15:38  Peter Nillson <pnidv96@student.vxu.se>
+
+	* lib/CmdLineApp.cxx: (cmdLineApp::usage): Create output stream
+	with default coding system.
+
+1999-12-09 23:32  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* doc/archform.htm, doc/build.htm, doc/catalog.htm,
+	doc/charset.htm, doc/features.htm, doc/generic.htm, doc/ideas.htm,
+	doc/index.htm, doc/new.htm, doc/nsgmls.htm, doc/sgmldecl.htm,
+	doc/sgmlnorm.htm, doc/sgmlsout.htm, doc/spam.htm, doc/spcat.htm,
+	doc/spent.htm, doc/sx.htm, doc/sysdecl.htm, doc/sysid.htm,
+	doc/xml.htm: Updated docs for long options, removed james' mail
+	address throughout.
+
+1999-12-09 18:45  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* NEWS: Mention --help.
+
+1999-12-09 18:39  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/CmdLineApp.h, lib/CmdLineApp.cxx,
+	lib/CmdLineAppMessages.msg, nsgmls/NsgmlsMessages.msg,
+	nsgmls/nsgmls.cxx, po/de.po, sgmlnorm/SgmlnormMessages.msg,
+	sgmlnorm/sgmlnorm.cxx, spam/SpamMessages.msg, spam/spam.cxx,
+	spcat/SpcatMessages.msg, spcat/spcat.cxx, spent/SpentMessages.msg,
+	spent/spent.cxx, sx/SxMessages.msg, sx/sx.cxx: Add info lines to
+	the usage messages, extracted from the html docs. Change the
+	CmdLineApp interface once more: info lines now have one argument,
+	the program name.
+
+1999-12-09 15:58  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* intl/Makefile.in, intl/VERSION: Add the VERSION file, so we know
+	which version of GNU gettext we use.
+
+1999-12-09 11:25  Peter Nillson <pnidv96@student.vxu.se>
+
+	* lib/CmdLineAppMessages.msg: (bHelp, eHelp): Clarified
+	documentation.
+
+1999-12-09 08:54  Peter Nillson <pnidv96@student.vxu.se>
+
+	* NEWS: Update.
+
+1999-12-08 21:23  Peter Nillson <pnidv96@student.vxu.se>
+
+	* po/Makefile.in.in: DISTFILES: Remove non-existent ChangeLog file.
+
+	* lib/Makefile.am: Typo fix.
+
+	* intl/Makefile.in: Deps on non-existent files removed.
+	check-install target added.
+
+1999-12-08 07:45  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/Makefile.am, nsgmls/Makefile.am, sx/Makefile.am: Remove
+	unnecessary dependencies.
+
+1999-12-08 00:53  Peter Nillson <pnidv96@student.vxu.se>
+
+	* msggen.pl, msggen.pl.in: Generate msggen.pl from msggen.pl.in.
+	Add header to generated .po file.
+
+	* lib/CmdLineApp.cxx: CmdLineApp::usage(): Clean up. Avoid using
+	messages in some places.
+
+	* configure.in: AC_OUTPUT: Generate msggen.pl.
+
+	* Makefile.am: BUILT_SOURCES: Add msggen.pl (remove from
+	EXTRA_DIST)
+
+1999-12-07 13:19  Peter Nillson <pnidv96@student.vxu.se>
+
+	* include/CmdLineApp.h, lib/CmdLineApp.cxx,
+	lib/CmdLineAppMessages.msg: CmdLineApp::registerOption(): Added
+	back the old form registering an undocumented option.
+
+1999-12-07 08:50  Peter Nillson <pnidv96@student.vxu.se>
+
+	* po/sv.po: New translations added.
+
+	* lib/CmdLineAppMessages.msg: tryHelpOptionFor INfo added.
+
+	* include/CmdLineApp.h, lib/CmdLineApp.cxx: Help message lokks more
+	like GNU tools. --help prints help message on stdout and exits
+	successfully.  Help message lokks more like GNU tools. --help
+	prints help message on stdout and exits successfully.
+
+1999-12-07 08:35  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/CmdLineApp.cxx: Make sure arg names in usage() get
+	translated.
+
+1999-12-06 16:09  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* po/de.po: More german translations.
+
+1999-12-06 15:54  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/CmdLineApp.h, lib/CmdLineApp.cxx,
+	lib/CmdLineAppMessages.msg, lib/EntityApp.cxx,
+	lib/EntityAppMessages.msg, lib/ParserApp.cxx,
+	lib/ParserAppMessages.msg, sgmlnorm/sgmlnorm.cxx, sx/sx.cxx: Add a
+	way to add information before the options list in usage() output,
+	some options got shorter names, resolved option name conficts, some
+	doc rewording.
+
+1999-12-06 14:28  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acinclude.m4, configure.in, include/CmdLineApp.h,
+	lib/CmdLineApp.cxx, lib/EntityApp.cxx, spam/spam.cxx: Fix bug in
+	redefining cmdline options.
+
+1999-12-05 22:49  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/EntityAppMessages.msg, sgmlnorm/SgmlnormMessages.msg,
+	spcat/SpcatMessages.msg, spent/SpentMessages.msg: add new messages
+	for translatable usage messages.
+
+	* include/CmdLineApp.h, include/MessageFormatter.h,
+	include/Options.cxx, include/Options.h, include/sptchar.h,
+	lib/CmdLineApp.cxx, lib/CmdLineAppMessages.msg, lib/EntityApp.cxx,
+	lib/Makefile.am, lib/MessageFormatter.cxx, lib/ParserApp.cxx,
+	lib/ParserAppMessages.msg, nsgmls/NsgmlsMessages.msg,
+	nsgmls/nsgmls.cxx, po/POTFILES.in, sgmlnorm/Makefile.am,
+	sgmlnorm/sgmlnorm.cxx, spam/SpamMessages.msg, spam/spam.cxx,
+	spcat/Makefile.am, spcat/spcat.cxx, spent/Makefile.am,
+	spent/spent.cxx, sx/SxMessages.msg, sx/sx.cxx: Revamp long options
+	and usage message.
+
+1999-12-04 13:07  Peter Nillson <pnidv96@student.vxu.se>
+
+	* po/sv.po: Updated after Matthias msggen.pl changes.
+
+1999-12-03 23:30  Peter Nillson <pnidv96@student.vxu.se>
+
+	* configure.in: ALL_LINGUAS: Added Swedish translation.
+
+	* po/sv.po: First Swedish messages. Most missing, and many
+	translated need review.
+
+1999-12-03 18:48  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/Makefile.am: Typo fix.
+
+1999-12-03 17:14  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* msggen.pl, lib/Makefile.am, lib/ParserMessages.msg,
+	nsgmls/Makefile.am, po/Makefile.in.in, po/POTFILES.in, po/de.po,
+	spam/Makefile.am, sx/Makefile.am: Improve the build process for
+	I18N: no more intermediate .po files, msggen.pl now directly
+	produces OpenSP.pot from the .msg files when called with -p
+	OpenSP.pot.
+
+1999-12-02 22:06  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* po/de.po: Latest and greatest translations.
+
+1999-12-01 22:01  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* NEWS, lib/ParserMessages.msg, po/de.po: More German translations,
+	fix some glitches in the English messages.
+
+1999-12-01 19:41  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* spent/spent.cxx, sgmlnorm/sgmlnorm.cxx, sx/sx.cxx: Add a needed
+	include.
+
+	* lib/ParserApp.cxx, sx/sx.cxx: Typo fix.
+
+	* nsgmls/nsgmls.cxx, sgmlnorm/sgmlnorm.cxx, spam/spam.cxx,
+	spcat/spcat.cxx, spent/spent.cxx, sx/sx.cxx: Add long variants for
+	all options. This was done in a hurry and the names may be
+	improvable.
+
+1999-12-01 19:27  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/EntityApp.cxx, lib/ParserApp.cxx: More long options.
+
+1999-12-01 19:08  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* include/CmdLineApp.h, include/Options.cxx, include/Options.h,
+	lib/CmdLineApp.cxx, lib/CmdLineAppMessages.msg, po/de.po: Long
+	options. Currently only CmdLineApp has some.
+
+1999-12-01 00:18  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* po/de.po: More german translations.
+
+1999-11-30 22:25  Peter Nillson <pnidv96@student.vxu.se>
+
+	* acconfig.h: Add HAVE_GETTEXT and #define SP_ANSI_LIB to 1 to
+	match OJ definition.
+
+1999-11-30 19:16  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/ParserMessages.msg: Remove some unwanted trailing spaces in
+	messages.
+
+1999-11-30 18:52  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/Makefile.am, nsgmls/Makefile.am, spam/Makefile.am,
+	sx/Makefile.am: Add rules for .rc and .po files.
+
+1999-11-30 18:22  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, configure.in, intl/po2tbl.sed, lib/MessageTable.cxx:
+	Remove a generated file in intl/, cosmetic fixes.
+
+1999-11-30 18:04  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* nsgmls/RastEventHandlerMessages.msg: Fix a typo.
+
+1999-11-30 17:46  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h: Re-add HAVE_GETTEXT which was accidentally removed.
+
+1999-11-29 17:37  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/MessageTable.cxx: Make it compile.
+
+1999-11-29 17:32  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, acinclude.m4, configure.in, include/MessageTable.h,
+	lib/CmdLineApp.cxx, lib/MessageTable.cxx: support ./configure
+	--disable-nls, use bindtextdomain() to find translated messages
+	where they are installed.
+
+1999-11-29 16:49  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* po/de.po: Remove illegal linebreak
+
+1999-11-29 16:33  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am, configure.in, include/Makefile.am: Generate config.h
+	at top level, since GNU gettext depends on it.
+
+1999-11-29 15:29  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* ABOUT-NLS: Apparently automake wants this to exist.
+
+1999-11-28 22:46  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in, po/de.po: Add beginning of german translation for
+	OpenSP.
+
+	* lib/Entity.cxx, lib/EntityManagerMessages.msg,
+	lib/ParserMessages.msg, lib/StdioStorageMessages.msg: Message
+	uniformity improvements.
+
+1999-11-27 01:00  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Cosmetic fix.
+
+1999-11-27 00:51  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h: Add gettext defines.
+
+	* Makefile.am, configure.in, msggen.pl, intl/Makefile.in,
+	intl/bindtextdom.c, intl/cat-compat.c, intl/dcgettext.c,
+	intl/dgettext.c, intl/finddomain.c, intl/gettext.c, intl/gettext.h,
+	intl/gettextP.h, intl/hash-string.h, intl/intl-compat.c,
+	intl/libgettext.h, intl/linux-msg.sed, intl/loadmsgcat.c,
+	intl/localealias.c, intl/po2tbl.sed, intl/po2tbl.sed.in,
+	intl/textdomain.c, intl/xopen-msg.sed, lib/Makefile.am,
+	nsgmls/Makefile.am, po/Makefile.in.in, po/POTFILES.in,
+	spam/Makefile.am, sx/Makefile.am: First cut at GNU gettext
+	integration.
+
+1999-11-26 10:07  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* doc/catalog.htm, doc/nsgmls.htm, doc/xml.htm: Update links to
+	WebSGML adaptations.
+
+1999-11-23 20:52  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, acinclude.m4, configure.in, include/config.h.old,
+	lib/EntityApp.cxx: Some define cleanups.
+
+1999-11-22 22:40  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* README, doc/nsgmls.htm, lib/CatalogMessages.msg: Cleanups.
+
+1999-11-22 17:21  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* FILES, NEWS, japan.sgmldecl, doc/nsgmls.htm, pubtext/Makefile.am,
+	pubtext/japan.dcl: Document -n and -x, move japan.sgmldecl to
+	pubtext/japan.dcl.
+
+1999-11-22 16:37  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* sp-generate.mak: Try to adapt win build. Here we go again: Win
+	users, test this !!!
+
+1999-11-21 02:27  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* msggen.pl, include/Message.h, include/MessageReporter.h,
+	include/MessageTable.h, lib/CmdLineApp.cxx, lib/Makefile.am,
+	lib/Message.cxx, lib/MessageReporter.cxx,
+	lib/MessageReporterMessages.msg, lib/MessageTable.cxx,
+	lib/ParserApp.cxx, nsgmls/Makefile.am, spam/Makefile.am,
+	spcat/Makefile.am, sx/Makefile.am: Changes to the message reporting
+	system: make the message domain for gettext settable and set it to
+	OpenSP for all messages, make the `relevant clauses' info and
+	message numbers available via -x and -n; related changes to
+	msggen.pl.
+
+1999-11-20 22:23  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/ParserMessages.msg: Move a comment.
+
+1999-11-15 21:19  Peter Nillson <pnidv96@student.vxu.se>
+
+	* configure.in, lib/CmdLineApp.cxx: Change Package to SP_PACKAGE
+	and VERSION to SP_VERSION to avoid conflicts, since
+	include/config.h gets included by users.
+
+1999-11-14 14:03  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Remove AC_CONFIG_AUX_DIR(config). All aux files are
+	toplevel now (automake prefers this).
+
+1999-11-14 12:30  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am: Remove all from SUBDIRS.
+
+1999-11-14 12:22  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* all/Makefile.am: Add a forgotten Makefile.
+
+1999-11-14 00:40  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am: Remove unneccessary EXTRA_DIST stuff (automake knows
+	to include the config stuff if it is toplevel).
+
+1999-11-13 22:13  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am, acconfig.h, acinclude.m4, configure.in,
+	doc/Makefile.am, generic/Makefile.am, include/Makefile.am,
+	lib/Makefile.am, nsgmls/Makefile.am, pubtext/Makefile.am,
+	sgmlnorm/Makefile.am, spam/Makefile.am, spcat/Makefile.am,
+	spent/Makefile.am, sx/Makefile.am: More C++ autoconf tests, some
+	caching fixes in configure, add windows-only stuff to distribution,
+	add dist-zip target for windows distribution.
+
+1999-11-12 21:50  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acinclude.m4, configure.in: remove unneeded test for RTTI.
+
+	* acinclude.m4: Fix a typo.
+
+1999-11-12 21:45  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, configure.in, include/Vector.cxx: Remove
+	SP_QUAL_TEMPLATE_DTOR_BROKEN, since the macro DTOR() whose
+	definition it influences is unused.
+
+1999-11-12 21:09  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Add test for `fancy' new_handler.
+
+1999-11-12 18:48  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Add forgotten type check.
+
+1999-11-12 18:15  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/ExtendEntityManager.cxx: Fix a typo·
+
+1999-11-12 17:17  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, acinclude.m4, configure.in,
+	lib/DtdDeclEventHandler.cxx, lib/DtdDeclEventHandler.h: Remove
+	erroneous SP_API on internal headers, add test for placement
+	operator delete.
+
+1999-11-11 21:45  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* instmac.pl, lib/instmac.pl: Move instmac.pl to toplevel.
+
+1999-11-11 19:09  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* README: Remove pointers to removed files.
+
+1999-11-11 17:54  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* configure.in: Some reorganization.
+
+1999-11-11 17:03  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* lib/CmdLineApp.cxx: Remove forgotten include of version.h
+
+1999-11-11 16:29  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.am, VERSION, configure.in, lib/CmdLineApp.cxx,
+	lib/CmdLineAppMessages.msg, lib/Makefile.am, lib/mkversion.pl,
+	nsgmls/Makefile.am, spam/Makefile.am, spcat/Makefile.am,
+	sx/Makefile.am: Directly use the #defined VERSION instead of
+	producing two intermediate files.
+
+1999-11-10 00:51  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, configure.in, lib/memcmp.c: Add better thread support
+	detection, add check for memcmp with replacement.
+
+1999-11-09 21:15  Peter Nillson <pnidv96@student.vxu.se>
+
+	* Makefile.am: EXTRA_DIST: Distribute files in config/.
+
+1999-11-09 11:07  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, configure.in: A few more checks for #defines found by
+	ifnames.
+
+1999-11-09 10:16  Peter Nillson <pnidv96@student.vxu.se>
+
+	* nsgmls/Makefile.am, sgmlnorm/Makefile.am, spent/Makefile.am,
+	sx/Makefile.am: INCLUDES: Added "-I" before directory names.
+
+1999-11-09 09:20  Peter Nillson <pnidv96@student.vxu.se>
+
+	* spam/Makefile.am, spcat/Makefile.am: INCLUDES: Add "-I" before
+	include path.
+
+1999-11-08 16:29  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, doc/Makefile, nsgmls/Makefile.am,
+	sgmlnorm/Makefile.am, spam/Makefile.am, spcat/Makefile.am,
+	spent/Makefile.am, sx/Makefile.am: More fixes, it should actually
+	compile and work now.
+
+1999-11-08 14:53  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, acinclude.m4, configure.in: Added some cxx checks
+	found in the autoconf macro archive.
+
+1999-11-07 23:04  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* acconfig.h, configure.in, include/Makefile.am, include/config.h,
+	include/config.h.old, lib/Makefile.am, nsgmls/Makefile.am: Initial
+	attempt to let configure create config.h.
+
+1999-11-07 20:52  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* AUTHORS, Makefile.am, Makefile.comm.in, Makefile.in,
+	Makefile.lib.CC, Makefile.lib.in, Makefile.lib.sun,
+	Makefile.prog.in, Makefile.wat, NEWS, README, configure,
+	configure.in, config/config.guess, config/config.sub,
+	config/install-sh, config/ltconfig, config/ltmain.sh,
+	doc/Makefile.am, generic/Makefile.am, include/Makefile.am,
+	lib/Makefile.am, lib/Makefile.sub, nsgmls/Makefile.am,
+	nsgmls/Makefile.sub, pubtext/Makefile.am, sgmlnorm/Makefile.am,
+	sgmlnorm/Makefile.sub, spam/Makefile.am, spam/Makefile.sub,
+	spcat/Makefile.am, spcat/Makefile.sub, spent/Makefile.am,
+	spent/Makefile.sub, sx/Makefile.am, sx/Makefile.sub: First attempt
+	to automakify OpenSP.
+
+1999-11-07 20:15  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* doc/xmlwarn.htm: Add forgotten file.
+
+1999-11-06 13:10  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.in, configure, configure.in, config/aclocal.m4,
+	config/configure.in: Install headers in $(includedir)/OpenSP, move
+	configure.in to toplevel, remove generated file aclocal.m4.
+
+1999-11-04 22:35  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.comm.in, config/configure.in: Define top_builddir in
+	Makefile.comm.in (needed by AM_PROG_LIBTOOL), protect AC_REVISION
+	argument in configure.in (otherwise the relevant information
+	doesn't make it into configure).
+
+1999-11-04 21:48  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* Makefile.comm.in, config/configure.in: Initial fixes.
+
+1999-11-04 08:35  Matthias Clasen <clasen@mathematik.uni-freiburg.de>
+
+	* COPYING, FILES, Makefile.comm.in, Makefile.in, Makefile.lib.CC,
+	Makefile.lib.in, Makefile.lib.sun, Makefile.prog.in, Makefile.wat,
+	README, SP.dsw, SP.mak, VERSION, build-win32.bat, configure,
+	japan.sgmldecl, msggen.pl, sp-generate.mak, sunfix.sh, all/README,
+	all/all.dsp, config/aclocal.m4, config/config.guess,
+	config/config.sub, config/configure.in, config/install-sh,
+	config/ltconfig, config/ltmain.sh, doc/Makefile, doc/archform.htm,
+	doc/build.htm, doc/catalog, doc/catalog.htm, doc/charset.htm,
+	doc/features.htm, doc/generic.htm, doc/ideas.htm, doc/index.htm,
+	doc/new.htm, doc/nsgmls.htm, doc/sgmldecl.htm, doc/sgmlnorm.htm,
+	doc/sgmlsout.htm, doc/spam.htm, doc/spcat.htm, doc/spent.htm,
+	doc/sx.htm, doc/sysdecl.htm, doc/sysid.htm, doc/xml.htm,
+	generic/EventGenerator.h, generic/ParserEventGeneratorKit.h,
+	generic/SGMLApplication.h, include/Allocator.h,
+	include/ArcEngine.h, include/Attribute.h, include/Attributed.h,
+	include/Big5CodingSystem.h, include/Boolean.h, include/CharMap.cxx,
+	include/CharMap.h, include/CharsetDecl.h, include/CharsetInfo.h,
+	include/CharsetRegistry.h, include/CmdLineApp.h,
+	include/CodingSystem.h, include/CodingSystemKit.h,
+	include/ConsoleOutput.h, include/ContentState.h,
+	include/ContentToken.h, include/CopyOwner.cxx, include/CopyOwner.h,
+	include/DescriptorManager.h, include/Dtd.h,
+	include/EUCJPCodingSystem.h, include/ElementType.h,
+	include/Entity.h, include/EntityApp.h, include/EntityCatalog.h,
+	include/EntityDecl.h, include/EntityManager.h,
+	include/ErrnoMessageArg.h, include/ErrorCountEventHandler.h,
+	include/Event.h, include/EventsWanted.h,
+	include/ExtendEntityManager.h, include/ExternalId.h,
+	include/Fixed2CodingSystem.h, include/GenericEventHandler.h,
+	include/Hash.h, include/HashTable.cxx, include/HashTable.h,
+	include/HashTableItemBase.cxx, include/HashTableItemBase.h,
+	include/IList.h, include/IListBase.h, include/IListIter.h,
+	include/IListIterBase.h, include/IQueue.cxx, include/IQueue.h,
+	include/ISet.cxx, include/ISet.h, include/ISetIter.h,
+	include/IdentityCodingSystem.h, include/InputSource.h,
+	include/InternalInputSource.h, include/Link.h,
+	include/LinkProcess.h, include/List.cxx, include/List.h,
+	include/ListIter.h, include/LiteralStorage.h, include/Location.h,
+	include/Lpd.h, include/Markup.h, include/Message.h,
+	include/MessageArg.h, include/MessageBuilder.h,
+	include/MessageEventHandler.h, include/MessageFormatter.h,
+	include/MessageReporter.h, include/MessageTable.h, include/Mode.h,
+	include/NCVector.h, include/NCVector.sed, include/Named.h,
+	include/NamedResource.h, include/NamedResourceTable.h,
+	include/NamedTable.h, include/Notation.h,
+	include/NotationStorage.h, include/OpenElement.h,
+	include/Options.cxx, include/Options.h, include/OutputByteStream.h,
+	include/OutputCharStream.h, include/Owner.cxx, include/Owner.h,
+	include/OwnerTable.cxx, include/OwnerTable.h, include/ParserApp.h,
+	include/ParserOptions.h, include/PointerTable.cxx,
+	include/PointerTable.h, include/PosixStorage.h, include/Ptr.cxx,
+	include/Ptr.h, include/RangeMap.cxx, include/RangeMap.h,
+	include/Resource.h, include/RewindStorageObject.h,
+	include/SJISCodingSystem.h, include/SOEntityCatalog.h,
+	include/Sd.h, include/SdText.h, include/SearchResultMessageArg.h,
+	include/SgmlParser.h, include/ShortReferenceMap.h,
+	include/StdioStorage.h, include/StorageManager.h,
+	include/StringC.h, include/StringOf.cxx, include/StringOf.h,
+	include/StringResource.h, include/SubstTable.cxx,
+	include/SubstTable.h, include/Syntax.h, include/Text.h,
+	include/TranslateCodingSystem.h, include/TypeId.h,
+	include/URLStorage.h, include/UTF8CodingSystem.h,
+	include/UnicodeCodingSystem.h, include/UnivCharsetDesc.h,
+	include/Vector.cxx, include/Vector.h, include/Win32CodingSystem.h,
+	include/WinApp.h, include/WinInetStorage.h,
+	include/XMLCodingSystem.h, include/XcharMap.cxx,
+	include/XcharMap.h, include/config.h, include/constant.h,
+	include/macros.h, include/rtti.h, include/sptchar.h,
+	include/types.h, include/xnew.h, lib/Allocator.cxx,
+	lib/ArcEngine.cxx, lib/ArcEngineMessages.msg, lib/ArcProcessor.h,
+	lib/Attribute.cxx, lib/Big5CodingSystem.cxx, lib/CatalogEntry.h,
+	lib/CatalogMessages.msg, lib/CharsetDecl.cxx, lib/CharsetInfo.cxx,
+	lib/CharsetRegistry.cxx, lib/CmdLineApp.cxx,
+	lib/CmdLineAppMessages.msg, lib/CodingSystem.cxx,
+	lib/CodingSystemKit.cxx, lib/ConsoleOutput.cxx,
+	lib/ContentState.cxx, lib/ContentToken.cxx,
+	lib/DescriptorManager.cxx, lib/Dtd.cxx,
+	lib/DtdDeclEventHandler.cxx, lib/DtdDeclEventHandler.h,
+	lib/EUCJPCodingSystem.cxx, lib/ElementType.cxx, lib/Entity.cxx,
+	lib/EntityApp.cxx, lib/EntityCatalog.cxx, lib/EntityDecl.cxx,
+	lib/EntityManager.cxx, lib/EntityManagerMessages.msg,
+	lib/EquivClass.h, lib/ErrnoMessageArg.cxx,
+	lib/ErrorCountEventHandler.cxx, lib/Event.cxx,
+	lib/EventGenerator.cxx, lib/EventQueue.h,
+	lib/ExtendEntityManager.cxx, lib/ExternalId.cxx,
+	lib/Fixed2CodingSystem.cxx, lib/GenericEventHandler.cxx,
+	lib/Group.cxx, lib/Group.h, lib/Hash.cxx, lib/IListBase.cxx,
+	lib/Id.cxx, lib/Id.h, lib/IdentityCodingSystem.cxx,
+	lib/InputSource.cxx, lib/InternalInputSource.cxx, lib/Link.cxx,
+	lib/LinkProcess.cxx, lib/LiteralStorage.cxx, lib/Location.cxx,
+	lib/Lpd.cxx, lib/LpdEntityRef.h, lib/Makefile.sub, lib/Markup.cxx,
+	lib/MarkupScan.h, lib/Message.cxx, lib/MessageArg.cxx,
+	lib/MessageEventHandler.cxx, lib/MessageFormatter.cxx,
+	lib/MessageFormatterMessages.msg, lib/MessageReporter.cxx,
+	lib/MessageReporterMessages.msg, lib/MessageTable.cxx,
+	lib/ModeInfo.cxx, lib/ModeInfo.h, lib/Mutex.h, lib/NameToken.h,
+	lib/Notation.cxx, lib/NotationStorage.cxx,
+	lib/NumericCharRefOrigin.cxx, lib/NumericCharRefOrigin.h,
+	lib/OffsetOrderedList.cxx, lib/OffsetOrderedList.h,
+	lib/OpenElement.cxx, lib/OutputByteStream.cxx,
+	lib/OutputCharStream.cxx, lib/OutputState.cxx, lib/OutputState.h,
+	lib/Param.cxx, lib/Param.h, lib/Parser.cxx, lib/Parser.h,
+	lib/ParserApp.cxx, lib/ParserAppMessages.msg,
+	lib/ParserEventGeneratorKit.cxx, lib/ParserMessages.msg,
+	lib/ParserOptions.cxx, lib/ParserState.cxx, lib/ParserState.h,
+	lib/Partition.cxx, lib/Partition.h, lib/PosixStorage.cxx,
+	lib/PosixStorageMessages.msg, lib/Priority.h, lib/Recognizer.cxx,
+	lib/Recognizer.h, lib/RewindStorageObject.cxx,
+	lib/SGMLApplication.cxx, lib/SJISCodingSystem.cxx,
+	lib/SOEntityCatalog.cxx, lib/Sd.cxx, lib/SdFormalError.h,
+	lib/SdText.cxx, lib/SearchResultMessageArg.cxx, lib/SgmlParser.cxx,
+	lib/ShortReferenceMap.cxx, lib/SrInfo.h, lib/StdioStorage.cxx,
+	lib/StdioStorageMessages.msg, lib/StorageManager.cxx,
+	lib/StorageObjectPosition.h, lib/StringVectorMessageArg.cxx,
+	lib/StringVectorMessageArg.h, lib/Syntax.cxx, lib/Text.cxx,
+	lib/TokenMessageArg.cxx, lib/TokenMessageArg.h,
+	lib/TranslateCodingSystem.cxx, lib/Trie.h, lib/TrieBuilder.cxx,
+	lib/TrieBuilder.h, lib/TypeId.cxx, lib/URLStorage.cxx,
+	lib/URLStorageMessages.msg, lib/UTF8CodingSystem.cxx, lib/Undo.cxx,
+	lib/Undo.h, lib/UnicodeCodingSystem.cxx, lib/UnivCharsetDesc.cxx,
+	lib/Win32CodingSystem.cxx, lib/WinApp.cxx, lib/WinInetStorage.cxx,
+	lib/WinInetStorageMessages.msg, lib/XMLCodingSystem.cxx,
+	lib/app_inst.m4, lib/arc_inst.m4, lib/assert.cxx, lib/big5.h,
+	lib/entmgr_inst.m4, lib/events.h, lib/gb2312.h, lib/instmac.pl,
+	lib/iso646-jis.h, lib/iso8859-2.h, lib/iso8859-3.h,
+	lib/iso8859-4.h, lib/iso8859-5.h, lib/iso8859-6.h, lib/iso8859-7.h,
+	lib/iso8859-8.h, lib/iso8859-9.h, lib/jis0201.h, lib/jis0208.h,
+	lib/jis0212.h, lib/ksc5601.h, lib/lib.dsp, lib/lib.rc,
+	lib/memmove.c, lib/mkversion.pl, lib/parseAttribute.cxx,
+	lib/parseCommon.cxx, lib/parseDecl.cxx, lib/parseInstance.cxx,
+	lib/parseMode.cxx, lib/parseParam.cxx, lib/parseSd.cxx,
+	lib/parser_inst.m4, lib/splib.cxx, lib/splib.h, lib/splibpch.h,
+	lib/strerror.c, lib/token.h, lib/xentmgr_inst.m4,
+	nsgmls/Makefile.sub, nsgmls/NsgmlsMessages.msg,
+	nsgmls/RastEventHandler.cxx, nsgmls/RastEventHandler.h,
+	nsgmls/RastEventHandlerMessages.msg, nsgmls/SgmlsEventHandler.cxx,
+	nsgmls/SgmlsEventHandler.h, nsgmls/StringSet.cxx,
+	nsgmls/StringSet.h, nsgmls/nsgmls.cxx, nsgmls/nsgmls.dsp,
+	nsgmls/nsgmls.rc, nsgmls/nsgmls_inst.m4, pubtext/HTML32.dcl,
+	pubtext/HTML32.dtd, pubtext/HTML32.soc, pubtext/HTML4-f.dtd,
+	pubtext/HTML4-s.dtd, pubtext/HTML4.dcl, pubtext/HTML4.dtd,
+	pubtext/HTML4.soc, pubtext/HTMLlat1.ent, pubtext/HTMLspec.ent,
+	pubtext/HTMLsym.ent, pubtext/ISOlat1.ent, pubtext/ISOlat1.sgm,
+	pubtext/html-1.dtd, pubtext/html-1s.dtd, pubtext/html-s.dtd,
+	pubtext/html.dcl, pubtext/html.dtd, pubtext/html.soc,
+	pubtext/xml.dcl, pubtext/xml.soc, sgmlnorm/Makefile.sub,
+	sgmlnorm/SGMLGenerator.cxx, sgmlnorm/SGMLGenerator.h,
+	sgmlnorm/sgmlnorm.cxx, sgmlnorm/sgmlnorm.dsp,
+	spam/CopyEventHandler.cxx, spam/CopyEventHandler.h,
+	spam/Makefile.sub, spam/MarkupEventHandler.cxx,
+	spam/MarkupEventHandler.h, spam/SpamMessages.msg, spam/spam.cxx,
+	spam/spam.dsp, spam/spam.rc, spam/spam_inst.m4, spcat/Makefile.sub,
+	spcat/spcat.cxx, spcat/spcat.dsp, spcat/spcat_inst.m4,
+	spent/Makefile.sub, spent/spent.cxx, spent/spent.dsp,
+	sx/Makefile.sub, sx/SxMessages.msg, sx/XmlOutputEventHandler.cxx,
+	sx/XmlOutputEventHandler.h, sx/XmlOutputMessages.msg, sx/sx.cxx,
+	sx/sx.dsp, sx/sx.rc, sx/sx_inst.m4, unicode/catalog,
+	unicode/demo.sgm, unicode/gensyntax.pl, unicode/unicode.sd,
+	unicode/unicode.syn: Initial revision, taken from the current jade
+	repository at tag before_split.
+
