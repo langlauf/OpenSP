@@ -23,24 +23,24 @@ ospent \- Concatenate entities
 .SH "SYNOPSIS"
 
 .nf
-\fBospent\fR [\fB-ChnrRv\fR] [\fB-b\fIbctf\fR\fR] [\fB-c\fIsysid\fR\fR] [\fB-f\fIfile\fR\fR]
-       [\fB-D\fIdirectory\fR\fR] [\fIsysid\fR...]
+\fBospent\fR [\fB-ChnrRv\fR] [\fB-bbctf\fR] [\fB-csysid\fR] [\fB-ffile\fR] [\fB-Ddirectory\fR]
+       [\fIsysid\fR...]
 .fi
 
 .SH "DESCRIPTION"
 
 .PP
-\fBospent\fR (OpenSP print entity) prints the concatenation of the entities with system identifiers [\fIsysid\fR...] on the standard output.
+\fBospent\fR (OpenSP print entity) prints the concatenation of the entities with system identifiers .nf \fB\fR .fi on the standard output.
 
 .PP
 The following options are available:
 
 .TP
-\fB-b\fIbctf\fR\fR, \fB--bctf=\fIbctf\fR\fR
+\fB-bbctf\fR, \fB--bctf=bctf\fR
 Use the BCTF with name \fIbctf\fR for output.
 
 .TP
-\fB-c\fIsysid\fR\fR, \fB--catalog=\fIsysid\fR\fR
+\fB-csysid\fR, \fB--catalog=sysid\fR
 Map public identifiers and entity names to system identifiers using the catalog entry file whose system identifier is \fIsysid\fR.
 
 .TP
@@ -48,11 +48,11 @@ Map public identifiers and entity names to system identifiers using the catalog 
 This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
-\fB-D\fIdirectory\fR\fR, \fB--directory=\fIdirectory\fR\fR
+\fB-Ddirectory\fR, \fB--directory=directory\fR
 Search directory for files specified in system identifiers. This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
-\fB-f\fIfile\fR\fR, \fB--error-file=\fIfile\fR\fR
+\fB-ffile\fR, \fB--error-file=file\fR
 Redirect error messages to \fIfile\fR.
 
 .TP

@@ -23,16 +23,16 @@ osx \- An SGML System Conforming to International Standard ISO 8879 -- Standard 
 .SH "SYNOPSIS"
 
 .nf
-\fBosx\fR [\fB-CeghnRvx\fR] [\fB-a\fIname\fR\fR] [\fB-A\fIarchitecture\fR\fR] [\fB-b\fIencoding\fR\fR]
-    [\fB-c\fIcatalog_file\fR\fR] [\fB-d\fIdirectory\fR\fR] [\fB-D\fIdirectory\fR\fR]
-    [\fB-i\fIname\fR\fR] [\fB-f\fIfile\fR\fR] [\fB-l\fIdirectory\fR\fR] [\fB-w\fIwarning_type\fR\fR]
-    [\fB-x\fIxml_output_option\fR\fR...] [\fB\fIsysid\fR\fR...]
+\fBosx\fR [\fB-CeghnRvx\fR] [\fB-aname\fR] [\fB-Aarchitecture\fR] [\fB-bencoding\fR]
+    [\fB-ccatalog_file\fR] [\fB-ddirectory\fR] [\fB-Ddirectory\fR] [\fB-iname\fR]
+    [\fB-ffile\fR] [\fB-ldirectory\fR] [\fB-wwarning_type\fR] [\fB-xxml_output_option\fR...]
+    [\fBsysid\fR...]
 .fi
 
 .SH "DESCRIPTION"
 
 .PP
-\fBosx\fR converts SGML to XML. \fBosx\fR parses and validates the SGML document contained in [\fB\fIsysid\fR\fR] and writes an equivalent XML document to the standard output. \fBosx\fR will warn about SGML constructs which have no XML equivalent.
+ \fBosx\fR converts SGML to XML. \fBosx\fR parses and validates the SGML document contained in .nf \fB\fR .fi and writes an equivalent XML document to the standard output. \fBosx\fR will warn about SGML constructs which have no XML equivalent.
 
 .SH "OPTIONS"
 
@@ -40,19 +40,19 @@ osx \- An SGML System Conforming to International Standard ISO 8879 -- Standard 
 The following options are available:
 
 .TP
-\fB-a\fIname\fR\fR, \fB--activate=\fIname\fR\fR
+\fB-aname\fR, \fB--activate=name\fR
 Make doctype or linkname \fIname\fR active.
 
 .TP
-\fB-A\fIname\fR\fR, \fB--architecture=\fIname\fR\fR
+\fB-Aname\fR, \fB--architecture=name\fR
 Parse with respect to architecture \fIname\fR.
 
 .TP
-\fB-b\fIencoding\fR\fR, \fB--encoding=\fIencoding\fR\fR
+\fB-bencoding\fR, \fB--encoding=encoding\fR
 Use the BCTF \fIencoding\fR for output. By default \fBosx\fR uses UTF-8.
 
 .TP
-\fB-c\fIsysid\fR\fR, \fB--catalog=\fIsysid\fR\fR
+\fB-csysid\fR, \fB--catalog=sysid\fR
 Map public identifiers and entity names to system identifiers using the catalog entry file whose system identifier is \fIsysid\fR.
 
 .TP
@@ -60,11 +60,11 @@ Map public identifiers and entity names to system identifiers using the catalog 
 This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
-\fB-d\fIdirectory\fR\fR, \fB--entity_output_location=\fIdirectory\fR\fR
+\fB-ddirectory\fR, \fB--entity_output_location=directory\fR
 Place output files in \fIdirectory\fR.
 
 .TP
-\fB-D\fIdirectory\fR\fR, \fB--directory=\fIdirectory\fR\fR
+\fB-Ddirectory\fR, \fB--directory=directory\fR
 Search \fIdirectory\fR for files specified in system identifiers. This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
@@ -72,11 +72,11 @@ Search \fIdirectory\fR for files specified in system identifiers. This has the s
 Describe open entities in error messages.
 
 .TP
-\fB-E\fImax_errors\fR\fR, \fB--max-errors=\fImax_errors\fR\fR
+\fB-Emax_errors\fR, \fB--max-errors=max_errors\fR
 Give up after \fImax_errors\fR errors.
 
 .TP
-\fB-f\fIfile\fR\fR, \fB--error-file=\fIfile\fR\fR
+\fB-ffile\fR, \fB--error-file=file\fR
 Redirect errors to \fIfile\fR. This is useful mainly with shells that do not support redirection of stderr.
 
 .TP
@@ -88,11 +88,11 @@ Describe open elements in error messages.
 Display a help text and exit.
 
 .TP
-\fB-i\fIname\fR\fR, \fB--include=\fIname\fR\fR
+\fB-iname\fR, \fB--include=name\fR
 This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
-\fB-l\fIdtd-file\fR\fR, \fB--dtd_location=\fIdtd-file\fR\fR
+\fB-ldtd-file\fR, \fB--dtd_location=dtd-file\fR
 Specify that the resulting XML file should conform to the DTD in \fIdtd-file\fR.
 
 .TP
@@ -112,11 +112,11 @@ This has the same effect as in \fBonsgmls(1)\fR.
 Print the version number and exit.
 
 .TP
-\fB-w\fItype\fR\fR, \fB--warning=\fItype\fR\fR
+\fB-wtype\fR, \fB--warning=type\fR
 Control warnings and errors according to type. This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
-\fB-x\fIxml_output_option\fR\fR, \fB--xml-output-option=\fIxml_output_option\fR\fR
+\fB-xxml_output_option\fR, \fB--xml-output-option=xml_output_option\fR
 Control the XML output according to the value of \fIxml_output_option\fR as follows:
 
 \fBno-nl-in-tag\fR Don't use newlines inside start-tags. Usually \fBosx\fR uses newlines inside start-tags so as to reduce the probability of excessively long lines.
@@ -150,6 +150,12 @@ Control the XML output according to the value of \fIxml_output_option\fR as foll
 \fBno-external-decl\fR Do not include the external entities declaration driver file in the instance's internal subset.
 
 \fBno-internal-decl\fR Do not include the internal entities declaration driver file in the instance's internal subset.
+
+\fBno-output-outside-outdir\fR When preserving external entities, do not write output files outside the specified output directory ("." by default). In other words, if an external entity's system identifier includes enough instances of ".." to cause osx to write a file outside (above) the output directory, exit (by default osx will issue a warning but will write the file and continue.
+
+\fBno-overwrite\fR When preserving internal or external entities, multiple output files will be written. If this option is specified, do not overwrite existing files; instead, attempt to append a number to the end of the original filename to create a unique filename. Exit with an error if too many (100) such files already exist.
+
+\fBpreserve-case\fR Preserve casing as specified in the DTD for element names; attribute names; attribute values which are token lists.
 
 \fBsdata-as-pis\fR When translating SDATA entities (whether expanding them or providing a definition for them in the output's internal subset), express them as processing instructions instead of as general internal entities.
 

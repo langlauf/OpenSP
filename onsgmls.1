@@ -23,49 +23,48 @@ onsgmls \- An SGML System Conforming to International Standard ISO 8879 -- Stand
 .SH "SYNOPSIS"
 
 .nf
-\fBonsgmls\fR [\fB-BCdeghlnpRrsuvx\fR] [\fB-a\fIlinktype\fR\fR] [\fB-A\fIarchitecture\fR\fR]
-        [\fB-b\fIbctf\fR\fR] [\fB-c\fIsysid\fR\fR...] [\fB-D\fIdirectory\fR\fR]
-        [\fB-E\fImax_errors\fR\fR] [\fB-f\fIfile\fR\fR] [\fB-i\fIname\fR\fR]
-        [\fB-o\fIoutput_option\fR\fR...] [\fB-t\fIfile\fR\fR] [\fB-w\fIwarning_type\fR\fR...]
-        [\fB\fIsysid\fR\fR...]
+\fBonsgmls\fR [\fB-BCdeghlnpRrsuvx\fR] [\fB-alinktype\fR] [\fB-Aarchitecture\fR] [\fB-bbctf\fR]
+        [\fB-csysid\fR...] [\fB-Ddirectory\fR] [\fB-Emax_errors\fR] [\fB-ffile\fR]
+        [\fB-iname\fR] [\fB-ooutput_option\fR...] [\fB-tfile\fR] [\fB-wwarning_type\fR...]
+        [\fBsysid\fR...]
 .fi
 
 .SH "DESCRIPTION"
 
 .PP
-\fBonsgmls\fR parses and validates the SGML document whose document entity is specified by the system identifiers [\fIsysid\fR...] and prints on the standard output a simple text representation of its Element Structure Information Set. (This is the information set which a structure-controlled conforming SGML application should act upon.) If more than one system identifier is specified, then the corresponding entities will be concatenated to form the document entity. Thus the document entity may be spread among several files; for example, the SGML declaration, prolog and document instance set could each be in a separate file. If no system identifiers are specified, then onsgmls will read the document entity from the standard input. A command line system identifier of - can be used to refer to the standard input. (Normally in a system identifier, <OSFD>0 is used to refer to standard input.)
+\fBonsgmls\fR parses and validates the SGML document whose document entity is specified by the system identifiers .nf \fB\fR .fi and prints on the standard output a simple text representation of its Element Structure Information Set. (This is the information set which a structure-controlled conforming SGML application should act upon.) If more than one system identifier is specified, then the corresponding entities will be concatenated to form the document entity. Thus the document entity may be spread among several files; for example, the SGML declaration, prolog and document instance set could each be in a separate file. If no system identifiers are specified, then onsgmls will read the document entity from the standard input. A command line system identifier of - can be used to refer to the standard input. (Normally in a system identifier, <OSFD>0 is used to refer to standard input.)
 
 .PP
 The following options are available:
 
 .TP
-\fB-a\fIlinktype\fR\fR, \fB--activate=\fIlinktype\fR\fR
+\fB-alinktype\fR, \fB--activate=linktype\fR
 Make link type \fIlinktype\fR active. Not all ESIS information is output in this case: the active LPDs are not explicitly reported, although each link attribute is qualified with its link type name; there is no information about result elements; when there are multiple link rules applicable to the current element, onsgmls always chooses the first.
 
 .TP
-\fB-A\fIarchitecture\fR\fR, \fB--architecture=\fIarchitecture\fR\fR
+\fB-Aarchitecture\fR, \fB--architecture=architecture\fR
 Parse with respect to architecture \fIarchitecture\fR.
 
 .TP
-\fB-b\fIbctf\fR\fR, \fB--bctf=\fIbctf\fR\fR, \fB-b\fIencoding\fR\fR, \fB--encoding=\fIencoding\fR\fR
+\fB-bbctf\fR, \fB--bctf=bctf\fR, \fB-bencoding\fR, \fB--encoding=encoding\fR
 This determines the encoding used for output. If in fixed character set mode it specifies the name of an encoding; if not, it specifies the name of a BCTF.
 
 .TP
 \fB-B\fR, \fB--batch_mode\fR
-Batch mode. Parse each [\fB\fIsysid\fR\fR...] specified on the command line separately, rather than concatenating them. This is useful mainly with \fB-s\fR.
+Batch mode. Parse each .nf \fB\fR .fi specified on the command line separately, rather than concatenating them. This is useful mainly with \fB-s\fR.
 
-If \fB-t\fIfilename\fR\fR is also specified, then the specified filename will be prefixed to the \fIsysid\fR to make the filename for the RAST result for each \fIsysid\fR.
+If \fB-tfilename\fR is also specified, then the specified filename will be prefixed to the \fIsysid\fR to make the filename for the RAST result for each \fIsysid\fR.
 
 .TP
-\fB-c\fIsysid\fR\fR, \fB--catalog=\fIsysid\fR\fR
+\fB-csysid\fR, \fB--catalog=sysid\fR
 Map public identifiers and entity names to system identifiers using the catalog entry file whose system identifier is sysid. Multiple \fB-c\fR options are allowed. If there is a catalog entry file called catalog in the same place as the document entity, it will be searched for immediately after those specified by \fB-c\fR.
 
 .TP
 \fB-C\fR, \fB--catalogs\fR
-The [\fB\fIfilename\fR\fR...] arguments specify catalog files rather than the document entity. The document entity is specified by the first DOCUMENT entry in the catalog files.
+The .nf \fB\fR .fi arguments specify catalog files rather than the document entity. The document entity is specified by the first DOCUMENT entry in the catalog files.
 
 .TP
-\fB-D\fIdirectory\fR\fR, \fB--directory=\fIdirectory\fR\fR
+\fB-Ddirectory\fR, \fB--directory=directory\fR
 Search \fIdirectory\fR for files specified in system identifiers. Multiple \fB-D\fR options are allowed. See the description of the osfile storage manager for more information about file searching.
 
 .TP
@@ -73,11 +72,11 @@ Search \fIdirectory\fR for files specified in system identifiers. Multiple \fB-D
 Describe open entities in error messages. Error messages always include the position of the most recently opened external entity.
 
 .TP
-\fB-E\fImax_errors\fR\fR, \fB--max-errors=\fImax_errors\fR\fR
+\fB-Emax_errors\fR, \fB--max-errors=max_errors\fR
 onsgmls will exit after \fImax_errors\fR errors. If \fImax_errors\fR is 0, there is no limit on the number of errors. The default is 200.
 
 .TP
-\fB-f\fIfile\fR\fR, \fB--error-file=\fIfile\fR\fR
+\fB-ffile\fR, \fB--error-file=file\fR
 Redirect errors to \fIfile\fR. This is useful mainly with shells that do not support redirection of stderr.
 
 .TP
@@ -89,7 +88,7 @@ Show the generic identifiers of open elements in error messages.
 Show a help message and exit.
 
 .TP
-\fB-i\fIname\fR\fR, \fB--include=\fIname\fR\fR
+\fB-iname\fR, \fB--include=name\fR
 Pretend that
 
 <!ENTITY % \fIname\fR "INCLUDE">
@@ -105,7 +104,7 @@ and will use %\fIname\fR; in the status keyword specification of a marked sectio
 Show message numbers in error messages.
 
 .TP
-\fB-o\fIoutput_option\fR\fR, \fB--option=\fIoutput_option\fR\fR
+\fB-ooutput_option\fR, \fB--option=output_option\fR
 Output additional information according to \fIoutput_option\fR:
 
 \fBentity\fR Output definitions of all general entities not just for data or subdoc entities that are referenced or named in an ENTITY or ENTITIES attribute.
@@ -147,7 +146,7 @@ Restrict file reading. This option is intended for use with onsgmls-based Web to
 Suppress output. Error messages will still be printed.
 
 .TP
-\fB-t\fIfile\fR\fR, \fB--rast-file=\fIfile\fR\fR
+\fB-tfile\fR, \fB--rast-file=file\fR
 Output to \fIfile\fR the RAST result as defined by ISO/IEC 13673:1995 (actually this isn't quite an IS yet; this implements the Intermediate Editor's Draft of 1994/08/29, with changes to implement ISO/IEC JTC1/SC18/WG8 N1777). The normal output is not produced.
 
 .TP
@@ -155,7 +154,7 @@ Output to \fIfile\fR the RAST result as defined by ISO/IEC 13673:1995 (actually 
 Print the version number.
 
 .TP
-\fB-w\fItype\fR\fR, \fB--warning=\fItype\fR\fR
+\fB-wtype\fR, \fB--warning=type\fR
 Control warnings and errors. Multiple \fB-w\fR options are allowed. The following values of type enable warnings:
 
 \fBxml\fR Warn about constructs that are not allowed by XML.
@@ -232,7 +231,7 @@ Same as \fB-wduplicate\fR.
 Same as \fB-oline\fR.
 
 .TP
-\fB-m\fIsysid\fR\fR
+\fB-msysid\fR
 Same as \fB-c\fR.
 
 .TP

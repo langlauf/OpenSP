@@ -28,6 +28,16 @@ struct XmlOutputMessages {
   static const MessageType1 missingSystemId;
   // 110
   static const MessageType1 unexpectedEntityType;
+  // 111
+  static const MessageType1 cannotCreateDirectory;
+  // 112
+  static const MessageType1 tooManyOutputFiles;
+  // 113
+  static const MessageType1 alreadyWroteOutputFile;
+  // 114
+  static const MessageType1 removingLeadingSlashes;
+  // 115
+  static const MessageType1 pathOutsideOutputDirectory;
 };
 extern MessageModule appModule;
 
@@ -117,6 +127,46 @@ MessageType::warning,
 110
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unexpected entity type for entity named %1"
+#endif
+);
+const MessageType1 XmlOutputMessages::cannotCreateDirectory(
+MessageType::warning,
+&appModule,
+111
+#ifndef SP_NO_MESSAGE_TEXT
+,"cannot create directory %1"
+#endif
+);
+const MessageType1 XmlOutputMessages::tooManyOutputFiles(
+MessageType::warning,
+&appModule,
+112
+#ifndef SP_NO_MESSAGE_TEXT
+,"already wrote 99 versions of %1; will not overwrite"
+#endif
+);
+const MessageType1 XmlOutputMessages::alreadyWroteOutputFile(
+MessageType::warning,
+&appModule,
+113
+#ifndef SP_NO_MESSAGE_TEXT
+,"already wrote output file %1; will not overwrite"
+#endif
+);
+const MessageType1 XmlOutputMessages::removingLeadingSlashes(
+MessageType::warning,
+&appModule,
+114
+#ifndef SP_NO_MESSAGE_TEXT
+,"removing leading slashes from output filename %1"
+#endif
+);
+const MessageType1 XmlOutputMessages::pathOutsideOutputDirectory(
+MessageType::warning,
+&appModule,
+115
+#ifndef SP_NO_MESSAGE_TEXT
+,"path %1 outside output directory"
 #endif
 );
 #ifdef SP_NAMESPACE

@@ -1,7 +1,7 @@
 <HTML
 ><HEAD
 ><TITLE
->OpenSP 1.5</TITLE
+>OpenSP 1.5.1</TITLE
 ><META
 NAME="GENERATOR"
 CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
@@ -13,12 +13,16 @@ TEXT="#000000"
 ><DIV
 CLASS="BOOK"
 ><A
-NAME="AEN1"><DIV
+NAME="AEN1"
+></A
+><DIV
 CLASS="TITLEPAGE"
 ><H1
 CLASS="title"
 ><A
-NAME="AEN2">OpenSP 1.5</H1
+NAME="AEN2"
+></A
+>OpenSP 1.5.1</H1
 ><H2
 CLASS="subtitle"
 >Release Notes</H2
@@ -27,7 +31,7 @@ CLASS="corpauthor"
 >OpenJade Project</H3
 ><P
 CLASS="copyright"
->Copyright &copy; 2002 by OpenJade Project</P
+>Copyright &copy; 2002, 2003 by OpenJade Project</P
 ><HR></DIV
 ><DIV
 CLASS="TOC"
@@ -38,64 +42,69 @@ CLASS="TOC"
 ></DT
 ><DT
 >1. <A
-HREF="#AEN11"
->OpenSP 1.5 Release Notes</A
+HREF="#AEN12"
+>OpenSP 1.5.1 Release Notes</A
 ></DT
 ><DD
 ><DL
 ><DT
 ><A
-HREF="#AEN16"
+HREF="#AEN17"
 >Applications of OpenSP</A
 ></DT
 ><DT
 ><A
-HREF="#AEN21"
+HREF="#AEN22"
 >Obtaining OpenSP</A
 ></DT
 ><DT
 ><A
-HREF="#AEN25"
+HREF="#AEN26"
 >Supported Platforms</A
 ></DT
 ><DT
 ><A
-HREF="#AEN114"
+HREF="#AEN115"
 >Building OpenSP from Source</A
 ></DT
 ><DT
 ><A
-HREF="#AEN163"
+HREF="#AEN170"
 >Binary Distributions</A
 ></DT
 ><DT
 ><A
-HREF="#AEN166"
+HREF="#AEN173"
 >Installation</A
 ></DT
 ><DT
 ><A
-HREF="#AEN173"
+HREF="#AEN180"
 >Support</A
 ></DT
 ><DT
 ><A
-HREF="#AEN185"
+HREF="#AEN192"
+>Version 1.5.1</A
+></DT
+><DT
+><A
+HREF="#AEN369"
 >Version 1.5</A
 ></DT
 ><DT
 ><A
-HREF="#AEN497"
+HREF="#AEN681"
 >Version 1.4</A
 ></DT
 ><DT
 ><A
-HREF="#AEN519"
+HREF="#AEN703"
 >Version 1.3.4</A
 ></DT
 ><DT
 ><A
-HREF="#AEN528"
+HREF="#AEN712"
 >Version 1.3.3</A
 ></DT
 ></DL
@@ -122,8 +131,13 @@ HREF="#configure"
 ></DT
 ><DT
 >1-3. <A
-HREF="#opensp15fixes"
+HREF="#opensp151fixes"
 >Changes for release 1.5</A
+></DT
+><DT
+>1-4. <A
+HREF="#opensp15fixes"
+>Changes for release 1.5.1</A
 ></DT
 ></DL
 ></DIV
@@ -131,7 +145,9 @@ HREF="#opensp15fixes"
 CLASS="chapter"
 ><HR><H1
 ><A
-NAME="AEN11">Chapter 1. OpenSP 1.5 Release Notes</H1
+NAME="AEN12"
+></A
+>Chapter 1. OpenSP 1.5.1 Release Notes</H1
 ><P
 >The OpenJade project provides a suite of tools and libraries for validating, processing and applying DSSSL (Document Style Semantics and Specification Language) style sheets to SGML and XML documents.</P
 ><P
@@ -146,7 +162,9 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN16">Applications of OpenSP</H2
+NAME="AEN17"
+></A
+>Applications of OpenSP</H2
 ><P
 >The OpenSP library has been used in a number of projects. The World Wide Web consortium on-line HTML and XHTML validator is based on the OpenSP library. In addition to the OpenSP library a set of command line tools are provided to support the validation and transformation of SGML files. In particular <B
 CLASS="command"
@@ -161,32 +179,38 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN21">Obtaining OpenSP</H2
+NAME="AEN22"
+></A
+>Obtaining OpenSP</H2
 ><P
->OpenJade is a project hosted at sourceforge.net and is available
+>OpenSP is a project hosted at sourceforge.net and is available
 from the OpenJade web site at http://openjade.sourceforge.net or directly
 from the OpenJade project page at http://sourceforge.net/projects/openjade</P
 ><P
->OpenJade is provided in source code form. However as a courtesy
-to Win32 users, where development tools are not always available, a binary release for the Win32 platform is usually available.</P
+>OpenSP is provided in source code form. However the project is moving towards
+the provision of pre-compiled binary packages for common platforms. These can be expected
+to appear shortly after a given source release. Any help to ensure that the widest array
+of platforms is support is always greatly appreciated.</P
 ></DIV
 ><DIV
 CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN25">Supported Platforms</H2
+NAME="AEN26"
+></A
+>Supported Platforms</H2
 ><P
 >OpenSP is intended to be as portable as possible. It should be
 possible to compile and build on most contemporary UNIX type platforms. In
-addition OpenSP will also build on Microsoft's Win32 based operating systems.
+addition OpenSP should also build on Microsoft's Win32 based operating systems.
 </P
 ><P
 >OpenSP is known to compile with both the GNU gcc c++ compiler and
 Microsoft Visual C++. Other compilers have not been extensively tested.</P
 ><P
->OpenSP 1.5 has been successfully built with the following compilers: 
-Red Hat gcc 2.96, GNU gcc 2.95.3 and gcc 3.2</P
+>OpenSP 1.5.1 should build with the GNU gcc c++ compiler from version 2.95
+up to version 3.3. </P
 ><P
 >OpenSP has been built on a number of architectures including Intel i386 and ia64, Alpha AXP, Sparc, PPC and S/390.</P
 ><P
@@ -194,7 +218,9 @@ Red Hat gcc 2.96, GNU gcc 2.95.3 and gcc 3.2</P
 ><DIV
 CLASS="table"
 ><A
-NAME="platforms"><P
+NAME="platforms"
+></A
+><P
 ><B
 >Table 1-1. Platforms on which OpenSP 1.5 is known to build</B
 ></P
@@ -533,7 +559,9 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN114">Building OpenSP from Source</H2
+NAME="AEN115"
+></A
+>Building OpenSP from Source</H2
 ><P
 >OpenSP requires 20Mb to 50Mb of disk space to build. An installation
 will require around 10Mb to 20Mb depending on architecture.</P
@@ -551,6 +579,9 @@ CLASS="command"
 >ospam</B
 >, <B
 CLASS="command"
+>ospcat</B
+>, <B
+CLASS="command"
 >ospent</B
 >, <B
 CLASS="command"
@@ -558,8 +589,8 @@ CLASS="command"
 >) and libraries are as follows:
 <PRE
 CLASS="screen"
->gzip -d OpenSP-1.5.tar.gz | tar xvf -
-cd OpenSP-1.5
+>gzip -d OpenSP-1.5.1.tar.gz | tar xvf -
+cd OpenSP-1.5.1
 ./configure [<SPAN
 CLASS="optional"
 ><TT
@@ -597,7 +628,9 @@ In addition to the standard options, the following table describes options speci
 ><DIV
 CLASS="table"
 ><A
-NAME="configure"><P
+NAME="configure"
+></A
+><P
 ><B
 >Table 1-2. OpenSP specific configure options</B
 ></P
@@ -700,6 +733,26 @@ CLASS="varname"
 >SGML_SEARCH_PATH</TT
 ></TD
 ></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><TT
+CLASS="option"
+>--enable-xml-messages</TT
+></TD
+><TD
+WIDTH="17%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Not enabled</TD
+><TD
+WIDTH="50%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Include support for XML Formatted Messages</TD
+></TR
 ></TBODY
 ></TABLE
 ></DIV
@@ -711,16 +764,20 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN163">Binary Distributions</H2
+NAME="AEN170"
+></A
+>Binary Distributions</H2
 ><P
->Although the OpenJade project does not make binary distributions available, OpenSP has been a part of many software distributions, including the major Linux distributions as well as FreeBSD. Expect pre-compiled and packaged versions of the latest version of OpenSP to be available from your distributor in due course.</P
+>In addition to binary packages availble from the project, OpenSP has been a part of many software distributions, including the major Linux distributions as well as FreeBSD. Expect pre-compiled and packaged versions of the latest version of OpenSP to be available from your distributor in due course.</P
 ></DIV
 ><DIV
 CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN166">Installation</H2
+NAME="AEN173"
+></A
+>Installation</H2
 ><P
 >In addition to the OpenSP executables and libraries you will also need various DTDs and declaration files.
 Some DTDs and associated files (entity definitions) are available in the <TT
@@ -744,7 +801,9 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN173">Support</H2
+NAME="AEN180"
+></A
+>Support</H2
 ><P
 >If, after reading the documentation, you still have a problem, then you
 may require some additional help.
@@ -782,7 +841,542 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN185">Version 1.5</H2
+NAME="AEN192"
+></A
+>Version 1.5.1</H2
+><DIV
+CLASS="formalpara"
+><P
+><B
+>Released October 2003. </B
+>The release contains a number of new features together with support for version 3.3 for the GNU C++ compiler.</P
+></DIV
+><P
+>The following table details the major improvements in OpenSP 1.5</P
+><DIV
+CLASS="table"
+><A
+NAME="opensp151fixes"
+></A
+><P
+><B
+>Table 1-3. Changes for release 1.5</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 1</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Runtime selection of message format</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Nick Kew</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enable run time selection of message format with <TT
+CLASS="envar"
+>SP_MESSAGE_FORMAT</TT
+> environment variable.
+Value is one of <TT
+CLASS="constant"
+>XML</TT
+>, <TT
+CLASS="constant"
+>NONE</TT
+>, <TT
+CLASS="constant"
+>TRADITIONAL</TT
+>.</P
+></TD
+></TR
+></TBODY
+></TABLE
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 2</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Support for HTTP redirection</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Nick Kew</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>When validating/parseing a document using http, OpenSP will now
+follow any redirects headers/requests from the server</P
+></TD
+></TR
+></TBODY
+></TABLE
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 3</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Specification of http user agent header</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Nick Kew</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>The environment variable <TT
+CLASS="envar"
+>SP_HTTP_USER_AGENT</TT
+>
+can be used to specify a UserAgent: header.</P
+></TD
+></TR
+></TBODY
+></TABLE
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 4</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Specification of http Accept: headers</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Nick Kew</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>The environment variable <TT
+CLASS="envar"
+>SP_HTTP_ACCEPT</TT
+>
+can be used to specify Accept: headers.</P
+></TD
+></TR
+></TBODY
+></TABLE
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 5</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Enhancements to <B
+CLASS="command"
+>osx</B
+></TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Jessica Perry Hekman</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>A number of enhancements have been made to the <B
+CLASS="command"
+>osx</B
+> tool: security fixes in the handling of output files; addition of the "preserve case option".</P
+></TD
+></TR
+></TBODY
+></TABLE
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 6</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Addition of a test suite</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Karl Eichwalder</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>A testing framework together with some initial tests have been added.
+Currently there are 22 tests. 6 of which fail.</P
+></TD
+></TR
+></TBODY
+></TABLE
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Item 7</TH
+><TH
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+>Sundry build improvments</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Contributor</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Neil Roeth, Peter O'Gorman et al</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Category</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Enhancement/Fixes</P
+></TD
+></TR
+><TR
+><TD
+WIDTH="25%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Description</P
+></TD
+><TD
+WIDTH="75%"
+ALIGN="LEFT"
+VALIGN="MIDDLE"
+><P
+>Support for Mac OS/X, Darwin has been improved. Build infrastructure and localisation fixes and enhancements. Improved compiler support</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><HR><H2
+CLASS="sect1"
+><A
+NAME="AEN369"
+></A
+>Version 1.5</H2
 ><DIV
 CLASS="formalpara"
 ><P
@@ -795,9 +1389,11 @@ CLASS="formalpara"
 ><DIV
 CLASS="table"
 ><A
-NAME="opensp15fixes"><P
+NAME="opensp15fixes"
+></A
+><P
 ><B
->Table 1-3. Changes for release 1.5</B
+>Table 1-4. Changes for release 1.5.1</B
 ></P
 ><TABLE
 BORDER="1"
@@ -830,7 +1426,7 @@ WIDTH="75%"
 ALIGN="LEFT"
 VALIGN="MIDDLE"
 ><P
->Terje Bless</P
+>Liam Quinn</P
 ></TD
 ></TR
 ><TR
@@ -1397,7 +1993,7 @@ WIDTH="75%"
 ALIGN="LEFT"
 VALIGN="MIDDLE"
 ><P
->Terje Bless, Liam Quinn</P
+>Liam Quinn (and others)</P
 ></TD
 ></TR
 ><TR
@@ -1722,7 +2318,9 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN497">Version 1.4</H2
+NAME="AEN681"
+></A
+>Version 1.4</H2
 ><DIV
 CLASS="formalpara"
 ><P
@@ -1777,7 +2375,9 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN519">Version 1.3.4</H2
+NAME="AEN703"
+></A
+>Version 1.3.4</H2
 ><DIV
 CLASS="formalpara"
 ><P
@@ -1803,7 +2403,9 @@ CLASS="sect1"
 ><HR><H2
 CLASS="sect1"
 ><A
-NAME="AEN528">Version 1.3.3</H2
+NAME="AEN712"
+></A
+>Version 1.3.3</H2
 ><P
 >The first release from the OpenJade project</P
 ></DIV

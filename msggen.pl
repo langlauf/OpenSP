@@ -7,7 +7,7 @@ use POSIX;
 
 # Package and version.
 $package = 'OpenSP';
-$version = '1.5';
+$version = '1.5.1';
 $package = $package; $version = $version; # be quiet, -w
 
 $prog = $0;

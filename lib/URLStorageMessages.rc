@@ -22,4 +22,5 @@ BEGIN
   2319, "could not initialize Windows Sockets (%1)"
   2320, "incompatible Windows Sockets version"
   2321, "error number "
+  2322, "URL Redirected to %1"
 END

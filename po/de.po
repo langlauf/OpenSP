@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sp 1.5pre9\n"
-"POT-Creation-Date: 2002-11-23 14:25+0000\n"
+"POT-Creation-Date: 2003-10-11 09:23+0000\n"
 "PO-Revision-Date: 2002-11-17 15:39+0100\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -2494,6 +2494,9 @@ msgstr "Inkompatible Windows Sockets Version"
 msgid "error number "
 msgstr "Fehlernummer "
 
+msgid "URL Redirected to %1"
+msgstr ""
+
 msgid "cannot open URL %1 (%2)"
 msgstr "Kann URL %1 nicht öffnen (%2)"
 
@@ -2692,6 +2695,22 @@ msgstr "Systembezeichner für die Entität %1 fehlt."
 
 msgid "unexpected entity type for entity named %1"
 msgstr "Unerwarteter Entitätstyp die Entität namens %1"
+
+#, fuzzy
+msgid "cannot create directory %1"
+msgstr "Kann kein Socket erzeugen (%1)"
+
+msgid "already wrote 99 versions of %1; will not overwrite"
+msgstr ""
+
+msgid "already wrote output file %1; will not overwrite"
+msgstr ""
+
+msgid "removing leading slashes from output filename %1"
+msgstr ""
+
+msgid "path %1 outside output directory"
+msgstr ""
 
 msgid "Output a document type declaration."
 msgstr "Gib eine Dokumenttypdeklaration aus."

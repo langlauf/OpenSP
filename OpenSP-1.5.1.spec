@@ -3,12 +3,12 @@
 
 Summary: The OpenJade Group's SGML and XML parsing tools
 Name: OpenSP
-Version: 1.5
+Version: 1.5.1
 Release: 1
-BuildRoot: /tmp/OpenSP-1.5-buildroot
+BuildRoot: /tmp/OpenSP-1.5.1-buildroot
 Copyright: Copyright 1997 James Clark
 Group: Applications/Text
-Source: http://download.sourceforge.net/openjade/OpenSP-1.5.tar.gz
+Source: http://download.sourceforge.net/openjade/OpenSP-1.5.1.tar.gz
 URL: http://openjade.sourceforge.net/
 Vendor: The OpenJade Team
 Packager: Matthias Clasen <clasen@mathematik.uni-freiburg.de>
@@ -61,7 +61,7 @@ test "$RPM_BUILD_ROOT" = "/" || rm -rf "$RPM_BUILD_ROOT"
 %defattr(-, root, root)
 %{_bindir}/*
 %{_datadir}/OpenSP/*
-%doc /usr/doc/OpenSP/*
+%doc %{_datadir}/doc/OpenSP/*
 
 %files lib
 %defattr(-, root, root)

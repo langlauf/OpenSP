@@ -50,6 +50,8 @@ struct URLStorageMessages {
   static const MessageType0 winsockVersion;
   // 2321
   static const MessageFragment winsockErrorNumber;
+  // 2322
+  static const MessageType1 Redirect;
 };
 extern MessageModule libModule;
 
@@ -226,6 +228,14 @@ const MessageFragment URLStorageMessages::winsockErrorNumber(
 2321
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error number "
+#endif
+);
+const MessageType1 URLStorageMessages::Redirect(
+MessageType::warning,
+&libModule,
+2322
+#ifndef SP_NO_MESSAGE_TEXT
+,"URL Redirected to %1"
 #endif
 );
 #ifdef SP_NAMESPACE

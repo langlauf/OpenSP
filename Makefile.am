@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS = check-news
 SUBDIRS = pubtext unicode doc \
 	include generic \
 	lib nsgmls spent spam sgmlnorm sx spcat \
-	intl po
+	intl po tests
 
 pkginclude_HEADERS = config.h
 
@@ -13,9 +13,9 @@ docdir = $(datadir)/doc
 pkgdocdir = $(docdir)/@PACKAGE@
 man1dir=$(mandir)/man1
 
-man_MANS = onsgmls.1 osgmlnorm.1 ospent.1 ospam.1 osx.1
+man_MANS = onsgmls.1 osgmlnorm.1 ospent.1 ospam.1 osx.1 ospcat.1
 
-pkgdoc_DATA = README ABOUT-NLS NEWS COPYING AUTHORS ChangeLog \
+pkgdoc_DATA = README ABOUT-NLS NEWS COPYING AUTHORS BUGS ChangeLog \
 	releasenotes.html releasenotes.pdf releasenotes.ps
 
 BUILT_SOURCES = config.h msggen.pl
@@ -30,8 +30,9 @@ MAINTAINERCLEANFILES = install-sh mkinstalldirs missing \
 EXTRA_DIST = instmac.pl msggen.pl sunfix.sh SP.dsw SP.mak \
 	build-win32.bat sp-generate.mak .cvsignore all \
 	@PACKAGE@-@VERSION@.spec config.rpath onsgmls.1 \
-	osgmlnorm.1 ospam.1 ospent.1 osx.1 releasenotes.html \
-	releasenotes.pdf releasenotes.ps
+	osgmlnorm.1 ospam.1 ospent.1 osx.1 ospcat.1 \
+	releasenotes.html releasenotes.pdf releasenotes.ps \
+	BUGS
 
 dist-hook:
 	mv $(distdir)/include/config.h.old $(distdir)/config.h

@@ -303,6 +303,6 @@
 
 // NOTE: This is processed as a Makefile, not as a header by autoconf.
 #define SP_PACKAGE "OpenSP"
-#define SP_VERSION "1.5"
+#define SP_VERSION "1.5.1"
 
 #endif /* not config_INCLUDED */

@@ -23,16 +23,15 @@ osgmlnorm \- An SGML System Conforming to International Standard ISO 8879 -- Sta
 .SH "SYNOPSIS"
 
 .nf
-\fBosgmlnorm\fR [\fB-CdeghmnrRvx\fR] [\fB-a\fIlinktype\fR\fR] [\fB-A\fIarchitecture\fR\fR]
-          [\fB-b\fIbctf\fR\fR] [\fB-c\fIcatalog\fR\fR] [\fB-D\fIdirectory\fR\fR...]
-          [\fB-E\fImax_errors\fR\fR...] [\fB-i\fIname\fR\fR...] [\fB-f\fIname\fR\fR...]
-          [\fB-w\fIwarning\fR\fR...] [\fIsysid\fR...]
+\fBosgmlnorm\fR [\fB-CdeghmnrRvx\fR] [\fB-alinktype\fR] [\fB-Aarchitecture\fR] [\fB-bbctf\fR]
+          [\fB-ccatalog\fR] [\fB-Ddirectory\fR...] [\fB-Emax_errors\fR...] [\fB-iname\fR...]
+          [\fB-fname\fR...] [\fB-wwarning\fR...] [\fIsysid\fR...]
 .fi
 
 .SH "DESCRIPTION"
 
 .PP
-\fBosgmlnorm\fR prints on the standard output a normalized document instance for the SGML document contained in the concatenation of the entities with system identifiers [\fIsysid\fR...].
+\fBosgmlnorm\fR prints on the standard output a normalized document instance for the SGML document contained in the concatenation of the entities with system identifiers .nf \fB\fR .fi.
 
 .PP
 When the normalized instance is prefixed with the original SGML declaration and prolog, it will have the same ESIS as the original SGML document, with the following exceptions:
@@ -62,19 +61,19 @@ The normalized instance will not use any markup minimization features except tha
 The following options are available:
 
 .TP
-\fB-a\fIname\fR\fR, \fB--activate=\fIname\fR\fR
+\fB-aname\fR, \fB--activate=name\fR
 Make doctype or linktype \fIname\fR active.
 
 .TP
-\fB-A\fIarchitecture\fR\fR, \fB--architecture=\fIarchitecture\fR\fR
+\fB-Aarchitecture\fR, \fB--architecture=architecture\fR
 Parse with respect to architecture \fIarchitecture\fR.
 
 .TP
-\fB-b\fIbctf\fR\fR, \fB--bctf=\fIbctf\fR\fR
+\fB-bbctf\fR, \fB--bctf=bctf\fR
 Use the BCTF with name \fIbctf\fR for output.
 
 .TP
-\fB-c\fIsysid\fR\fR, \fB--catalog=\fIsysid\fR\fR
+\fB-csysid\fR, \fB--catalog=sysid\fR
 Map public identifiers and entity names to system identifiers using the catalog entry file whose system identifier is \fIsysid\fR.
 
 .TP
@@ -86,7 +85,7 @@ This has the same effect as in \fBonsgmls(1)\fR.
 Output a document type declaration with the same external identifier as the input document, and with no internal declaration subset. No check is performed that the document instance is valid with respect to this DTD.
 
 .TP
-\fB-D\fIdirectory\fR\fR, \fB--directory=\fIdirectory\fR\fR
+\fB-Ddirectory\fR, \fB--directory=directory\fR
 Search \fIdirectory\fR for files specified in system identifiers.
 
 This has the same effect as in \fBonsgmls(1)\fR.
@@ -104,7 +103,7 @@ Show error numbers in error messages.
 Display a help text and exit.
 
 .TP
-\fB-i\fIname\fR\fR, \fB--include=\fIname\fR\fR
+\fB-iname\fR, \fB--include=name\fR
 This has the same effect as in \fBonsgmls(1)\fR.
 
 .TP
@@ -128,7 +127,7 @@ This has the same effect as in \fBonsgmls(1)\fR.
 Print the version number.
 
 .TP
-\fB-w\fItype\fR\fR
+\fB-wtype\fR
 Control warnings and errors according to type. This has the same effect as in \fBonsgmls(1)\fR.
 
 .SH "SEE ALSO"
