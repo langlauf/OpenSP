@@ -24,8 +24,8 @@ namespace SP_NAMESPACE {
 #include "ISet.h"
 #include "ISetIter.h"
 #include "XcharMap.h"
-#include "SubstTable.h"
 #include "StringResource.h"
+#include "SubstTable.h"
 #include "CharMap.h"
 #undef SP_DEFINE_TEMPLATES
 
@@ -521,19 +521,6 @@ typedef Vector<ISetRange<WideChar> > Dummy_36;
 #endif
 #endif
 #ifdef __DECCXX
-#pragma define_template SubstTable<Char>
-#else
-#ifdef __xlC__
-#pragma define(SubstTable<Char>)
-#else
-#ifdef SP_ANSI_CLASS_INST
-template class SubstTable<Char>;
-#else
-typedef SubstTable<Char> Dummy_37;
-#endif
-#endif
-#endif
-#ifdef __DECCXX
 #pragma define_template SharedXcharMap<PackedBoolean>
 #else
 #ifdef __xlC__
@@ -542,7 +529,7 @@ typedef SubstTable<Char> Dummy_37;
 #ifdef SP_ANSI_CLASS_INST
 template class SharedXcharMap<PackedBoolean>;
 #else
-typedef SharedXcharMap<PackedBoolean> Dummy_38;
+typedef SharedXcharMap<PackedBoolean> Dummy_37;
 #endif
 #endif
 #endif
@@ -555,7 +542,7 @@ typedef SharedXcharMap<PackedBoolean> Dummy_38;
 #ifdef SP_ANSI_CLASS_INST
 template class SharedXcharMap<EquivCode>;
 #else
-typedef SharedXcharMap<EquivCode> Dummy_39;
+typedef SharedXcharMap<EquivCode> Dummy_38;
 #endif
 #endif
 #endif
@@ -568,7 +555,7 @@ typedef SharedXcharMap<EquivCode> Dummy_39;
 #ifdef SP_ANSI_CLASS_INST
 template class String<SyntaxChar>;
 #else
-typedef String<SyntaxChar> Dummy_40;
+typedef String<SyntaxChar> Dummy_39;
 #endif
 #endif
 #endif
@@ -581,7 +568,7 @@ typedef String<SyntaxChar> Dummy_40;
 #ifdef SP_ANSI_CLASS_INST
 template class XcharMap<PackedBoolean>;
 #else
-typedef XcharMap<PackedBoolean> Dummy_41;
+typedef XcharMap<PackedBoolean> Dummy_40;
 #endif
 #endif
 #endif
@@ -594,7 +581,7 @@ typedef XcharMap<PackedBoolean> Dummy_41;
 #ifdef SP_ANSI_CLASS_INST
 template class XcharMap<EquivCode>;
 #else
-typedef XcharMap<EquivCode> Dummy_42;
+typedef XcharMap<EquivCode> Dummy_41;
 #endif
 #endif
 #endif
@@ -607,7 +594,7 @@ typedef XcharMap<EquivCode> Dummy_42;
 #ifdef SP_ANSI_CLASS_INST
 template class Vector<char>;
 #else
-typedef Vector<char> Dummy_43;
+typedef Vector<char> Dummy_42;
 #endif
 #endif
 #endif
@@ -621,7 +608,7 @@ typedef Vector<char> Dummy_43;
 #ifdef SP_ANSI_CLASS_INST
 template class Vector<PackedBoolean>;
 #else
-typedef Vector<PackedBoolean> Dummy_44;
+typedef Vector<PackedBoolean> Dummy_43;
 #endif
 #endif
 #endif
@@ -635,11 +622,24 @@ typedef Vector<PackedBoolean> Dummy_44;
 #ifdef SP_ANSI_CLASS_INST
 template class CharMap<Unsigned32>;
 #else
-typedef CharMap<Unsigned32> Dummy_45;
+typedef CharMap<Unsigned32> Dummy_44;
 #endif
 #endif
 #endif
 #ifdef SP_MULTI_BYTE
+#ifdef __DECCXX
+#pragma define_template CharMapPlane<Unsigned32>
+#else
+#ifdef __xlC__
+#pragma define(CharMapPlane<Unsigned32>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMapPlane<Unsigned32>;
+#else
+typedef CharMapPlane<Unsigned32> Dummy_45;
+#endif
+#endif
+#endif
 #ifdef __DECCXX
 #pragma define_template CharMapPage<Unsigned32>
 #else
@@ -703,6 +703,19 @@ typedef Ptr<CharMapResource<Unsigned32> > Dummy_49;
 template class ConstPtr<CharMapResource<Unsigned32> >;
 #else
 typedef ConstPtr<CharMapResource<Unsigned32> > Dummy_50;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template Vector<SubstTable::Pair>
+#else
+#ifdef __xlC__
+#pragma define(Vector<SubstTable::Pair>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class Vector<SubstTable::Pair>;
+#else
+typedef Vector<SubstTable::Pair> Dummy_51;
 #endif
 #endif
 #endif

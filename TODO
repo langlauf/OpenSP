@@ -1,3 +1,0 @@
-check that simplified configure.in works ok
-add comments to all AC_DEFINES, reduce acconfig.h
-commit

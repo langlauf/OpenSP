@@ -19,18 +19,20 @@ namespace SP_NAMESPACE {
 
 class SP_API ArcDirector {
 public:
-  virtual EventHandler *arcEventHandler(const Notation *,
+  virtual EventHandler *arcEventHandler(const StringC *arcPublicId,
+					const Notation *,
 					const Vector<StringC> &,
-					const SubstTable<Char> *) = 0;
+					const SubstTable *) = 0;
 };
 
 class SP_API SelectOneArcDirector : public ArcDirector, public Messenger {
 public:
   SelectOneArcDirector(const Vector<StringC> &select, EventHandler &eh)
     : select_(select), eh_(&eh) { }
-  EventHandler *arcEventHandler(const Notation *,
+  EventHandler *arcEventHandler(const StringC *,
+				const Notation *,
 				const Vector<StringC> &,
-				const SubstTable<Char> *);
+				const SubstTable *);
   void dispatchMessage(const Message &);
   void dispatchMessage(Message &);
 private:

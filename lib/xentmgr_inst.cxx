@@ -491,6 +491,19 @@ typedef CharMap<Char> Dummy_33;
 #endif
 #ifdef SP_MULTI_BYTE
 #ifdef __DECCXX
+#pragma define_template CharMapPlane<Char>
+#else
+#ifdef __xlC__
+#pragma define(CharMapPlane<Char>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMapPlane<Char>;
+#else
+typedef CharMapPlane<Char> Dummy_34;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
 #pragma define_template CharMapPage<Char>
 #else
 #ifdef __xlC__
@@ -499,7 +512,7 @@ typedef CharMap<Char> Dummy_33;
 #ifdef SP_ANSI_CLASS_INST
 template class CharMapPage<Char>;
 #else
-typedef CharMapPage<Char> Dummy_34;
+typedef CharMapPage<Char> Dummy_35;
 #endif
 #endif
 #endif
@@ -512,7 +525,7 @@ typedef CharMapPage<Char> Dummy_34;
 #ifdef SP_ANSI_CLASS_INST
 template class CharMapColumn<Char>;
 #else
-typedef CharMapColumn<Char> Dummy_35;
+typedef CharMapColumn<Char> Dummy_36;
 #endif
 #endif
 #endif
@@ -526,7 +539,7 @@ typedef CharMapColumn<Char> Dummy_35;
 #ifdef SP_ANSI_CLASS_INST
 template class CharMapResource<Char>;
 #else
-typedef CharMapResource<Char> Dummy_36;
+typedef CharMapResource<Char> Dummy_37;
 #endif
 #endif
 #endif
@@ -539,7 +552,7 @@ typedef CharMapResource<Char> Dummy_36;
 #ifdef SP_ANSI_CLASS_INST
 template class Ptr<CharMapResource<Char> >;
 #else
-typedef Ptr<CharMapResource<Char> > Dummy_37;
+typedef Ptr<CharMapResource<Char> > Dummy_38;
 #endif
 #endif
 #endif
@@ -552,7 +565,7 @@ typedef Ptr<CharMapResource<Char> > Dummy_37;
 #ifdef SP_ANSI_CLASS_INST
 template class ConstPtr<CharMapResource<Char> >;
 #else
-typedef ConstPtr<CharMapResource<Char> > Dummy_38;
+typedef ConstPtr<CharMapResource<Char> > Dummy_39;
 #endif
 #endif
 #endif
@@ -565,7 +578,152 @@ typedef ConstPtr<CharMapResource<Char> > Dummy_38;
 #ifdef SP_ANSI_CLASS_INST
 template class Owner<CharsetRegistry::Iter>;
 #else
-typedef Owner<CharsetRegistry::Iter> Dummy_39;
+typedef Owner<CharsetRegistry::Iter> Dummy_40;
+#endif
+#endif
+#endif
+#ifdef SP_MULTI_BYTE
+#ifdef __DECCXX
+#pragma define_template CharMap<unsigned char>
+#else
+#ifdef __xlC__
+#pragma define(CharMap<unsigned char>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMap<unsigned char>;
+#else
+typedef CharMap<unsigned char> Dummy_41;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template CharMapPlane<unsigned char>
+#else
+#ifdef __xlC__
+#pragma define(CharMapPlane<unsigned char>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMapPlane<unsigned char>;
+#else
+typedef CharMapPlane<unsigned char> Dummy_42;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template CharMapPage<unsigned char>
+#else
+#ifdef __xlC__
+#pragma define(CharMapPage<unsigned char>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMapPage<unsigned char>;
+#else
+typedef CharMapPage<unsigned char> Dummy_43;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template CharMapColumn<unsigned char>
+#else
+#ifdef __xlC__
+#pragma define(CharMapColumn<unsigned char>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMapColumn<unsigned char>;
+#else
+typedef CharMapColumn<unsigned char> Dummy_44;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template CharMapResource<unsigned char>
+#else
+#ifdef __xlC__
+#pragma define(CharMapResource<unsigned char>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class CharMapResource<unsigned char>;
+#else
+typedef CharMapResource<unsigned char> Dummy_45;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template Ptr<CharMapResource<unsigned char> >
+#else
+#ifdef __xlC__
+#pragma define(Ptr<CharMapResource<unsigned char> >)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class Ptr<CharMapResource<unsigned char> >;
+#else
+typedef Ptr<CharMapResource<unsigned char> > Dummy_46;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template ConstPtr<CharMapResource<unsigned char> >
+#else
+#ifdef __xlC__
+#pragma define(ConstPtr<CharMapResource<unsigned char> >)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class ConstPtr<CharMapResource<unsigned char> >;
+#else
+typedef ConstPtr<CharMapResource<unsigned char> > Dummy_47;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template String<unsigned short>
+#else
+#ifdef __xlC__
+#pragma define(String<unsigned short>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class String<unsigned short>;
+#else
+typedef String<unsigned short> Dummy_48;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template Vector<String<unsigned short> >
+#else
+#ifdef __xlC__
+#pragma define(Vector<String<unsigned short> >)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class Vector<String<unsigned short> >;
+#else
+typedef Vector<String<unsigned short> > Dummy_49;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template Ptr<CharMapResource<bool> >
+#else
+#ifdef __xlC__
+#pragma define(Ptr<CharMapResource<bool> >)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class Ptr<CharMapResource<bool> >;
+#else
+typedef Ptr<CharMapResource<bool> > Dummy_50;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
+#pragma define_template Ptr<CharMapResource<unsigned short> >
+#else
+#ifdef __xlC__
+#pragma define(Ptr<CharMapResource<unsigned short> >)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class Ptr<CharMapResource<unsigned short> >;
+#else
+typedef Ptr<CharMapResource<unsigned short> > Dummy_51;
+#endif
 #endif
 #endif
 #endif

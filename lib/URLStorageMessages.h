@@ -51,9 +51,11 @@ struct URLStorageMessages {
   // 2321
   static const MessageFragment winsockErrorNumber;
 };
+extern MessageModule libModule;
+
 const MessageType1 URLStorageMessages::emptyHost(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2300
 #ifndef SP_NO_MESSAGE_TEXT
 ,"empty host in HTTP URL %1"
@@ -61,7 +63,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::badRelative(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2301
 #ifndef SP_NO_MESSAGE_TEXT
 ,"uncompletable relative HTTP URL %1"
@@ -69,7 +71,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::emptyPort(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2302
 #ifndef SP_NO_MESSAGE_TEXT
 ,"empty port number in HTTP URL %1"
@@ -77,7 +79,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::invalidPort(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2303
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid port number in HTTP URL %1"
@@ -85,7 +87,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::hostNotFound(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2304
 #ifndef SP_NO_MESSAGE_TEXT
 ,"host %1 not found"
@@ -93,7 +95,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::hostTryAgain(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2305
 #ifndef SP_NO_MESSAGE_TEXT
 ,"could not resolve host %1 (try again later)"
@@ -101,7 +103,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::hostNoRecovery(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2306
 #ifndef SP_NO_MESSAGE_TEXT
 ,"could not resolve host %1 (unrecoverable error)"
@@ -109,7 +111,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::hostNoData(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2307
 #ifndef SP_NO_MESSAGE_TEXT
 ,"no address record for host name %1"
@@ -117,7 +119,7 @@ MessageFragment::libModule,
 );
 const MessageType2 URLStorageMessages::hostOtherError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2308
 #ifndef SP_NO_MESSAGE_TEXT
 ,"could not resolve host %1 (%2)"
@@ -125,7 +127,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::hostUnknownError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2309
 #ifndef SP_NO_MESSAGE_TEXT
 ,"could not resolve host %1 (unknown error)"
@@ -133,7 +135,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::cannotCreateSocket(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2310
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot create socket (%1)"
@@ -141,7 +143,7 @@ MessageFragment::libModule,
 );
 const MessageType2 URLStorageMessages::cannotConnect(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2311
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error connecting to %1 (%2)"
@@ -149,7 +151,7 @@ MessageFragment::libModule,
 );
 const MessageType2 URLStorageMessages::writeError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2312
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error sending request to %1 (%2)"
@@ -157,7 +159,7 @@ MessageFragment::libModule,
 );
 const MessageType2 URLStorageMessages::readError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2313
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error receiving from host %1 (%2)"
@@ -165,7 +167,7 @@ MessageFragment::libModule,
 );
 const MessageType2 URLStorageMessages::closeError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2314
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error closing connection to host %1 (%2)"
@@ -173,7 +175,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::invalidHostNumber(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2315
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid host number %1"
@@ -181,7 +183,7 @@ MessageFragment::libModule,
 );
 const MessageType3 URLStorageMessages::getFailed(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2316
 #ifndef SP_NO_MESSAGE_TEXT
 ,"could not get %2 from %1 (reason given was %3)"
@@ -189,7 +191,7 @@ MessageFragment::libModule,
 );
 const MessageType0 URLStorageMessages::notSupported(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2317
 #ifndef SP_NO_MESSAGE_TEXT
 ,"URL not supported by this version"
@@ -197,7 +199,7 @@ MessageFragment::libModule,
 );
 const MessageType0 URLStorageMessages::onlyHTTP(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2318
 #ifndef SP_NO_MESSAGE_TEXT
 ,"only HTTP scheme supported"
@@ -205,7 +207,7 @@ MessageFragment::libModule,
 );
 const MessageType1 URLStorageMessages::winsockInitialize(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2319
 #ifndef SP_NO_MESSAGE_TEXT
 ,"could not initialize Windows Sockets (%1)"
@@ -213,14 +215,14 @@ MessageFragment::libModule,
 );
 const MessageType0 URLStorageMessages::winsockVersion(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2320
 #ifndef SP_NO_MESSAGE_TEXT
 ,"incompatible Windows Sockets version"
 #endif
 );
 const MessageFragment URLStorageMessages::winsockErrorNumber(
-MessageFragment::libModule,
+&libModule,
 2321
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error number "

@@ -61,7 +61,7 @@ dnl define HAVE_BOOL. Note that a typedef is not a separate
 dnl type since you cannot overload a function such that it accepts either
 dnl the basic type or the typedef.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_BOOL,
@@ -86,7 +86,7 @@ dnl @synopsis AC_CXX_TYPENAME
 dnl
 dnl If the compiler recognizes the typename keyword, define HAVE_TYPENAME.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_TYPENAME,
@@ -110,7 +110,7 @@ dnl If the compiler accepts the new for scoping rules (the scope of a
 dnl variable declared inside the parentheses is restricted to the
 dnl for-body), define HAVE_NEW_FOR_SCOPING.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_NEW_FOR_SCOPING,
@@ -138,7 +138,7 @@ dnl @synopsis AC_CXX_DYNAMIC_CAST
 dnl
 dnl If the compiler supports dynamic_cast<>, define HAVE_DYNAMIC_CAST.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_DYNAMIC_CAST,
@@ -164,7 +164,7 @@ dnl
 dnl If the compiler can prevent names clashes using namespaces, define
 dnl HAVE_NAMESPACES.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_NAMESPACES,
@@ -193,7 +193,7 @@ dnl
 dnl Use for enabling code to handle drive letters, backslashes in
 dnl filenames and semicolons in the PATH.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Mark Elbrecht <snowball3@bigfoot.com>
 dnl
 AC_DEFUN(ACX_CHECK_PATHNAME_STYLE_DOS,
@@ -221,7 +221,7 @@ dnl
 dnl If the C++ compiler supports explicit instanciations syntax,
 dnl define HAVE_INSTANTIATIONS.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_EXPLICIT_INSTANTIATIONS,
@@ -256,7 +256,7 @@ dnl If the compiler allows modifying class data members flagged with
 dnl the mutable keyword even in const objects (for example in the
 dnl body of a const member function), define HAVE_MUTABLE.
 dnl
-dnl @version $Id: acinclude.m4,v 1.8.2.2 1999/12/22 19:47:39 clasen Exp $
+dnl @version $Id: acinclude.m4,v 1.9 2000/02/08 16:59:26 clasen Exp $
 dnl @author Luc Maisonobe
 dnl
 AC_DEFUN(AC_CXX_MUTABLE,

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-12-21 21:04+0000\n"
+"POT-Creation-Date: 2002-11-23 14:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,9 +83,6 @@ msgstr ""
 msgid "invalid value %1 for ArcIgnD attribute"
 msgstr ""
 
-msgid "invalid value %1 for ArcIndr architectural support attribute"
-msgstr ""
-
 msgid "unrecognized quantity name %1"
 msgstr ""
 
@@ -99,6 +96,42 @@ msgid "invalid digit %1"
 msgstr ""
 
 msgid "only value of nArcIndr for ArcIndr attribute supported"
+msgstr ""
+
+msgid "#ARCCONT attribute already specified"
+msgstr ""
+
+msgid "invalid value %1 for #ARCCONT"
+msgstr ""
+
+msgid "%1 already used as a substitute name"
+msgstr ""
+
+msgid "substitute name #CONTENT already specified"
+msgstr ""
+
+msgid "IS10744 PI keyword missing"
+msgstr ""
+
+msgid "invalid IS10744 PI keyword %1"
+msgstr ""
+
+msgid "architecture %1 already defined"
+msgstr ""
+
+msgid "the first definition"
+msgstr ""
+
+msgid "ignoring PI declaration of architecture %1"
+msgstr ""
+
+msgid "the ArcBase definition"
+msgstr ""
+
+msgid "ignoring ArcBase declaration of architecture %1"
+msgstr ""
+
+msgid "the PI definition"
 msgstr ""
 
 msgid "name expected"
@@ -216,6 +249,9 @@ msgid "Arguments are catalogs, use DOCUMENT entry."
 msgstr ""
 
 msgid "Search files in directory %1."
+msgstr ""
+
+msgid "Restrict file reading (for use in Web apps)."
 msgstr ""
 
 msgid "DIRECTORY"
@@ -1661,7 +1697,7 @@ msgstr ""
 msgid "can't use #IMPLICIT doctype unless CONCUR NO and LINK EXPLICIT NO"
 msgstr ""
 
-msgid "Sorry, #IMPLICIT doctypes not implemented"
+msgid "Sorry, #IMPLIED doctypes not implemented"
 msgstr ""
 
 msgid "reference to DTD data entity ignored"
@@ -1671,6 +1707,24 @@ msgid "notation %1 for parameter entity %2 undefined"
 msgstr ""
 
 msgid "notation %1 for external subset undefined"
+msgstr ""
+
+msgid "attribute %1 can't be redeclared"
+msgstr ""
+
+msgid "#IMPLICIT attributes have already been specified for notation %1"
+msgstr ""
+
+msgid "a name group is not allowed in a parameter entity reference in a start tag"
+msgstr ""
+
+msgid "name group in a parameter entity reference in an end tag (SGML forbids them in start tags)"
+msgstr ""
+
+msgid "if the declared value is NOTATION a default value of CONREF is useless"
+msgstr ""
+
+msgid "Sorry, #ALL and #IMPLICIT content tokens not implemented"
 msgstr ""
 
 msgid "delimiter "
@@ -2025,6 +2079,15 @@ msgid "attributes were defined for notation %1; not allowed in XML"
 msgstr ""
 
 msgid "cannot convert formal system identifier %1 to URL"
+msgstr ""
+
+msgid "cannot open output file %1"
+msgstr ""
+
+msgid "missing system ID for entity %1"
+msgstr ""
+
+msgid "unexpected entity type for entity named %1"
 msgstr ""
 
 msgid "Output a document type declaration."

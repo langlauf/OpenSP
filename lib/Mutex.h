@@ -68,13 +68,13 @@ namespace SP_NAMESPACE {
 
 #define SP_MUTEX
 
-#ifdef SP_NAMESPACE
-namespace SP_NAMESPACE {
-#endif
-
 extern "C" {
 #include <pthread.h>
 }
+
+#ifdef SP_NAMESPACE
+namespace SP_NAMESPACE {
+#endif
 
 class Mutex {
 public:
@@ -88,7 +88,7 @@ public:
   private:
     Mutex *mp_;
   };
-  Mutex()  { pthread_mutex_init (&cs_, 0); }
+  Mutex()  { pthread_mutex_init (&cs_, NULL); }
   ~Mutex() { pthread_mutex_destroy (&cs_); }
   friend class Lock;
 private:

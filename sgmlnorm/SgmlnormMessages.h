@@ -21,9 +21,11 @@ struct SgmlnormMessages {
   // 6
   static const MessageType1 info3;
 };
+extern MessageModule appModule;
+
 const MessageType1 SgmlnormMessages::dHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 0
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Output a document type declaration."
@@ -31,7 +33,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SgmlnormMessages::mHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 1
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Output marked sections."
@@ -39,7 +41,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SgmlnormMessages::nHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 2
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Output comments."
@@ -47,7 +49,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SgmlnormMessages::rHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 3
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Raw output."
@@ -55,7 +57,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SgmlnormMessages::info1(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 4
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 prints on the standard output a normalized document instance"
@@ -63,7 +65,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SgmlnormMessages::info2(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 5
 #ifndef SP_NO_MESSAGE_TEXT
 ,"for the SGML document contained in the concatenation of the entities"
@@ -71,7 +73,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SgmlnormMessages::info3(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 6
 #ifndef SP_NO_MESSAGE_TEXT
 ,"with system identifiers SYSID..."

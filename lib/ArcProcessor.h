@@ -1,4 +1,4 @@
-// Copyright (c) 1996 James Clark
+// Copyright (c) 1996 James Clark, 2000 Matthias Clasen
 // See the file COPYING for copying permission.
 
 #ifndef ArcProcessor_INCLUDED
@@ -32,6 +32,10 @@ public:
     Vector<unsigned> attMapFrom;
     // corresponding list of indexes in form's attlist
     Vector<unsigned> attMapTo;
+    // corresponding list of pointers in the token maps
+    Vector<size_t> attTokenMapBase;
+    Vector<StringC> tokenMapFrom;
+    Vector<StringC> tokenMapTo;
   };
   struct MetaMapCache {
     MetaMapCache();
@@ -46,13 +50,14 @@ public:
     const AttributeList *linkAtts;
   };
   ArcProcessor();
-  void setName(const StringC &);
+  void setName(const StringC &, const Location &);
   void init(const EndPrologEvent &,
 	    const ConstPtr<Sd> &,
 	    const ConstPtr<Syntax> &,
 	    const SgmlParser *parser,
 	    Messenger *,
 	    const Vector<StringC> &superName,
+	    const NCVector<ArcProcessor> &arcProcessors,
 	    ArcDirector &director,
 	    const volatile sig_atomic_t *cancelPtr);
   // Return 0 if the content is needed, but wasn't supplied
@@ -68,7 +73,10 @@ public:
   Boolean valid() const { return valid_; }
   void checkIdrefs();
   const StringC &name() const { return name_; }
+  Boolean piDecl() const { return piDecl_; }
   EventHandler &docHandler() const { return *docHandler_; }
+  void setPiDecl(const Location &loc, const StringC &attspecText, Index attspecIndex,
+		 const ConstPtr<AttributeDefinitionList> &archPiAttributeDefs);
 private:
   ArcProcessor(const ArcProcessor &); // undefined
   void operator=(const ArcProcessor &);	// undefined
@@ -124,7 +132,9 @@ private:
 			       const Text &rename,
 			       const AttributeList &atts,
 			       const AttributeList *linkAtts,
-			       Vector<PackedBoolean> &attRenamed);
+			       Vector<PackedBoolean> &attRenamed,
+			       Vector<PackedBoolean> &attSubstituted,
+                               Boolean isNotation);
   void buildAttributeMapRest(MetaMap &map,
 			     const AttributeList &atts,
 			     const AttributeList *linkAtts,
@@ -140,8 +150,8 @@ private:
 			AttributeList &to,
 			ConstPtr<AttributeValue> &arcContent,
 			const MetaMap &map);
-  void supportAttributes(const AttributeList &);
-  void processArcOpts(const AttributeList &atts);
+  void supportAttributes(const AttributeList &, Boolean piDecl);
+  void processArcOpts(const AttributeList &atts, Boolean piDecl);
   void processArcQuant(const Text &);
   ConstPtr<Entity> makeDtdEntity(const Notation *);
   void mungeMetaDtd(Dtd &metaDtd, const Dtd &docDtd);
@@ -159,6 +169,8 @@ private:
   ConstPtr<Syntax> metaSyntax_;
   ConstPtr<Sd> docSd_;
   enum ReservedName {
+    rArcName,
+    rArcPubid,
     rArcFormA,
     rArcNamrA,
     rArcSuprA,
@@ -168,18 +180,26 @@ private:
     rArcBridF,
     rArcDataF,
     rArcAuto,
-    rArcIndr,
     rArcDTD,
+    rArcDtdPubid,
+    rArcDtdSysid,
     rArcQuant
   };
   enum { nReserve = rArcQuant + 1 };
   StringC supportAtts_[nReserve];
+  const Text *supportAttsText_[nReserve];
+  Boolean piDecl_;
+  Location declLoc_;
+  StringC piDeclAttspecText_;
+  Index piDeclAttspecIndex_;
+  ConstPtr<AttributeDefinitionList> archPiAttributeDefs_;
   Boolean arcDtdIsParam_;
   Boolean arcAuto_;
   Vector<StringC> arcOpts_;
   StringC rniContent_;
   StringC rniArcCont_;
   StringC rniDefault_;
+  StringC rniMaptoken_;
   enum {
     isArc = 01,
     suppressForm = 02,

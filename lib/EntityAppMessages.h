@@ -13,13 +13,17 @@ struct EntityAppMessages {
   // 4102
   static const MessageType1 DHelp;
   // 4103
-  static const MessageFragment directory;
+  static const MessageType1 RHelp;
   // 4104
+  static const MessageFragment directory;
+  // 4105
   static const MessageFragment sysid;
 };
+extern MessageModule libModule;
+
 const MessageType1 EntityAppMessages::cHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4100
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Use catalog %1."
@@ -27,7 +31,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityAppMessages::CHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4101
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Arguments are catalogs, use DOCUMENT entry."
@@ -35,22 +39,30 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityAppMessages::DHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4102
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Search files in directory %1."
 #endif
 );
-const MessageFragment EntityAppMessages::directory(
-MessageFragment::libModule,
+const MessageType1 EntityAppMessages::RHelp(
+MessageType::info,
+&libModule,
 4103
+#ifndef SP_NO_MESSAGE_TEXT
+,"Restrict file reading (for use in Web apps)."
+#endif
+);
+const MessageFragment EntityAppMessages::directory(
+&libModule,
+4104
 #ifndef SP_NO_MESSAGE_TEXT
 ,"DIRECTORY"
 #endif
 );
 const MessageFragment EntityAppMessages::sysid(
-MessageFragment::libModule,
-4104
+&libModule,
+4105
 #ifndef SP_NO_MESSAGE_TEXT
 ,"SYSID"
 #endif

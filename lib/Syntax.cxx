@@ -41,7 +41,7 @@ Syntax::Syntax(const Sd &sd)
   categoryTable_(otherCategory),
   shuncharControls_(0),
   multicode_(0),
-  markupScanTable_(MarkupScan::normal)
+  hasMarkupScanTable_(0)
 {
   static const char lcletter[] = "abcdefghijklmnopqrstuvwxyz";
   static const char ucletter[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -85,7 +85,7 @@ Syntax::Syntax(const Sd &sd)
       const CharsetInfo &charset = sd.internalCharset();
       WideChar c;
       ISet<WideChar> set;
-      if (charset.univToDesc(wwwSpecial[i], c, set) > 0 && c <= Char(-1)) {
+      if (charset.univToDesc(wwwSpecial[i], c, set) > 0 && c <= charMax) {
 	set_[minimumData] += Char(c);
 	set_[significant] += c;
       }
@@ -213,14 +213,26 @@ void Syntax::addFunctionChar(const StringC &str, FunctionClass fun, Char c)
     break;
   case cMSOCHAR:
     multicode_ = 1;
+    if (!hasMarkupScanTable_) {
+      markupScanTable_ = XcharMap<unsigned char>(MarkupScan::normal);
+      hasMarkupScanTable_ = 1;
+    }
     markupScanTable_.setChar(c, MarkupScan::out);
     break;
   case cMSICHAR:
     // don't need to do anything special if we just have MSICHARs
+    if (!hasMarkupScanTable_) {
+      markupScanTable_ = XcharMap<unsigned char>(MarkupScan::normal);
+      hasMarkupScanTable_ = 1;
+    }
     markupScanTable_.setChar(c, MarkupScan::in);
     break;
   case cMSSCHAR:
     multicode_ = 1;
+    if (!hasMarkupScanTable_) {
+      markupScanTable_ = XcharMap<unsigned char>(MarkupScan::normal);
+      hasMarkupScanTable_ = 1;
+    }
     markupScanTable_.setChar(c, MarkupScan::suppress);
     break;
   }
@@ -283,6 +295,11 @@ Boolean Syntax::lookupFunctionChar(const StringC &name, Char *result) const
 #ifdef __GNUG__
 typedef HashTableIter<StringC,Char> Dummy_HashTableIter_StringC_Char;
 #endif
+
+HashTableIter<StringC,Char> Syntax::functionIter() const
+{
+  return HashTableIter<StringC,Char>(functionTable_);
+}
 
 Boolean Syntax::charFunctionName(Char c, const StringC *&name) const
 {
@@ -417,7 +434,7 @@ StringC Syntax::rniReservedName(ReservedName i) const
   return result;
 }
 
-const SubstTable<Char> &Syntax::upperSubstTable() const
+const SubstTable &Syntax::upperSubstTable() const
 {
   return upperSubst_;
 }

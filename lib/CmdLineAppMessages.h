@@ -55,9 +55,11 @@ struct CmdLineAppMessages {
   // 4023
   static const MessageType1 undocOption;
 };
+extern MessageModule libModule;
+
 const MessageType1 CmdLineAppMessages::invalidOptionError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4000
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid option %1"
@@ -65,7 +67,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::missingOptionArgError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4001
 #ifndef SP_NO_MESSAGE_TEXT
 ,"missing argument for option %1"
@@ -73,7 +75,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::ambiguousOptionError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4002
 #ifndef SP_NO_MESSAGE_TEXT
 ,"option %1 is ambiguous"
@@ -81,7 +83,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::erroneousOptionArgError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4003
 #ifndef SP_NO_MESSAGE_TEXT
 ,"option %1 doesn't allow an argument"
@@ -89,7 +91,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::usage(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4004
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Usage: %1"
@@ -97,7 +99,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::usageCont(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4005
 #ifndef SP_NO_MESSAGE_TEXT
 ,"or: %1"
@@ -105,7 +107,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::defaultUsage(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4006
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 [OPTION] SYSID..."
@@ -113,7 +115,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::usageStart(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4007
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Short options need the same arguments as their long forms."
@@ -121,7 +123,7 @@ MessageFragment::libModule,
 );
 const MessageType2 CmdLineAppMessages::versionInfo(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4008
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 version %2"
@@ -129,7 +131,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::unknownBctf(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4009
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown BCTF %1"
@@ -137,7 +139,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::unknownEncoding(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4010
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown encoding %1"
@@ -145,7 +147,7 @@ MessageFragment::libModule,
 );
 const MessageType2 CmdLineAppMessages::openFileError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4011
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot open output file %1 (%2)"
@@ -153,7 +155,7 @@ MessageFragment::libModule,
 );
 const MessageType2 CmdLineAppMessages::closeFileError(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4012
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot close output file %1 (%2)"
@@ -161,7 +163,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::bHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4013
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Use bctf %1 for output."
@@ -169,7 +171,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::eHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4014
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Use encoding %1 for output."
@@ -177,7 +179,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::fHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4015
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Append error messages to file %1."
@@ -185,7 +187,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::vHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4016
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Display the program version."
@@ -193,28 +195,28 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::hHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4017
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Show this help text."
 #endif
 );
 const MessageFragment CmdLineAppMessages::name(
-MessageFragment::libModule,
+&libModule,
 4018
 #ifndef SP_NO_MESSAGE_TEXT
 ,"NAME"
 #endif
 );
 const MessageFragment CmdLineAppMessages::file(
-MessageFragment::libModule,
+&libModule,
 4019
 #ifndef SP_NO_MESSAGE_TEXT
 ,"FILE"
 #endif
 );
 const MessageFragment CmdLineAppMessages::noArg(
-MessageFragment::libModule,
+&libModule,
 4020
 #ifndef SP_NO_MESSAGE_TEXT
 ,"NOTHING"
@@ -222,14 +224,14 @@ MessageFragment::libModule,
 );
 const MessageType0 CmdLineAppMessages::tryHelpOptionForInfo(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4021
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Try the \"--help\" option for more information."
 #endif
 );
 const MessageFragment CmdLineAppMessages::someArg(
-MessageFragment::libModule,
+&libModule,
 4022
 #ifndef SP_NO_MESSAGE_TEXT
 ,"ARG"
@@ -237,7 +239,7 @@ MessageFragment::libModule,
 );
 const MessageType1 CmdLineAppMessages::undocOption(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4023
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Undocumented option (check the application's manual)."

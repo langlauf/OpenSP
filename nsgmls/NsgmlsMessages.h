@@ -48,10 +48,14 @@ struct NsgmlsMessages {
   static const MessageFragment file;
   // 20
   static const MessageFragment option;
+  // 21
+  static const MessageFragment sysid;
 };
+extern MessageModule appModule;
+
 const MessageType1 NsgmlsMessages::unknownOutputOption(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 0
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown output option %1"
@@ -59,7 +63,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::BHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 1
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Enable batch mode."
@@ -67,7 +71,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::oHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 2
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Produce output according to %1."
@@ -75,7 +79,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::pHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 3
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Stop after the document prolog."
@@ -83,7 +87,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::sHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 4
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Suppress output."
@@ -91,7 +95,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::tHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 5
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Send RAST output to file %1."
@@ -99,7 +103,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::dHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 6
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Same as -wduplicate."
@@ -107,7 +111,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::lHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 7
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Same as -oline."
@@ -115,7 +119,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::mHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 8
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Same as -c."
@@ -123,7 +127,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::rHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 9
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Same as -wdefault."
@@ -131,7 +135,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::uHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 10
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Same as -wundef."
@@ -139,7 +143,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info1(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 11
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 parses and validates the SGML document whose document entity is"
@@ -147,7 +151,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info2(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 12
 #ifndef SP_NO_MESSAGE_TEXT
 ,"specified by the system identifiers SYSID... and prints on the standard"
@@ -155,7 +159,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info3(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 13
 #ifndef SP_NO_MESSAGE_TEXT
 ,"output a simple text representation of its Element Structure Information Set."
@@ -163,7 +167,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info4(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 14
 #ifndef SP_NO_MESSAGE_TEXT
 ,"If more than one system identifier is specified, then the corresponding"
@@ -171,7 +175,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info5(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 15
 #ifndef SP_NO_MESSAGE_TEXT
 ,"entities will be concatenated to form the document entity. If no system"
@@ -179,7 +183,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info6(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 16
 #ifndef SP_NO_MESSAGE_TEXT
 ,"identifiers are specified, then %1 will read the document entity from"
@@ -187,7 +191,7 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info7(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 17
 #ifndef SP_NO_MESSAGE_TEXT
 ,"the standard input. A command line system identifier of - can be used"
@@ -195,24 +199,31 @@ MessageFragment::appModule,
 );
 const MessageType1 NsgmlsMessages::info8(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 18
 #ifndef SP_NO_MESSAGE_TEXT
 ,"to refer to the standard input."
 #endif
 );
 const MessageFragment NsgmlsMessages::file(
-MessageFragment::appModule,
+&appModule,
 19
 #ifndef SP_NO_MESSAGE_TEXT
 ,"FILE"
 #endif
 );
 const MessageFragment NsgmlsMessages::option(
-MessageFragment::appModule,
+&appModule,
 20
 #ifndef SP_NO_MESSAGE_TEXT
 ,"OPTION"
+#endif
+);
+const MessageFragment NsgmlsMessages::sysid(
+&appModule,
+21
+#ifndef SP_NO_MESSAGE_TEXT
+,"SYSID"
 #endif
 );
 #ifdef SP_NAMESPACE

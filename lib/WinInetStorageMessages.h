@@ -11,9 +11,11 @@ struct WinInetStorageMessages {
   // 2501
   static const MessageType2 readFailed;
 };
+extern MessageModule libModule;
+
 const MessageType2 WinInetStorageMessages::cannotOpen(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2500
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot open URL %1 (%2)"
@@ -21,7 +23,7 @@ MessageFragment::libModule,
 );
 const MessageType2 WinInetStorageMessages::readFailed(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2501
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error reading URL %1 (%2)"

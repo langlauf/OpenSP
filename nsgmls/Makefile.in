@@ -1,6 +1,7 @@
-# Makefile.in generated automatically by automake 1.4a from Makefile.am
+# Makefile.in generated automatically by automake 1.5 from Makefile.am.
 
-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
+# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
+# Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
 # with or without modifications, as long as this notice is preserved.
@@ -10,6 +11,7 @@
 # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.
 
+@SET_MAKE@
 
 SHELL = @SHELL@
 
@@ -31,13 +33,9 @@ infodir = @infodir@
 mandir = @mandir@
 includedir = @includedir@
 oldincludedir = /usr/include
-
-DESTDIR =
-
 pkgdatadir = $(datadir)/@PACKAGE@
 pkglibdir = $(libdir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
-
 top_builddir = ..
 
 ACLOCAL = @ACLOCAL@
@@ -49,9 +47,8 @@ INSTALL = @INSTALL@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
-INSTALL_STRIP_FLAG =
+INSTALL_HEADER = $(INSTALL_DATA)
 transform = @program_transform_name@
-
 NORMAL_INSTALL = :
 PRE_INSTALL = :
 POST_INSTALL = :
@@ -60,160 +57,129 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 host_alias = @host_alias@
 host_triplet = @host@
+AMTAR = @AMTAR@
 AS = @AS@
-CATALOGS = @CATALOGS@
+AWK = @AWK@
+BUILD_INCLUDED_LIBINTL = @BUILD_INCLUDED_LIBINTL@
 CATOBJEXT = @CATOBJEXT@
 CC = @CC@
 CPP = @CPP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
 DATADIRNAME = @DATADIRNAME@
+DEPDIR = @DEPDIR@
 DLLTOOL = @DLLTOOL@
+ECHO = @ECHO@
+EXEEXT = @EXEEXT@
 GENCAT = @GENCAT@
-GMOFILES = @GMOFILES@
+GLIBC21 = @GLIBC21@
 GMSGFMT = @GMSGFMT@
-GT_NO = @GT_NO@
-GT_YES = @GT_YES@
-INCLUDE_LOCALE_H = @INCLUDE_LOCALE_H@
+HAVE_LIB = @HAVE_LIB@
+INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 INSTOBJEXT = @INSTOBJEXT@
-INTLDEPS = @INTLDEPS@
+INTLBISON = @INTLBISON@
 INTLLIBS = @INTLLIBS@
 INTLOBJS = @INTLOBJS@
-LD = @LD@
-LIBOBJS = @LIBOBJS@
+INTL_LIBTOOL_SUFFIX_PREFIX = @INTL_LIBTOOL_SUFFIX_PREFIX@
+LIB = @LIB@
+LIBICONV = @LIBICONV@
+LIBINTL = @LIBINTL@
 LIBTOOL = @LIBTOOL@
 LN_S = @LN_S@
-MAKEINFO = @MAKEINFO@
+LTLIB = @LTLIB@
+LTLIBICONV = @LTLIBICONV@
+LTLIBINTL = @LTLIBINTL@
 MKINSTALLDIRS = @MKINSTALLDIRS@
-MSGFMT = @MSGFMT@
-NM = @NM@
 OBJDUMP = @OBJDUMP@
+OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
 PERL = @PERL@
-POFILES = @POFILES@
 POSUB = @POSUB@
 RANLIB = @RANLIB@
 SP_MESSAGE_DOMAIN = @SP_MESSAGE_DOMAIN@
+STRIP = @STRIP@
 USE_INCLUDED_LIBINTL = @USE_INCLUDED_LIBINTL@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
-l = @l@
+am__include = @am__include@
+am__quote = @am__quote@
+install_sh = @install_sh@
 
 bin_PROGRAMS = onsgmls
 
-onsgmls_SOURCES = nsgmls.cxx SgmlsEventHandler.cxx SgmlsEventHandler.h 	RastEventHandler.cxx RastEventHandler.h StringSet.cxx StringSet.h 	nsgmls_inst.cxx NsgmlsMessages.h RastEventHandlerMessages.h
+onsgmls_SOURCES = nsgmls.cxx SgmlsEventHandler.cxx SgmlsEventHandler.h \
+	RastEventHandler.cxx RastEventHandler.h StringSet.cxx StringSet.h \
+	nsgmls_inst.cxx NsgmlsMessages.h RastEventHandlerMessages.h nsgmls.h
 
 
-EXTRA_DIST = nsgmls_inst.m4 NsgmlsMessages.msg NsgmlsMessages.rc 	RastEventHandlerMessages.msg RastEventHandlerMessages.rc 	nsgmls.rc nsgmls.dsp
+EXTRA_DIST = nsgmls_inst.m4 NsgmlsMessages.msg NsgmlsMessages.rc \
+	RastEventHandlerMessages.msg RastEventHandlerMessages.rc \
+	nsgmls.rc nsgmls.dsp .cvsignore
 
 
 onsgmls_LDADD = $(top_builddir)/lib/libosp.la
 
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/generic 
 
-BUILT_SOURCES = nsgmls_inst.cxx NsgmlsMessages.h NsgmlsMessages.rc 	RastEventHandlerMessages.h RastEventHandlerMessages.rc
+BUILT_SOURCES = nsgmls_inst.cxx NsgmlsMessages.h NsgmlsMessages.rc \
+	RastEventHandlerMessages.h RastEventHandlerMessages.rc
 
+
+MAINTAINERCLEANFILES = Makefile.in
 
 MSGGENFLAGS = -l appModule 
 
 SUFFIXES = .msg .m4 .rc
+subdir = nsgmls
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
-CONFIG_HEADER = ../config.h
-CONFIG_CLEAN_FILES = 
-PROGRAMS =  $(bin_PROGRAMS)
+CONFIG_HEADER = $(top_builddir)/config.h
+CONFIG_CLEAN_FILES =
+bin_PROGRAMS = onsgmls$(EXEEXT)
+PROGRAMS = $(bin_PROGRAMS)
 
+am_onsgmls_OBJECTS = nsgmls.$(OBJEXT) SgmlsEventHandler.$(OBJEXT) \
+	RastEventHandler.$(OBJEXT) StringSet.$(OBJEXT) \
+	nsgmls_inst.$(OBJEXT)
+onsgmls_OBJECTS = $(am_onsgmls_OBJECTS)
+onsgmls_DEPENDENCIES = $(top_builddir)/lib/libosp.la
+onsgmls_LDFLAGS =
 
-DEFS = @DEFS@ -I. -I$(srcdir) -I..
+DEFS = @DEFS@
+DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
 CPPFLAGS = @CPPFLAGS@
 LDFLAGS = @LDFLAGS@
 LIBS = @LIBS@
-onsgmls_OBJECTS =  nsgmls.o SgmlsEventHandler.o RastEventHandler.o \
-StringSet.o nsgmls_inst.o
-onsgmls_DEPENDENCIES =  $(top_builddir)/lib/libosp.la
-onsgmls_LDFLAGS = 
-CXXFLAGS = @CXXFLAGS@
-CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+depcomp = $(SHELL) $(top_srcdir)/depcomp
+@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/RastEventHandler.Po \
+@AMDEP_TRUE@	$(DEPDIR)/SgmlsEventHandler.Po \
+@AMDEP_TRUE@	$(DEPDIR)/StringSet.Po $(DEPDIR)/nsgmls.Po \
+@AMDEP_TRUE@	$(DEPDIR)/nsgmls_inst.Po
+CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CXXFLAGS) $(CXXFLAGS)
 CXXLD = $(CXX)
-CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+CXXFLAGS = @CXXFLAGS@
 CFLAGS = @CFLAGS@
-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
-DIST_COMMON =  Makefile.am Makefile.in
-
-
-DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
-
-TAR = gtar
-GZIP_ENV = --best
+LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+DIST_SOURCES = $(onsgmls_SOURCES)
+DIST_COMMON = Makefile.am Makefile.in
 SOURCES = $(onsgmls_SOURCES)
-OBJECTS = $(onsgmls_OBJECTS)
 
-all: all-redirect
+all: $(BUILT_SOURCES)
+	$(MAKE) $(AM_MAKEFLAGS) all-am
+
 .SUFFIXES:
-.SUFFIXES: .S .c .cxx .lo .m4 .msg .o .rc .s
-$(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps nsgmls/Makefile
-
-Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
-	cd $(top_builddir) \
-	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
-
-
-mostlyclean-binPROGRAMS:
-
-clean-binPROGRAMS:
-	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-
-distclean-binPROGRAMS:
-
-maintainer-clean-binPROGRAMS:
-
-install-binPROGRAMS: $(bin_PROGRAMS)
-	@$(NORMAL_INSTALL)
-	$(mkinstalldirs) $(DESTDIR)$(bindir)
-	@list='$(bin_PROGRAMS)'; for p in $$list; do \
-	  if test -f $$p; then \
-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
-	  else :; fi; \
-	done
-
-uninstall-binPROGRAMS:
-	@$(NORMAL_UNINSTALL)
-	list='$(bin_PROGRAMS)'; for p in $$list; do \
-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
-	done
-
-.c.o:
-	$(COMPILE) -c $<
-
-.s.o:
-	$(COMPILE) -c $<
-
-.S.o:
-	$(COMPILE) -c $<
-
-mostlyclean-compile:
-	-rm -f *.o core *.core
-
-clean-compile:
-
-distclean-compile:
-	-rm -f *.tab.c
-
-maintainer-clean-compile:
-
-.c.lo:
-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
-
-.s.lo:
-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
-
-.S.lo:
-	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+.SUFFIXES: .msg .m4 .rc .cxx .lo .o .obj
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -222,267 +188,210 @@ clean-libtool:
 	-rm -rf .libs _libs
 
 distclean-libtool:
+	-rm -f libtool
+$(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+	cd $(top_srcdir) && \
+	  $(AUTOMAKE) --gnu  nsgmls/Makefile
+Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) && \
+	  CONFIG_HEADERS= CONFIG_LINKS= \
+	  CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+	  if test -f $$p \
+	     || test -f $$p1 \
+	  ; then \
+	    f=`echo $$p1|sed '$(transform);s/$$/$(EXEEXT)/'`; \
+	   echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$f"; \
+	   $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$f; \
+	  else :; fi; \
+	done
 
-maintainer-clean-libtool:
+uninstall-binPROGRAMS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  f=`echo $$p|sed 's/$(EXEEXT)$$//;$(transform);s/$$/$(EXEEXT)/'`; \
+	  echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
+	  rm -f $(DESTDIR)$(bindir)/$$f; \
+	done
 
-onsgmls: $(onsgmls_OBJECTS) $(onsgmls_DEPENDENCIES)
-	@rm -f onsgmls
+clean-binPROGRAMS:
+	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+onsgmls$(EXEEXT): $(onsgmls_OBJECTS) $(onsgmls_DEPENDENCIES) 
+	@rm -f onsgmls$(EXEEXT)
 	$(CXXLINK) $(onsgmls_LDFLAGS) $(onsgmls_OBJECTS) $(onsgmls_LDADD) $(LIBS)
+
+mostlyclean-compile:
+	-rm -f *.$(OBJEXT) core *.core
+
+distclean-compile:
+	-rm -f *.tab.c
+
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/RastEventHandler.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/SgmlsEventHandler.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/StringSet.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/nsgmls.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/nsgmls_inst.Po@am__quote@
+
+distclean-depend:
+	-rm -rf $(DEPDIR)
+
 .cxx.o:
-	$(CXXCOMPILE) -c $<
+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+
+.cxx.obj:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CXXCOMPILE) -c -o $@ `cygpath -w $<`
+
 .cxx.lo:
-	$(LTCXXCOMPILE) -c $<
+@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(LTCXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+CXXDEPMODE = @CXXDEPMODE@
+uninstall-info-am:
 
 tags: TAGS
 
-ID: $(HEADERS) $(SOURCES) $(LISP)
-	list='$(SOURCES) $(HEADERS)'; \
-	unique=`for i in $$list; do echo $$i; done | \
-	  awk '    { files[$$0] = 1; } \
+ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
 	       END { for (i in files) print i; }'`; \
-	here=`pwd` && cd $(srcdir) \
-	  && mkid -f$$here/ID $$unique $(LISP)
+	mkid -fID $$unique $(LISP)
 
-TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+		$(TAGS_FILES) $(LISP)
 	tags=; \
 	here=`pwd`; \
-	list='$(SOURCES) $(HEADERS)'; \
-	unique=`for i in $$list; do echo $$i; done | \
-	  awk '    { files[$$0] = 1; } \
+	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
 	       END { for (i in files) print i; }'`; \
 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
-	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
 
-mostlyclean-tags:
-
-clean-tags:
+GTAGS:
+	here=`CDPATH=: && cd $(top_builddir) && pwd` \
+	  && cd $(top_srcdir) \
+	  && gtags -i $(GTAGS_ARGS) $$here
 
 distclean-tags:
-	-rm -f TAGS ID
+	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
 
-maintainer-clean-tags:
+DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 
-distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
-
-subdir = nsgmls
+top_distdir = ..
+distdir = $(top_distdir)/$(PACKAGE)-$(VERSION)
 
 distdir: $(DISTFILES)
 	@for file in $(DISTFILES); do \
-	  d=$(srcdir); \
+	  if test -f $$file; then d=.; else d=$(srcdir); fi; \
+	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+	  if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+	    $(mkinstalldirs) "$(distdir)/$$dir"; \
+	  fi; \
 	  if test -d $$d/$$file; then \
-	    cp -pr $$d/$$file $(distdir)/$$file; \
+	    cp -pR $$d/$$file $(distdir) \
+	    || exit 1; \
 	  else \
 	    test -f $(distdir)/$$file \
-	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+	    || cp -p $$d/$$file $(distdir)/$$file \
+	    || exit 1; \
 	  fi; \
 	done
-nsgmls_inst.o: nsgmls_inst.cxx ../config.h
-nsgmls.o: nsgmls.cxx ../config.h ../include/Event.h ../include/Link.h \
-	../include/Allocator.h ../include/Location.h ../include/types.h \
-	../include/Boolean.h ../include/Ptr.h ../include/Ptr.cxx \
-	../include/Resource.h ../include/Vector.h ../include/xnew.h \
-	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
-	../include/StringC.h ../include/StringOf.h \
-	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
-	../include/NamedResource.h ../include/Named.h \
-	../include/ExternalId.h ../include/Text.h \
-	../include/SubstTable.h ../include/SubstTable.cxx \
-	../include/Message.h ../include/CopyOwner.h \
-	../include/CopyOwner.cxx ../include/MessageArg.h \
-	../include/Attributed.h ../include/Attribute.h \
-	../include/StringResource.h ../include/EntityDecl.h \
-	../include/Sd.h ../include/CharsetInfo.h \
-	../include/UnivCharsetDesc.h ../include/CharMap.h \
-	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
-	../include/ISet.cxx ../include/RangeMap.cxx \
-	../include/constant.h ../include/Syntax.h \
-	../include/HashTable.h ../include/OwnerTable.h \
-	../include/PointerTable.h ../include/PointerTable.cxx \
-	../include/OwnerTable.cxx ../include/Hash.h \
-	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
-	../include/HashTable.cxx ../include/XcharMap.h \
-	../include/XcharMap.cxx ../include/EntityCatalog.h \
-	../include/CharsetDecl.h ../include/EntityManager.h \
-	../include/Dtd.h ../include/NamedTable.h \
-	../include/NamedResourceTable.h ../include/ElementType.h \
-	../include/Mode.h ../include/ContentToken.h \
-	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
-	../include/SdText.h ../include/ShortReferenceMap.h \
-	../include/Lpd.h ../include/MessageEventHandler.h \
-	../include/ErrorCountEventHandler.h SgmlsEventHandler.h \
-	../include/OutputCharStream.h ../include/CodingSystem.h \
-	../include/OutputByteStream.h StringSet.h \
-	../include/LinkProcess.h ../include/IList.h \
-	../include/IListBase.h RastEventHandler.h ../include/IQueue.h \
-	../include/IQueue.cxx NsgmlsMessages.h \
-	../include/ErrnoMessageArg.h ../include/ParserApp.h \
-	../include/SgmlParser.h ../include/ParserOptions.h \
-	../include/EventsWanted.h ../include/EntityApp.h \
-	../include/CmdLineApp.h ../include/MessageReporter.h \
-	../include/MessageFormatter.h ../include/MessageBuilder.h \
-	../include/CodingSystemKit.h ../include/Options.h \
-	../include/Options.cxx ../include/ExtendEntityManager.h \
-	../include/sptchar.h ../include/macros.h
-RastEventHandler.o: RastEventHandler.cxx ../config.h RastEventHandler.h \
-	../include/Event.h ../include/Link.h ../include/Allocator.h \
-	../include/Location.h ../include/types.h ../include/Boolean.h \
-	../include/Ptr.h ../include/Ptr.cxx ../include/Resource.h \
-	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
-	../include/Owner.h ../include/Owner.cxx ../include/StringC.h \
-	../include/StringOf.h ../include/StringOf.cxx ../include/rtti.h \
-	../include/Notation.h ../include/NamedResource.h \
-	../include/Named.h ../include/ExternalId.h ../include/Text.h \
-	../include/SubstTable.h ../include/SubstTable.cxx \
-	../include/Message.h ../include/CopyOwner.h \
-	../include/CopyOwner.cxx ../include/MessageArg.h \
-	../include/Attributed.h ../include/Attribute.h \
-	../include/StringResource.h ../include/EntityDecl.h \
-	../include/Sd.h ../include/CharsetInfo.h \
-	../include/UnivCharsetDesc.h ../include/CharMap.h \
-	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
-	../include/ISet.cxx ../include/RangeMap.cxx \
-	../include/constant.h ../include/Syntax.h \
-	../include/HashTable.h ../include/OwnerTable.h \
-	../include/PointerTable.h ../include/PointerTable.cxx \
-	../include/OwnerTable.cxx ../include/Hash.h \
-	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
-	../include/HashTable.cxx ../include/XcharMap.h \
-	../include/XcharMap.cxx ../include/EntityCatalog.h \
-	../include/CharsetDecl.h ../include/EntityManager.h \
-	../include/Dtd.h ../include/NamedTable.h \
-	../include/NamedResourceTable.h ../include/ElementType.h \
-	../include/Mode.h ../include/ContentToken.h \
-	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
-	../include/SdText.h ../include/ShortReferenceMap.h \
-	../include/Lpd.h ../include/OutputCharStream.h \
-	../include/CodingSystem.h ../include/OutputByteStream.h \
-	../include/LinkProcess.h ../include/IList.h \
-	../include/IListBase.h ../include/IQueue.h \
-	../include/IQueue.cxx ../include/ErrorCountEventHandler.h \
-	../include/SgmlParser.h ../include/ParserOptions.h \
-	../include/EventsWanted.h RastEventHandlerMessages.h
-SgmlsEventHandler.o: SgmlsEventHandler.cxx ../config.h \
-	SgmlsEventHandler.h ../include/Event.h ../include/Link.h \
-	../include/Allocator.h ../include/Location.h ../include/types.h \
-	../include/Boolean.h ../include/Ptr.h ../include/Ptr.cxx \
-	../include/Resource.h ../include/Vector.h ../include/xnew.h \
-	../include/Vector.cxx ../include/Owner.h ../include/Owner.cxx \
-	../include/StringC.h ../include/StringOf.h \
-	../include/StringOf.cxx ../include/rtti.h ../include/Notation.h \
-	../include/NamedResource.h ../include/Named.h \
-	../include/ExternalId.h ../include/Text.h \
-	../include/SubstTable.h ../include/SubstTable.cxx \
-	../include/Message.h ../include/CopyOwner.h \
-	../include/CopyOwner.cxx ../include/MessageArg.h \
-	../include/Attributed.h ../include/Attribute.h \
-	../include/StringResource.h ../include/EntityDecl.h \
-	../include/Sd.h ../include/CharsetInfo.h \
-	../include/UnivCharsetDesc.h ../include/CharMap.h \
-	../include/CharMap.cxx ../include/RangeMap.h ../include/ISet.h \
-	../include/ISet.cxx ../include/RangeMap.cxx \
-	../include/constant.h ../include/Syntax.h \
-	../include/HashTable.h ../include/OwnerTable.h \
-	../include/PointerTable.h ../include/PointerTable.cxx \
-	../include/OwnerTable.cxx ../include/Hash.h \
-	../include/HashTableItemBase.h ../include/HashTableItemBase.cxx \
-	../include/HashTable.cxx ../include/XcharMap.h \
-	../include/XcharMap.cxx ../include/EntityCatalog.h \
-	../include/CharsetDecl.h ../include/EntityManager.h \
-	../include/Dtd.h ../include/NamedTable.h \
-	../include/NamedResourceTable.h ../include/ElementType.h \
-	../include/Mode.h ../include/ContentToken.h \
-	../include/NCVector.h ../include/Entity.h ../include/Markup.h \
-	../include/SdText.h ../include/ShortReferenceMap.h \
-	../include/Lpd.h ../include/OutputCharStream.h \
-	../include/CodingSystem.h ../include/OutputByteStream.h \
-	StringSet.h ../include/LinkProcess.h ../include/IList.h \
-	../include/IListBase.h ../include/ErrorCountEventHandler.h \
-	../include/SgmlParser.h ../include/ParserOptions.h \
-	../include/EventsWanted.h ../include/ExtendEntityManager.h \
-	../include/CodingSystemKit.h ../include/StorageManager.h \
-	../include/macros.h
-StringSet.o: StringSet.cxx ../config.h StringSet.h ../include/StringC.h \
-	../include/types.h ../include/StringOf.h ../include/Boolean.h \
-	../include/StringOf.cxx ../include/Hash.h \
-	../include/OwnerTable.h ../include/PointerTable.h \
-	../include/Vector.h ../include/xnew.h ../include/Vector.cxx \
-	../include/PointerTable.cxx ../include/OwnerTable.cxx
-
-info-am:
-info: info-am
-dvi-am:
-dvi: dvi-am
 check-am: all-am
 check: check-am
-installcheck-am:
-installcheck: installcheck-am
-install-exec-am: install-binPROGRAMS
-install-exec: install-exec-am
+all-am: Makefile $(PROGRAMS)
 
-install-data-am:
+installdirs:
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+
+install: install-am
+install-exec: install-exec-am
 install-data: install-data-am
+uninstall: uninstall-am
 
 install-am: all-am
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
-install: install-am
-uninstall-am: uninstall-binPROGRAMS
-uninstall: uninstall-am
-all-am: Makefile $(PROGRAMS)
-all-redirect: all-am
+
+installcheck: installcheck-am
 install-strip:
-	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
-installdirs:
-	$(mkinstalldirs)  $(DESTDIR)$(bindir)
-
-
+	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
+	  `test -z '$(STRIP)' || \
+	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
 mostlyclean-generic:
 
 clean-generic:
 
 distclean-generic:
-	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
 
 maintainer-clean-generic:
-	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
-mostlyclean-am:  mostlyclean-binPROGRAMS mostlyclean-compile \
-		mostlyclean-libtool mostlyclean-tags \
-		mostlyclean-generic
-
-mostlyclean: mostlyclean-am
-
-clean-am:  clean-binPROGRAMS clean-compile clean-libtool clean-tags \
-		clean-generic mostlyclean-am
-
+	@echo "This command is intended for maintainers to use"
+	@echo "it deletes files that may require special tools to rebuild."
+	-test -z "$(BUILT_SOURCES)$(MAINTAINERCLEANFILES)" || rm -f $(BUILT_SOURCES) $(MAINTAINERCLEANFILES)
 clean: clean-am
 
-distclean-am:  distclean-binPROGRAMS distclean-compile distclean-libtool \
-		distclean-tags distclean-generic clean-am
-	-rm -f libtool
+clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-am
 
-maintainer-clean-am:  maintainer-clean-binPROGRAMS \
-		maintainer-clean-compile maintainer-clean-libtool \
-		maintainer-clean-tags maintainer-clean-generic \
-		distclean-am
-	@echo "This command is intended for maintainers to use;"
-	@echo "it deletes files that may require special tools to rebuild."
+distclean-am: clean-am distclean-compile distclean-depend \
+	distclean-generic distclean-libtool distclean-tags
+
+dvi: dvi-am
+
+dvi-am:
+
+info: info-am
+
+info-am:
+
+install-data-am:
+
+install-exec-am: install-binPROGRAMS
+
+install-info: install-info-am
+
+install-man:
+
+installcheck-am:
 
 maintainer-clean: maintainer-clean-am
 
-.PHONY: mostlyclean-binPROGRAMS distclean-binPROGRAMS clean-binPROGRAMS \
-maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
-mostlyclean-compile distclean-compile clean-compile \
-maintainer-clean-compile mostlyclean-libtool distclean-libtool \
-clean-libtool maintainer-clean-libtool tags mostlyclean-tags \
-distclean-tags clean-tags maintainer-clean-tags distdir info-am info \
-dvi-am dvi check check-am installcheck-am installcheck install-exec-am \
-install-exec install-data-am install-data install-am install \
-uninstall-am uninstall all-redirect all-am all installdirs \
-mostlyclean-generic distclean-generic clean-generic \
-maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+maintainer-clean-am: distclean-am maintainer-clean-generic
+
+mostlyclean: mostlyclean-am
+
+mostlyclean-am: mostlyclean-compile mostlyclean-generic \
+	mostlyclean-libtool
+
+uninstall-am: uninstall-binPROGRAMS uninstall-info-am
+
+.PHONY: GTAGS all all-am check check-am clean clean-binPROGRAMS \
+	clean-generic clean-libtool distclean distclean-compile \
+	distclean-depend distclean-generic distclean-libtool \
+	distclean-tags distdir dvi dvi-am info info-am install \
+	install-am install-binPROGRAMS install-data install-data-am \
+	install-exec install-exec-am install-info install-info-am \
+	install-man install-strip installcheck installcheck-am \
+	installdirs maintainer-clean maintainer-clean-generic \
+	mostlyclean mostlyclean-compile mostlyclean-generic \
+	mostlyclean-libtool tags uninstall uninstall-am \
+	uninstall-binPROGRAMS uninstall-info-am
 
 
 .m4.cxx:
@@ -490,7 +399,6 @@ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
 
 %.h %.cxx %.rc: %.msg
 	[ ! -f $(top_srcdir)/msggen.pl ] || $(PERL) -w $(top_srcdir)/msggen.pl $(MSGGENFLAGS) $<
-
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

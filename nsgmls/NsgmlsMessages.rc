@@ -21,4 +21,5 @@ BEGIN
   18, "to refer to the standard input."
   19, "FILE"
   20, "OPTION"
+  21, "SYSID"
 END

@@ -8,4 +8,7 @@ BEGIN
   105, "external data entity %1 is CDATA or SDATA, but XML allows only NDATA"
   106, "attributes were defined for notation %1; not allowed in XML"
   107, "cannot convert formal system identifier %1 to URL"
+  108, "cannot open output file %1"
+  109, "missing system ID for entity %1"
+  110, "unexpected entity type for entity named %1"
 END

@@ -35,9 +35,11 @@ struct SpcatMessages {
   // 13
   static const MessageFragment name;
 };
+extern MessageModule appModule;
+
 const MessageType1 SpcatMessages::PHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 0
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for the public id %1."
@@ -45,7 +47,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::SHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 1
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for system id %1."
@@ -53,7 +55,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::pHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 2
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for parameter entity %1."
@@ -61,7 +63,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::dHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 3
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for the doctype %1."
@@ -69,7 +71,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::lHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 4
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for the linktype %1."
@@ -77,7 +79,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::eHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 5
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for entity %1."
@@ -85,7 +87,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::nHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 6
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for notation %1."
@@ -93,7 +95,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::sHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 7
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Print the effective system id for the SGML declaration for doctype %1."
@@ -101,7 +103,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::info1(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 8
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 prints effective system identifiers found in the catalogs on the"
@@ -109,7 +111,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::info2(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 9
 #ifndef SP_NO_MESSAGE_TEXT
 ,"standard output. It doesn't check that the system identifiers correspond"
@@ -117,7 +119,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::info3(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 10
 #ifndef SP_NO_MESSAGE_TEXT
 ,"to actual files. The return value is 0 if the last system identifier was"
@@ -125,21 +127,21 @@ MessageFragment::appModule,
 );
 const MessageType1 SpcatMessages::info4(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 11
 #ifndef SP_NO_MESSAGE_TEXT
 ,"successfully created and 1 otherwise."
 #endif
 );
 const MessageFragment SpcatMessages::literal(
-MessageFragment::appModule,
+&appModule,
 12
 #ifndef SP_NO_MESSAGE_TEXT
 ,"LITERAL"
 #endif
 );
 const MessageFragment SpcatMessages::name(
-MessageFragment::appModule,
+&appModule,
 13
 #ifndef SP_NO_MESSAGE_TEXT
 ,"NAME"

@@ -35,9 +35,11 @@ struct SpamMessages {
   // 13
   static const MessageFragment name;
 };
+extern MessageModule appModule;
+
 const MessageType1 SpamMessages::invalidMarkupArgument(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 0
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid argument for -m option"
@@ -45,7 +47,7 @@ MessageFragment::appModule,
 );
 const MessageType0 SpamMessages::tagInSpecialMarkedSection(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 1
 #ifndef SP_NO_MESSAGE_TEXT
 ,"omitted start or end tag implied in CDATA or RCDATA marked section; not normalized"
@@ -53,7 +55,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::hHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 2
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Hoist omitted tags."
@@ -61,7 +63,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::lHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 3
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Prefer lowercase."
@@ -69,7 +71,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::mHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 4
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Use markup option %1."
@@ -77,7 +79,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::oHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 5
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Output the entity named %1."
@@ -85,7 +87,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::pHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 6
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Output the prolog."
@@ -93,7 +95,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::rHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 7
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Raw."
@@ -101,7 +103,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::xHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 8
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Expand references."
@@ -109,7 +111,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::info1(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 9
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 is an SGML markup stream editor. %1 parses the SGML document"
@@ -117,7 +119,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::info2(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 10
 #ifndef SP_NO_MESSAGE_TEXT
 ,"contained in SYSID... and copies portions of the document to the"
@@ -125,21 +127,21 @@ MessageFragment::appModule,
 );
 const MessageType1 SpamMessages::info3(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 11
 #ifndef SP_NO_MESSAGE_TEXT
 ,"standard output, adding or changing markup as specified by the options."
 #endif
 );
 const MessageFragment SpamMessages::option(
-MessageFragment::appModule,
+&appModule,
 12
 #ifndef SP_NO_MESSAGE_TEXT
 ,"OPTION"
 #endif
 );
 const MessageFragment SpamMessages::name(
-MessageFragment::appModule,
+&appModule,
 13
 #ifndef SP_NO_MESSAGE_TEXT
 ,"NAME"

@@ -25,9 +25,11 @@ struct PosixStorageMessages {
   // 2208
   static const MessageType2 cannotFind;
 };
+extern MessageModule libModule;
+
 const MessageType2 PosixStorageMessages::readSystemCall(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2200
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error reading %1 (%2)"
@@ -35,7 +37,7 @@ MessageFragment::libModule,
 );
 const MessageType2 PosixStorageMessages::openSystemCall(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2201
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot open %1 (%2)"
@@ -43,7 +45,7 @@ MessageFragment::libModule,
 );
 const MessageType2 PosixStorageMessages::closeSystemCall(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2202
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error closing %1 (%2)"
@@ -51,7 +53,7 @@ MessageFragment::libModule,
 );
 const MessageType2 PosixStorageMessages::lseekSystemCall(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2203
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error seeking on %1 (%2)"
@@ -59,7 +61,7 @@ MessageFragment::libModule,
 );
 const MessageType1 PosixStorageMessages::invalidFilename(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2204
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid filename %1"
@@ -67,7 +69,7 @@ MessageFragment::libModule,
 );
 const MessageType2 PosixStorageMessages::fdRead(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2205
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error reading file descriptor %1 (%2)"
@@ -75,7 +77,7 @@ MessageFragment::libModule,
 );
 const MessageType2 PosixStorageMessages::fdLseek(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2206
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error seeking on file descriptor %1 (%2)"
@@ -83,7 +85,7 @@ MessageFragment::libModule,
 );
 const MessageType1 PosixStorageMessages::invalidNumber(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2207
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 is not a valid file descriptor number"
@@ -91,7 +93,7 @@ MessageFragment::libModule,
 );
 const MessageType2 PosixStorageMessages::cannotFind(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2208
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot find %1; tried %2"

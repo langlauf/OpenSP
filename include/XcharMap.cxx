@@ -1,4 +1,4 @@
-// Copyright (c) 1994 James Clark
+// Copyright (c) 1994 James Clark, 2000 Matthias Clasen
 // See the file COPYING for copying permission.
 
 #ifndef XcharMap_DEF_INCLUDED
@@ -31,6 +31,9 @@ XcharMap<T>::XcharMap()
 template<class T>
 XcharMap<T>::XcharMap(T defaultValue)
 : sharedMap_(new SharedXcharMap<T>(defaultValue))
+#ifdef SP_MULTI_BYTE
+  , hiMap_(new CharMapResource<T>(defaultValue))
+#endif
 {
   ptr_ = sharedMap_->ptr();
 }
@@ -39,9 +42,20 @@ template<class T>
 void XcharMap<T>::setRange(Char min, Char max, T val)
 {
   if (min <= max) {
-    do {
-      ptr_[min] = val;
-    } while (min++ != max);
+#ifdef SP_MULTI_BYTE
+    if (min <= 0xffff) {
+      Char m = max <= 0xffff ? max : 0xffff;
+#else
+      Char m = max;
+#endif
+      do {
+	ptr_[min] = val;
+      } while (min++ != m);
+#ifdef SP_MULTI_BYTE
+    }
+    if (max >= 0x10000)
+      hiMap_->setRange(min < 0x10000 ? 0x10000 : min, max, val);
+#endif
   }
 }
 

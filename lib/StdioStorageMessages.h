@@ -13,9 +13,11 @@ struct StdioStorageMessages {
   // 2402
   static const MessageType2 seekFailed;
 };
+extern MessageModule libModule;
+
 const MessageType2 StdioStorageMessages::openFailed(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2400
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot open %1 (%2)"
@@ -23,7 +25,7 @@ MessageFragment::libModule,
 );
 const MessageType2 StdioStorageMessages::readFailed(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2401
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error reading %1 (%2)"
@@ -31,7 +33,7 @@ MessageFragment::libModule,
 );
 const MessageType2 StdioStorageMessages::seekFailed(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2402
 #ifndef SP_NO_MESSAGE_TEXT
 ,"error seeking %1 (%2)"

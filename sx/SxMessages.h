@@ -19,9 +19,11 @@ struct SxMessages {
   // 5
   static const MessageFragment option;
 };
+extern MessageModule appModule;
+
 const MessageType1 SxMessages::unknownOutputOption(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 0
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown output option %1"
@@ -29,7 +31,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SxMessages::xHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 1
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Modify the XML output according to %1."
@@ -37,7 +39,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SxMessages::info1(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 2
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 converts SGML to XML. %1 parses and validates the SGML document"
@@ -45,7 +47,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SxMessages::info2(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 3
 #ifndef SP_NO_MESSAGE_TEXT
 ,"contained in SYSID... and writes an equivalent XML document to the standard"
@@ -53,14 +55,14 @@ MessageFragment::appModule,
 );
 const MessageType1 SxMessages::info3(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 4
 #ifndef SP_NO_MESSAGE_TEXT
 ,"output. %1 will warn about SGML constructs which have no XML equivalent."
 #endif
 );
 const MessageFragment SxMessages::option(
-MessageFragment::appModule,
+&appModule,
 5
 #ifndef SP_NO_MESSAGE_TEXT
 ,"OPTION"

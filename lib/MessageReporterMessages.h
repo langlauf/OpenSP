@@ -29,78 +29,80 @@ struct MessageReporterMessages {
   // 5010
   static const MessageFragment relevantClauses;
 };
+extern MessageModule libModule;
+
 const MessageFragment MessageReporterMessages::infoTag(
-MessageFragment::libModule,
+&libModule,
 5000
 #ifndef SP_NO_MESSAGE_TEXT
 ,"I"
 #endif
 );
 const MessageFragment MessageReporterMessages::warningTag(
-MessageFragment::libModule,
+&libModule,
 5001
 #ifndef SP_NO_MESSAGE_TEXT
 ,"W"
 #endif
 );
 const MessageFragment MessageReporterMessages::quantityErrorTag(
-MessageFragment::libModule,
+&libModule,
 5002
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Q"
 #endif
 );
 const MessageFragment MessageReporterMessages::idrefErrorTag(
-MessageFragment::libModule,
+&libModule,
 5003
 #ifndef SP_NO_MESSAGE_TEXT
 ,"X"
 #endif
 );
 const MessageFragment MessageReporterMessages::errorTag(
-MessageFragment::libModule,
+&libModule,
 5004
 #ifndef SP_NO_MESSAGE_TEXT
 ,"E"
 #endif
 );
 const MessageFragment MessageReporterMessages::openElements(
-MessageFragment::libModule,
+&libModule,
 5005
 #ifndef SP_NO_MESSAGE_TEXT
 ,"open elements"
 #endif
 );
 const MessageFragment MessageReporterMessages::inNamedEntity(
-MessageFragment::libModule,
+&libModule,
 5006
 #ifndef SP_NO_MESSAGE_TEXT
 ,"In entity %1 included from %2"
 #endif
 );
 const MessageFragment MessageReporterMessages::inUnnamedEntity(
-MessageFragment::libModule,
+&libModule,
 5007
 #ifndef SP_NO_MESSAGE_TEXT
 ,"In entity included from %2"
 #endif
 );
 const MessageFragment MessageReporterMessages::invalidLocation(
-MessageFragment::libModule,
+&libModule,
 5008
 #ifndef SP_NO_MESSAGE_TEXT
 ,"(invalid location)"
 #endif
 );
 const MessageFragment MessageReporterMessages::offset(
-MessageFragment::libModule,
+&libModule,
 5009
 #ifndef SP_NO_MESSAGE_TEXT
 ,"offset "
 #endif
 );
 const MessageFragment MessageReporterMessages::relevantClauses(
-MessageFragment::libModule,
+&libModule,
 5010
 #ifndef SP_NO_MESSAGE_TEXT
 ,"relevant clauses: "

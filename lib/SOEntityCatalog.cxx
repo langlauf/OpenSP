@@ -118,7 +118,7 @@ private:
     Table();
     const CatalogEntry *lookup(const StringC &, Boolean overrideOnly) const;
     const CatalogEntry *lookup(const StringC &key,
-			       const SubstTable<Char> &substTable,
+			       const SubstTable &substTable,
 			       Boolean overrideOnly) const;
     void insert(const StringC &, const CatalogEntry &, Boolean override);
     size_t count() const;
@@ -237,7 +237,7 @@ private:
   StringC dtddeclKey_;
   StringC sgmlKey_;
   XcharMap<unsigned char> categoryTable_;
-  SubstTable<Char> substTable_;
+  SubstTable substTable_;
   Boolean override_;
 };
 
@@ -542,7 +542,7 @@ Boolean SOEntityCatalog::lookupChar(const StringC &name,
     int d = charset.digitWeight(number[i]);
     if (d < 0)
       return 0;
-    if (n <= UnivChar(-1)/10 && (n *= 10) <= UnivChar(-1) - d)
+    if (n <= univCharMax/10 && (n *= 10) <= univCharMax - d)
       n += d;
   }
   result = n;
@@ -757,7 +757,7 @@ const CatalogEntry *SOEntityCatalog::Table::lookup(const StringC &key,
 
 const CatalogEntry *
 SOEntityCatalog::Table::lookup(const StringC &name,
-			       const SubstTable<Char> &substTable,
+			       const SubstTable &substTable,
 			       Boolean overrideOnly) const
 {
   HashTableIter<StringC,CatalogEntry> iter1(overrideEntries_);
@@ -775,8 +775,7 @@ SOEntityCatalog::Table::lookup(const StringC &name,
     StringC buffer;
     while (iter.next(key, value)) {
       buffer = *key;
-      for (size_t j = 0; j < buffer.size(); j++)
-	substTable.subst(buffer[j]);
+      substTable.subst(buffer);
       if (buffer == name) {
 	if (!entry || value->serial < entry->serial)
 	  entry = value;
@@ -833,7 +832,7 @@ CatalogParser::CatalogParser(const CharsetInfo &charset)
   for (p = wwwMinChars; *p; p++) {
     WideChar c;
     ISet<WideChar> set;
-    if (charset.univToDesc(*p, c, set) > 0 && c <= Char(-1))
+    if (charset.univToDesc(*p, c, set) > 0 && c <= charMax)
       categoryTable_.setChar(Char(c), min);
   }
   categoryTable_.setChar(charset.execToDesc('\''), lita);
@@ -1185,8 +1184,7 @@ void CatalogParser::parseName()
 
 void CatalogParser::upcase(StringC &str)
 {
-  for (size_t i = 0; i < str.size(); i++)
-    substTable_.subst(str[i]);
+  substTable_.subst(str);
 }
 
 void CatalogParser::dispatchMessage(const Message &msg)

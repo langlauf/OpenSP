@@ -179,6 +179,7 @@ public:
 
   Syntax(const Sd &);
   Boolean lookupFunctionChar(const StringC &, Char *) const;
+  HashTableIter<StringC,Char> functionIter() const;
   Boolean charFunctionName(Char c, const StringC *&name) const;
   Boolean lookupReservedName(const StringC &, ReservedName *) const;
   const StringC &reservedName(ReservedName) const;
@@ -188,9 +189,9 @@ public:
   Boolean getStandardFunction(int, Char &) const;
   const StringC &delim() const;
   const ISet<Char> *charSet(int i) const;
-  const SubstTable<Char> *generalSubstTable() const;
-  const SubstTable<Char> *entitySubstTable() const;
-  const SubstTable<Char> &upperSubstTable() const;
+  const SubstTable *generalSubstTable() const;
+  const SubstTable *entitySubstTable() const;
+  const SubstTable &upperSubstTable() const;
   Boolean namecaseGeneral() const;
   Boolean namecaseEntity() const;
   const StringC &peroDelim() const;
@@ -276,13 +277,14 @@ private:
   Number quantity_[nQuantity];
   HashTable<StringC,int> nameTable_;
   HashTable<StringC,Char> functionTable_;
-  SubstTable<Char> upperSubst_;
-  SubstTable<Char> identitySubst_;
-  const SubstTable<Char> *generalSubst_;
-  const SubstTable<Char> *entitySubst_;
+  SubstTable upperSubst_;
+  SubstTable identitySubst_;
+  const SubstTable *generalSubst_;
+  const SubstTable *entitySubst_;
   XcharMap<unsigned char> categoryTable_;
   Boolean multicode_;
   XcharMap<unsigned char> markupScanTable_;
+  Boolean hasMarkupScanTable_;
   Vector<StringC> entityNames_;
   StringC entityChars_;
   static const int referenceQuantity_[];
@@ -298,12 +300,12 @@ inline void Syntax::setQuantity(int i, Number n)
   quantity_[i] = n;
 }
 
-inline const SubstTable<Char> *Syntax::generalSubstTable() const
+inline const SubstTable *Syntax::generalSubstTable() const
 {
   return generalSubst_;
 }
 
-inline const SubstTable<Char> *Syntax::entitySubstTable() const
+inline const SubstTable *Syntax::entitySubstTable() const
 {
   return entitySubst_;
 }

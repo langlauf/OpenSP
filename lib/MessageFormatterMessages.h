@@ -19,43 +19,45 @@ struct MessageFormatterMessages {
   // 5105
   static const MessageFragment invalidMessage;
 };
+extern MessageModule libModule;
+
 const MessageFragment MessageFormatterMessages::ordinal1(
-MessageFragment::libModule,
+&libModule,
 5100
 #ifndef SP_NO_MESSAGE_TEXT
 ,"st"
 #endif
 );
 const MessageFragment MessageFormatterMessages::ordinal2(
-MessageFragment::libModule,
+&libModule,
 5101
 #ifndef SP_NO_MESSAGE_TEXT
 ,"nd"
 #endif
 );
 const MessageFragment MessageFormatterMessages::ordinal3(
-MessageFragment::libModule,
+&libModule,
 5102
 #ifndef SP_NO_MESSAGE_TEXT
 ,"rd"
 #endif
 );
 const MessageFragment MessageFormatterMessages::ordinaln(
-MessageFragment::libModule,
+&libModule,
 5103
 #ifndef SP_NO_MESSAGE_TEXT
 ,"th"
 #endif
 );
 const MessageFragment MessageFormatterMessages::invalidArgumentType(
-MessageFragment::libModule,
+&libModule,
 5104
 #ifndef SP_NO_MESSAGE_TEXT
 ,"(invalid argument type)"
 #endif
 );
 const MessageFragment MessageFormatterMessages::invalidMessage(
-MessageFragment::libModule,
+&libModule,
 5105
 #ifndef SP_NO_MESSAGE_TEXT
 ,"(invalid message)"

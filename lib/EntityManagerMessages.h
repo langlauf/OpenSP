@@ -49,9 +49,11 @@ struct EntityManagerMessages {
   // 2020
   static const MessageType1 fsiLookupChar;
 };
+extern MessageModule libModule;
+
 const MessageType1 EntityManagerMessages::fsiSyntax(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2000
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bad formal system identifier syntax in %1"
@@ -59,7 +61,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiMissingValue(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2001
 #ifndef SP_NO_MESSAGE_TEXT
 ,"value for attribute %1 missing in formal system identifier"
@@ -67,7 +69,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiValueAsName(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2002
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 is a formal system identifier attribute value not an attribute name"
@@ -75,7 +77,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiBadSmcrd(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2003
 #ifndef SP_NO_MESSAGE_TEXT
 ,"value of smcrd attribute must be a single character not %1"
@@ -83,7 +85,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiUnknownBctf(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2004
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown BCTF %1"
@@ -91,7 +93,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiUnknownEncoding(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2005
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown encoding %1"
@@ -99,7 +101,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiUnsupportedRecords(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2006
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unsupported record boundary indicator %1"
@@ -107,7 +109,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiUnsupportedAttribute(
 MessageType::warning,
-MessageFragment::libModule,
+&libModule,
 2007
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unsupported formal system identifier attribute %1"
@@ -115,7 +117,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiUnsupportedAttributeToken(
 MessageType::warning,
-MessageFragment::libModule,
+&libModule,
 2008
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unsupported formal system identifier attribute value %1"
@@ -123,7 +125,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiBadTracking(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2009
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bad value %1 for formal system identifier tracking attribute"
@@ -131,7 +133,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiDuplicateAttribute(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2010
 #ifndef SP_NO_MESSAGE_TEXT
 ,"duplicate specification for formal system identifier attribute %1"
@@ -139,7 +141,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiBadZapeof(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2011
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bad value %1 for formal system identifier zapeof attribute"
@@ -147,7 +149,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiBadSearch(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2012
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bad value %1 for formal system identifier search attribute"
@@ -155,7 +157,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiBadFold(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2013
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bad value %1 for formal system identifier fold attribute"
@@ -163,7 +165,7 @@ MessageFragment::libModule,
 );
 const MessageType0 EntityManagerMessages::fsiFoldNotNeutral(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2014
 #ifndef SP_NO_MESSAGE_TEXT
 ,"fold attribute allowed only for neutral storage manager"
@@ -171,7 +173,7 @@ MessageFragment::libModule,
 );
 const MessageType0 EntityManagerMessages::fsiBctfEncodingNotApplicable(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2015
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bctf and encoding attributes not applicable to this storage manager"
@@ -179,7 +181,7 @@ MessageFragment::libModule,
 );
 const MessageType0 EntityManagerMessages::fsiBctfAndEncoding(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2016
 #ifndef SP_NO_MESSAGE_TEXT
 ,"cannot specify both bctf and encoding attribute"
@@ -187,7 +189,7 @@ MessageFragment::libModule,
 );
 const MessageType0 EntityManagerMessages::fsiZapeofNotApplicable(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2017
 #ifndef SP_NO_MESSAGE_TEXT
 ,"zapeof attribute not applicable to this storage manager"
@@ -195,7 +197,7 @@ MessageFragment::libModule,
 );
 const MessageType0 EntityManagerMessages::fsiRecordsNotApplicable(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2018
 #ifndef SP_NO_MESSAGE_TEXT
 ,"records attribute not applicable to this storage manager"
@@ -203,7 +205,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiBadIndirect(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2019
 #ifndef SP_NO_MESSAGE_TEXT
 ,"bad value %1 for formal system identifier indirect attribute"
@@ -211,7 +213,7 @@ MessageFragment::libModule,
 );
 const MessageType1 EntityManagerMessages::fsiLookupChar(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 2020
 #ifndef SP_NO_MESSAGE_TEXT
 ,"non-minimum data character (number %1) in value of formal system identifier lookup attribute"

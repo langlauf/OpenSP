@@ -15,9 +15,11 @@ struct SpentMessages {
   // 3
   static const MessageType1 info2;
 };
+extern MessageModule appModule;
+
 const MessageType1 SpentMessages::nHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 0
 #ifndef SP_NO_MESSAGE_TEXT
 ,"non-SGML"
@@ -25,7 +27,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpentMessages::rHelp(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 1
 #ifndef SP_NO_MESSAGE_TEXT
 ,"raw"
@@ -33,7 +35,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpentMessages::info1(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 2
 #ifndef SP_NO_MESSAGE_TEXT
 ,"%1 prints the concatenation of the entities with system identifiers"
@@ -41,7 +43,7 @@ MessageFragment::appModule,
 );
 const MessageType1 SpentMessages::info2(
 MessageType::info,
-MessageFragment::appModule,
+&appModule,
 3
 #ifndef SP_NO_MESSAGE_TEXT
 ,"SYSID... on the standard output"

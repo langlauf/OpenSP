@@ -1,4 +1,4 @@
-// Copyright (c) 1994, 1997 James Clark
+// Copyright (c) 1994, 1997 James Clark, 2000 Matthias Clasen
 // See the file COPYING for copying permission.
 
 #ifdef __GNUG__
@@ -10,6 +10,8 @@
 
 #include "XMLCodingSystem.h"
 #include "UTF8CodingSystem.h"
+#include "UTF16CodingSystem.h"
+#include "Fixed4CodingSystem.h"
 #include "CodingSystemKit.h"
 #include "Boolean.h"
 #include "Owner.h"
@@ -57,15 +59,6 @@ public:
   Boolean convertOffset(unsigned long &offset) const;
 private:
 
-  class UCS2 : public Decoder {
-  public:
-    UCS2(Boolean swapBytes);
-    size_t decode(Char *to, const char *from, size_t fromLen,
-		  const char **rest);
-    Boolean convertOffset(unsigned long &offset) const;
-  private:
-    Boolean swapBytes_;
-  };
   // Don't keep parsing a PI longer than this.
   // We want to avoid reading some enormous file into memory just because
   // some quote was left off.
@@ -84,6 +77,7 @@ private:
   DetectPhase phase_;
   Boolean byteOrderMark_;
   Boolean lsbFirst_;
+  Boolean lswFirst_;
   int guessBytesPerChar_;
   Owner<Decoder> subDecoder_;
   // Contains all the characters passed to caller that were
@@ -115,6 +109,7 @@ XMLDecoder::XMLDecoder(const InputCodingSystemKit *kit)
   phase_(phaseInit),
   byteOrderMark_(0),
   lsbFirst_(0),
+  lswFirst_(0),
   guessBytesPerChar_(1),
   piLiteral_(0)
 {
@@ -158,15 +153,54 @@ size_t XMLDecoder::decode(Char *to, const char *from, size_t fromLen,
       case 0x3C3F:
 	phase_ = phasePI;
 	break;
+      case 0x0000:
       case 0x3C00:
-	lsbFirst_ = 1;
-	phase_ = phasePI;
-	guessBytesPerChar_ = 2;
-	break;
       case 0x003C:
-	phase_ = phasePI;
-	guessBytesPerChar_ = 2;
-	break;
+        if (fromLen < 4) {
+          *rest = from;
+          return 0;
+        }
+        switch (((unsigned char)from[0] << 24) 
+		| ((unsigned char)from[1] << 16) 
+		| ((unsigned char)from[2] << 8)
+		| (unsigned char)from[3]) {
+	case 0x0000003C:
+	  lsbFirst_ = 0;
+	  lswFirst_ = 0;
+	  phase_ = phasePI;
+	  guessBytesPerChar_ = 4;
+	  break;
+	case 0x00003C00:
+	  lsbFirst_ = 1;
+	  lswFirst_ = 0;
+	  phase_ = phasePI;
+	  guessBytesPerChar_ = 4;
+	  break;
+	case 0x003C0000:
+	  lsbFirst_ = 0;
+	  lswFirst_ = 1;
+	  phase_ = phasePI;
+	  guessBytesPerChar_ = 4;
+	  break;
+	case 0x3C000000:
+	  lsbFirst_ = 1;
+	  lswFirst_ = 1;
+	  phase_ = phasePI;
+	  guessBytesPerChar_ = 4;
+	  break;
+	case 0x003C003F:
+	  lsbFirst_ = 1;
+	  phase_ = phasePI;
+	  guessBytesPerChar_ = 2;
+	  break;
+	case 0x3C003F00:
+	  lsbFirst_ = 0;
+	  phase_ = phasePI;
+	  guessBytesPerChar_ = 2;
+	  break;
+	default:
+	  break;
+	}
       default:
 	break;
       }
@@ -189,14 +223,29 @@ size_t XMLDecoder::decode(Char *to, const char *from, size_t fromLen,
       phase_ = phaseFinish;
       return (p - to) + subDecoder_->decode(p, from, fromLen, rest);
     }
-    Char c = (unsigned char)from[0];
-    if (guessBytesPerChar_ > 1) {
-      if (lsbFirst_)
-	c |= (unsigned char)from[1] << 8;
-      else {
-	c <<= 8;
-	c |= (unsigned char)from[1];
+    Char c;
+    switch (guessBytesPerChar_) {
+    case 1:
+      c = (unsigned char)from[0];
+      break;
+    case 2:
+      c = lsbFirst_ ? ((unsigned char)from[1] << 8) | (unsigned char)from[0]
+	            : ((unsigned char)from[0] << 8) | (unsigned char)from[1];
+      break;
+    case 4: 
+       {
+        size_t shift0 = 8*(!lsbFirst_ + 2*!lswFirst_); 
+        size_t shift1 = 8*(lsbFirst_ + 2*!lswFirst_); 
+        size_t shift2 = 8*(!lsbFirst_ + 2*lswFirst_); 
+        size_t shift3 = 8*(lsbFirst_ + 2*lswFirst_); 
+        c = ((unsigned char)from[0] << shift0)
+	  | ((unsigned char)from[1] << shift1)
+	  | ((unsigned char)from[2] << shift2)
+	  | ((unsigned char)from[3] << shift3);
       }
+      break;
+    default:
+      CANNOT_HAPPEN();
     }
     static const Char startBytes[] = {
       ISO646_LT, ISO646_QUEST, ISO646_LETTER_x, ISO646_LETTER_m, ISO646_LETTER_l
@@ -248,15 +297,29 @@ Boolean XMLDecoder::convertOffset(unsigned long &n) const
 
 void XMLDecoder::initDecoderDefault()
 {
-  if (guessBytesPerChar_ == 1) {
-    UTF8CodingSystem utf8;
-    subDecoder_ = utf8.makeDecoder();
+  switch (guessBytesPerChar_) {
+  case 1:
+    {
+      UTF8CodingSystem utf8;
+      subDecoder_ = utf8.makeDecoder();
+    }
+    break;
+  case 2:
+    {
+      UTF16CodingSystem utf16;
+      subDecoder_ = utf16.makeDecoder(lsbFirst_); 
+    }
+    break;
+  case 4:
+    {
+      Fixed4CodingSystem utf32;
+      subDecoder_ = utf32.makeDecoder(lsbFirst_, lswFirst_); 
+    }
+    break;
+  default:
+    CANNOT_HAPPEN();
   }
-  else {
-    unsigned short n = 0x1;
-    minBytesPerChar_ = 2;
-    subDecoder_ = new UCS2((*(char *)&n == 0x1) != lsbFirst_);
-  }
+  minBytesPerChar_ = subDecoder_->minBytesPerChar();
 }
 
 void XMLDecoder::initDecoderPI()
@@ -273,7 +336,7 @@ void XMLDecoder::initDecoderPI()
 				  0,
 				  dummy);
   if (ics) {
-    subDecoder_ = ics->makeDecoder();
+    subDecoder_ = ics->makeDecoder(lsbFirst_, lswFirst_); 
     minBytesPerChar_ = subDecoder_->minBytesPerChar();
   }
   if (!subDecoder_)
@@ -346,52 +409,6 @@ Boolean XMLDecoder::extractEncoding(StringC &name)
       lit = 0;
   }
   return 0;
-}
-
-XMLDecoder::UCS2::UCS2(Boolean swapBytes)
-: swapBytes_(swapBytes)
-{
-}
-
-size_t XMLDecoder::UCS2::decode(Char *to, const char *from, size_t fromLen,
-				const char **rest)
-{
-  union U {
-    unsigned short word;
-    char bytes[2];
-  };
-  fromLen &= ~1;
-  *rest = from + fromLen;
-  if (sizeof(Char) == 2) {
-    if (!swapBytes_) {
-      if (from != (char *)to)
-	memmove(to, from, fromLen);
-      return fromLen/2;
-    }
-  }
-  if (swapBytes_) {
-    for (size_t n = fromLen; n > 0; n -= 2) {
-      U u;
-      u.bytes[1] = *from++;
-      u.bytes[0] = *from++;
-      *to++ = u.word;
-    }
-  }
-  else  {
-    for (size_t n = fromLen; n > 0; n -= 2) {
-      U u;
-      u.bytes[0] = *from++;
-      u.bytes[1] = *from++;
-      *to++ = u.word;
-    }
-  }
-  return fromLen/2;
-}
-
-Boolean XMLDecoder::UCS2::convertOffset(unsigned long &n) const
-{
-  n *= 2;
-  return 1;
 }
 
 #ifdef SP_NAMESPACE

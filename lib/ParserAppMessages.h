@@ -37,9 +37,11 @@ struct ParserAppMessages {
   // 4214
   static const MessageFragment number;
 };
+extern MessageModule libModule;
+
 const MessageType1 ParserAppMessages::unknownWarning(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4200
 #ifndef SP_NO_MESSAGE_TEXT
 ,"unknown warning type %1"
@@ -47,7 +49,7 @@ MessageFragment::libModule,
 );
 const MessageType0 ParserAppMessages::badErrorLimit(
 MessageType::error,
-MessageFragment::libModule,
+&libModule,
 4201
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid error limit"
@@ -55,7 +57,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::errorLimitExceeded(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4202
 #ifndef SP_NO_MESSAGE_TEXT
 ,"maximum number of errors (%1) reached; change with -E option"
@@ -63,7 +65,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::aHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4203
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Make doctype or linktype %1 active."
@@ -71,7 +73,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::AHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4204
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Parse wrt. architecture %1."
@@ -79,7 +81,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::EHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4205
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Give up after %1 errors."
@@ -87,7 +89,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::eHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4206
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Show open entities in error messages."
@@ -95,7 +97,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::gHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4207
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Show open elements in error messages."
@@ -103,7 +105,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::nHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4208
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Show error numbers in error messages."
@@ -111,7 +113,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::xHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4209
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Show references in error messages."
@@ -119,7 +121,7 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::iHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4210
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Define parameter entity %1 as \"INCLUDE\"."
@@ -127,28 +129,28 @@ MessageFragment::libModule,
 );
 const MessageType1 ParserAppMessages::wHelp(
 MessageType::info,
-MessageFragment::libModule,
+&libModule,
 4211
 #ifndef SP_NO_MESSAGE_TEXT
 ,"Enable warning %1."
 #endif
 );
 const MessageFragment ParserAppMessages::type(
-MessageFragment::libModule,
+&libModule,
 4212
 #ifndef SP_NO_MESSAGE_TEXT
 ,"TYPE"
 #endif
 );
 const MessageFragment ParserAppMessages::name(
-MessageFragment::libModule,
+&libModule,
 4213
 #ifndef SP_NO_MESSAGE_TEXT
 ,"NAME"
 #endif
 );
 const MessageFragment ParserAppMessages::number(
-MessageFragment::libModule,
+&libModule,
 4214
 #ifndef SP_NO_MESSAGE_TEXT
 ,"NUMBER"

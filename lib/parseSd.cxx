@@ -1320,6 +1320,7 @@ Boolean Parser::sdParseSyntax(SdBuilder &sdBuilder, SdParam &parm)
     if (!invalidSgmlChar.isEmpty())
       message(ParserMessages::invalidSgmlChar, CharsetMessageArg(invalidSgmlChar));
   }
+  checkSyntaxNames(*sdBuilder.syntax);
   checkSyntaxNamelen(*sdBuilder.syntax);
   checkSwitchesMarkup(sdBuilder.switcher);
   return 1;
@@ -1976,9 +1977,7 @@ Boolean Parser::sdParseDelim(SdBuilder &sdBuilder, SdParam &parm)
     if (parm.paramLiteralText.size() == 0)
 	message(ParserMessages::sdEmptyDelimiter);
     else if (translateSyntax(sdBuilder, parm.paramLiteralText, str)) {
-      const SubstTable<Char> *table = sdBuilder.syntax->generalSubstTable();
-      for (size_t i = 0; i < str.size(); i++)
-	table->subst(str[i]);
+      sdBuilder.syntax->generalSubstTable()->subst(str);
       if (checkGeneralDelim(*sdBuilder.syntax, str)
 	  && !delimGeneralSpecified[delimGeneral])
 	sdBuilder.syntax->setDelimGeneral(delimGeneral, str);
@@ -2062,9 +2061,7 @@ Boolean Parser::sdParseDelim(SdBuilder &sdBuilder, SdParam &parm)
       if (lastLiteral.size() == 0)
 	message(ParserMessages::sdEmptyDelimiter);
       else if (translateSyntax(sdBuilder, lastLiteral, str)) {
-	const SubstTable<Char> *table = sdBuilder.syntax->generalSubstTable();
-	for (size_t i = 0; i < str.size(); i++)
-	  table->subst(str[i]);
+	sdBuilder.syntax->generalSubstTable()->subst(str);
 	if (str.size() == 1
 	    || checkShortrefDelim(*sdBuilder.syntax,
 				  sdBuilder.sd->internalCharset(),
@@ -2135,9 +2132,8 @@ Boolean Parser::sdParseNames(SdBuilder &sdBuilder, SdParam &parm)
 		    StringMessageArg(transName));
 	    transName.resize(0);
 	    break;
-	  }
-	for (i = 0; i < transName.size(); i++)
-	  sdBuilder.syntax->generalSubstTable()->subst(transName[i]);
+	  }	
+	sdBuilder.syntax->generalSubstTable()->subst(transName);
 	if (sdBuilder.syntax->reservedName(reservedName).size() > 0)
 	  message(ParserMessages::duplicateReservedName,
 		  StringMessageArg(syntax().reservedName(reservedName)));
@@ -2806,6 +2802,21 @@ Boolean Parser::checkSwitchesMarkup(CharSwitcher &switcher)
       valid = 0;
     }
   return valid;
+}
+
+void Parser::checkSyntaxNames(const Syntax &syn)
+{
+  HashTableIter<StringC,Char> iter(syn.functionIter());
+  const StringC *name;
+  const Char *c;
+  while (iter.next(name, c)) {
+    for (size_t i = 1; i < name->size(); i++)
+      if (!syn.isNameCharacter((*name)[i])) {
+	message(ParserMessages::reservedNameSyntax,
+		StringMessageArg(*name));
+	break;
+      }	
+  }  
 }
 
 void Parser::checkSyntaxNamelen(const Syntax &syn)

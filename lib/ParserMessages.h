@@ -872,6 +872,18 @@ struct ParserMessages {
   static const MessageType2 parameterEntityNotationUndefined;
   // 441
   static const MessageType1 dsEntityNotationUndefined;
+  // 442
+  static const MessageType1 specifiedAttributeRedeclared;
+  // 443
+  static const MessageType1 notationMustNotBeDeclared;
+  // 444
+  static const MessageType0 peroGrpoStartTag;
+  // 445
+  static const MessageType0 peroGrpoEndTag;
+  // 446
+  static const MessageType0 notationConref;
+  // 447
+  static const MessageType0 sorryAllImplicit;
   // 1000
   static const MessageFragment delimStart;
   // 1002

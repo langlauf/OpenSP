@@ -19,9 +19,11 @@ struct RastEventHandlerMessages {
   // 105
   static const MessageType0 multipleLinkRules;
 };
+extern MessageModule appModule;
+
 const MessageType0 RastEventHandlerMessages::invalidRastPiError(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 100
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid RAST processing instruction"
@@ -29,7 +31,7 @@ MessageFragment::appModule,
 );
 const MessageType1 RastEventHandlerMessages::invalidActiveLinkType(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 101
 #ifndef SP_NO_MESSAGE_TEXT
 ,"invalid link type %1 in rast-active-lpd processing instruction"
@@ -37,7 +39,7 @@ MessageFragment::appModule,
 );
 const MessageType1 RastEventHandlerMessages::duplicateActiveLinkType(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 102
 #ifndef SP_NO_MESSAGE_TEXT
 ,"duplicate link type %1 in rast-active-lpd processing instruction"
@@ -45,7 +47,7 @@ MessageFragment::appModule,
 );
 const MessageType0 RastEventHandlerMessages::multipleLinkRuleMatch(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 103
 #ifndef SP_NO_MESSAGE_TEXT
 ,"rast-link-rule: processing instruction matches more than one link rule"
@@ -53,7 +55,7 @@ MessageFragment::appModule,
 );
 const MessageType0 RastEventHandlerMessages::noLinkRuleMatch(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 104
 #ifndef SP_NO_MESSAGE_TEXT
 ,"rast-link-rule: processing instruction does not match any link rules"
@@ -61,7 +63,7 @@ MessageFragment::appModule,
 );
 const MessageType0 RastEventHandlerMessages::multipleLinkRules(
 MessageType::error,
-MessageFragment::appModule,
+&appModule,
 105
 #ifndef SP_NO_MESSAGE_TEXT
 ,"multiple applicable link rules without disambiguating rast-link-rule: processing instruction"

@@ -62,7 +62,10 @@ private:
 class SP_API InputCodingSystem {
 public:
   virtual ~InputCodingSystem();
-  virtual Decoder *makeDecoder() const = 0;
+  // one of these has to be overwritten
+  virtual Decoder *makeDecoder() const { return makeDecoder(1); } 
+  virtual Decoder *makeDecoder(Boolean lsbFirst) const { return makeDecoder(lsbFirst,1); }
+  virtual Decoder *makeDecoder(Boolean lsbFirst, Boolean lswFirst) const { return makeDecoder(); }
   StringC convertIn(const char *) const;
   virtual Boolean isIdentity() const;
 };
