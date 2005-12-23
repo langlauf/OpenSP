@@ -11,8 +11,6 @@ struct WinInetStorageMessages {
   // 2501
   static const MessageType2 readFailed;
 };
-extern MessageModule libModule;
-
 const MessageType2 WinInetStorageMessages::cannotOpen(
 MessageType::error,
 &libModule,

@@ -35,8 +35,6 @@ struct SpamMessages {
   // 13
   static const MessageFragment name;
 };
-extern MessageModule appModule;
-
 const MessageType1 SpamMessages::invalidMarkupArgument(
 MessageType::error,
 &appModule,

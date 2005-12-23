@@ -49,8 +49,6 @@ struct EntityManagerMessages {
   // 2020
   static const MessageType1 fsiLookupChar;
 };
-extern MessageModule libModule;
-
 const MessageType1 EntityManagerMessages::fsiSyntax(
 MessageType::error,
 &libModule,

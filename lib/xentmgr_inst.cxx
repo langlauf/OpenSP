@@ -688,6 +688,19 @@ typedef String<unsigned short> Dummy_48;
 #endif
 #endif
 #ifdef __DECCXX
+#pragma define_template String<wchar_t>
+#else
+#ifdef __xlC__
+#pragma define(String<wchar_t>)
+#else
+#ifdef SP_ANSI_CLASS_INST
+template class String<wchar_t>;
+#else
+typedef String<wchar_t> Dummy_49;
+#endif
+#endif
+#endif
+#ifdef __DECCXX
 #pragma define_template Vector<String<unsigned short> >
 #else
 #ifdef __xlC__
@@ -696,7 +709,7 @@ typedef String<unsigned short> Dummy_48;
 #ifdef SP_ANSI_CLASS_INST
 template class Vector<String<unsigned short> >;
 #else
-typedef Vector<String<unsigned short> > Dummy_49;
+typedef Vector<String<unsigned short> > Dummy_50;
 #endif
 #endif
 #endif
@@ -709,7 +722,7 @@ typedef Vector<String<unsigned short> > Dummy_49;
 #ifdef SP_ANSI_CLASS_INST
 template class Ptr<CharMapResource<bool> >;
 #else
-typedef Ptr<CharMapResource<bool> > Dummy_50;
+typedef Ptr<CharMapResource<bool> > Dummy_51;
 #endif
 #endif
 #endif
@@ -722,7 +735,7 @@ typedef Ptr<CharMapResource<bool> > Dummy_50;
 #ifdef SP_ANSI_CLASS_INST
 template class Ptr<CharMapResource<unsigned short> >;
 #else
-typedef Ptr<CharMapResource<unsigned short> > Dummy_51;
+typedef Ptr<CharMapResource<unsigned short> > Dummy_52;
 #endif
 #endif
 #endif

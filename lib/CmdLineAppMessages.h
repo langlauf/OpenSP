@@ -55,8 +55,6 @@ struct CmdLineAppMessages {
   // 4023
   static const MessageType1 undocOption;
 };
-extern MessageModule libModule;
-
 const MessageType1 CmdLineAppMessages::invalidOptionError(
 MessageType::error,
 &libModule,

@@ -81,8 +81,6 @@ struct ArcEngineMessages {
   // 3039
   static const MessageType1L ignoringArcBaseArcDecl;
 };
-extern MessageModule libModule;
-
 const MessageType1 ArcEngineMessages::arcGenerateSystemId(
 MessageType::error,
 &libModule,

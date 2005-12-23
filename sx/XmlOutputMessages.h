@@ -39,8 +39,6 @@ struct XmlOutputMessages {
   // 115
   static const MessageType1 pathOutsideOutputDirectory;
 };
-extern MessageModule appModule;
-
 const MessageType1 XmlOutputMessages::sdataEntityReference(
 MessageType::warning,
 &appModule,

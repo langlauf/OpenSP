@@ -84,7 +84,7 @@
 #define SP_DLLEXPORT __declspec(dllexport)
 #define SP_DLLIMPORT __declspec(dllimport)
 
-#ifdef _DLL
+#if defined(_DLL) || defined(_USRDLL) || defined(_MT)
 #define SP_USE_DLL
 #endif
 
@@ -104,9 +104,16 @@
 #endif
 #endif /* not SP_MANUAL_INST */
 
-#ifdef SP_MULTI_BYTE
-#define SP_WIDE_SYSTEM
-#endif
+// SP_WIDE_SYSTEM builds will not compile due to missing overloads
+// OutputCharStream &operator<<(wchar_t) and
+// OutputCharStream &operator<<(unsigned short*)
+// which are required by onsgmls; osx has probably similar issues.
+// Once these issues are addressed, the following lines should be
+// re-activated.
+
+// #ifdef SP_MULTI_BYTE
+// #define SP_WIDE_SYSTEM
+// #endif
 
 // wchar_t's base type is an unsigned short
 #define SP_WCHAR_T_USHORT
@@ -303,6 +310,6 @@
 
 // NOTE: This is processed as a Makefile, not as a header by autoconf.
 #define SP_PACKAGE "OpenSP"
-#define SP_VERSION "1.5.1"
+#define SP_VERSION "1.5.2"
 
 #endif /* not config_INCLUDED */

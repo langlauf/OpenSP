@@ -21,8 +21,6 @@ struct SgmlnormMessages {
   // 6
   static const MessageType1 info3;
 };
-extern MessageModule appModule;
-
 const MessageType1 SgmlnormMessages::dHelp(
 MessageType::info,
 &appModule,

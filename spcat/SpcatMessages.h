@@ -35,8 +35,6 @@ struct SpcatMessages {
   // 13
   static const MessageFragment name;
 };
-extern MessageModule appModule;
-
 const MessageType1 SpcatMessages::PHelp(
 MessageType::info,
 &appModule,

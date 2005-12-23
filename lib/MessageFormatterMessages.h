@@ -19,8 +19,6 @@ struct MessageFormatterMessages {
   // 5105
   static const MessageFragment invalidMessage;
 };
-extern MessageModule libModule;
-
 const MessageFragment MessageFormatterMessages::ordinal1(
 &libModule,
 5100

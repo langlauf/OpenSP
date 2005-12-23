@@ -25,8 +25,6 @@ struct PosixStorageMessages {
   // 2208
   static const MessageType2 cannotFind;
 };
-extern MessageModule libModule;
-
 const MessageType2 PosixStorageMessages::readSystemCall(
 MessageType::error,
 &libModule,

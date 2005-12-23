@@ -19,8 +19,6 @@ struct SxMessages {
   // 5
   static const MessageFragment option;
 };
-extern MessageModule appModule;
-
 const MessageType1 SxMessages::unknownOutputOption(
 MessageType::error,
 &appModule,

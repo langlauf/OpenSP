@@ -31,8 +31,6 @@ struct CatalogMessages {
   // 2111
   static const MessageType2 noPublicEntry;
 };
-extern MessageModule libModule;
-
 const MessageType0 CatalogMessages::nameExpected(
 MessageType::error,
 &libModule,

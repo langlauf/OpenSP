@@ -37,8 +37,6 @@ struct ParserAppMessages {
   // 4214
   static const MessageFragment number;
 };
-extern MessageModule libModule;
-
 const MessageType1 ParserAppMessages::unknownWarning(
 MessageType::error,
 &libModule,

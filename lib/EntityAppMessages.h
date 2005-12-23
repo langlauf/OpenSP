@@ -19,8 +19,6 @@ struct EntityAppMessages {
   // 4105
   static const MessageFragment sysid;
 };
-extern MessageModule libModule;
-
 const MessageType1 EntityAppMessages::cHelp(
 MessageType::info,
 &libModule,

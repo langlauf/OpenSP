@@ -19,8 +19,6 @@ struct RastEventHandlerMessages {
   // 105
   static const MessageType0 multipleLinkRules;
 };
-extern MessageModule appModule;
-
 const MessageType0 RastEventHandlerMessages::invalidRastPiError(
 MessageType::error,
 &appModule,

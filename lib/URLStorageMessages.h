@@ -53,8 +53,6 @@ struct URLStorageMessages {
   // 2322
   static const MessageType1 Redirect;
 };
-extern MessageModule libModule;
-
 const MessageType1 URLStorageMessages::emptyHost(
 MessageType::error,
 &libModule,

@@ -15,8 +15,6 @@ struct SpentMessages {
   // 3
   static const MessageType1 info2;
 };
-extern MessageModule appModule;
-
 const MessageType1 SpentMessages::nHelp(
 MessageType::info,
 &appModule,

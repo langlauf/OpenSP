@@ -13,8 +13,6 @@ struct StdioStorageMessages {
   // 2402
   static const MessageType2 seekFailed;
 };
-extern MessageModule libModule;
-
 const MessageType2 StdioStorageMessages::openFailed(
 MessageType::error,
 &libModule,

@@ -51,8 +51,6 @@ struct NsgmlsMessages {
   // 21
   static const MessageFragment sysid;
 };
-extern MessageModule appModule;
-
 const MessageType1 NsgmlsMessages::unknownOutputOption(
 MessageType::error,
 &appModule,

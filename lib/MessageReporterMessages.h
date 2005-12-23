@@ -29,8 +29,6 @@ struct MessageReporterMessages {
   // 5010
   static const MessageFragment relevantClauses;
 };
-extern MessageModule libModule;
-
 const MessageFragment MessageReporterMessages::infoTag(
 &libModule,
 5000

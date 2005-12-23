@@ -7,7 +7,7 @@ use POSIX;
 
 # Package and version.
 $package = 'OpenSP';
-$version = '1.5.1';
+$version = '1.5.2';
 $package = $package; $version = $version; # be quiet, -w
 
 $prog = $0;
@@ -191,9 +191,11 @@ namespace SP_NAMESPACE {
 END
 }
 
-if (defined($opt_l)) {
-    print "extern MessageModule $module;\n\n";
-}
+# The declaration is already included through Message.h
+#
+# if (defined($opt_l)) {
+#     print "extern MessageModule $module;\n\n";
+# }
 
 foreach $i (0 .. $#message) {
     if (defined($message[$i])) {

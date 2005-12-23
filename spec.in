@@ -5,13 +5,11 @@ Summary: The OpenJade Group's SGML and XML parsing tools
 Name: @PACKAGE@
 Version: @VERSION@
 Release: 1
-BuildRoot: /tmp/@PACKAGE@-@VERSION@-buildroot
-Copyright: Copyright 1997 James Clark
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+License: GPL
 Group: Applications/Text
 Source: http://download.sourceforge.net/openjade/@PACKAGE@-@VERSION@.tar.gz
 URL: http://openjade.sourceforge.net/
-Vendor: The OpenJade Team
-Packager: Matthias Clasen <clasen@mathematik.uni-freiburg.de>
 Requires: @PACKAGE@-lib
 
 %description
@@ -62,11 +60,12 @@ test "$RPM_BUILD_ROOT" = "/" || rm -rf "$RPM_BUILD_ROOT"
 %{_bindir}/*
 %{_datadir}/@PACKAGE@/*
 %doc %{_datadir}/doc/@PACKAGE@/*
+%doc %{_mandir}/man1/*
 
 %files lib
 %defattr(-, root, root)
 %{_libdir}/*.so.*
-%{_datadir}/locale/*/LC_MESSAGES/sp.mo
+%{_datadir}/locale/*/LC_MESSAGES/sp4.mo
 
 %files devel
 %defattr(-, root, root)
@@ -76,8 +75,17 @@ test "$RPM_BUILD_ROOT" = "/" || rm -rf "$RPM_BUILD_ROOT"
 %{_includedir}/@PACKAGE@/*
 
 %changelog
-* Wed Feb 21 2001 Terje Bless <link@tss.no>
+* Fri Aug 26 2005 Terje Bless <link@pobox.com>
+- Slightly tweak spec towards Fedora guidelines;
+  for Vendor, Packager, Copyright vs. License, and BuildRoot.
+
+* Fri Apr 09 2004 Terje Bless <link@pobox.com>
+- Add man pages to the "files" section for OpenSP.
+- Use _datadir macro for doc files (Karl Eichwalder and Ville Skytta).
+- Tweak name of l10n files; they get the lib's major rev appended.
+
+* Wed Feb 21 2001 Terje Bless <link@pobox.com>
 - Fixed name of l10n message files ("OpenSP" -> "sp").
 
-* Tue Feb 20 2001 Terje Bless <link@tss.no>
+* Tue Feb 20 2001 Terje Bless <link@pobox.com>
 - Tweaked strings, moved to Sourceforge.

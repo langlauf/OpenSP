@@ -11,8 +11,6 @@
 namespace SP_NAMESPACE {
 #endif
 
-extern MessageModule libModule;
-
 const MessageType1 ParserMessages::nameLength(
 MessageType::quantityError,
 &libModule,
